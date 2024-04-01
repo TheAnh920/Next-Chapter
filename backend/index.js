@@ -1,13 +1,13 @@
-import express from "express";
-import { PORT } from "./config.js";
+require('dotenv').config()
+
+const express = require('express');
 
 const app = express();
+const routes = require('./routes/routes')
 
-app.get('/', (request, response) => {
-    console.log(request);
-    return response.status(234).send('Donde esta la biblioteca?');
-});
+app.use(routes)
 
-app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}`);
+app.listen(process.env.PORT, () => {
+    console.log('App listening on port', process.env.PORT);
 })
+
