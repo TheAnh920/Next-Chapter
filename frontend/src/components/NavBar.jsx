@@ -1,7 +1,7 @@
 import React from 'react'
-import { NavLink as Link } from 'react-router-dom';
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
-import Logo from '../assets/react.svg';
+import { NavLink as Link } from 'react-router-dom'
+import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
+import Logo from '../assets/react.svg'
 
 const NavBar = () => {
   return (
