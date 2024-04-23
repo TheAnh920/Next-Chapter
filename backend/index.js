@@ -2,6 +2,7 @@
 require('dotenv').config()
 
 const express = require('express');
+const cors = require('cors');
 
 // Just importing the required libraries
 const app = express();
@@ -11,6 +12,7 @@ const routes = require('./routes/routes')
 // Middleware
 // This one allows us to write to the database in json form (I think?)
 app.use(express.json())
+app.use(cors());
 
 // No clue what this does lmao
 app.use((req, res, next) => {

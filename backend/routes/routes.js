@@ -1,6 +1,5 @@
 const express = require('express');
 const accountModel = require('../models/accountModel')
-
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -37,5 +36,25 @@ router.post('/account', async(req, res) => {
         console.error(error);
     }
 })
+
+router.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+  
+    try {
+        const account = await accountModel.findOne({ username });
+        if (!account) {
+          return res.status(404).json({ success: false, message: 'User not found' });
+        }
+    
+        if (account.password !== password) {
+          return res.status(401).json({ success: false, message: 'Invalid password' });
+        }
+
+        return res.json({ success: true, message: 'Login successful' });
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Internal server error' });
+      }
+  });
 
 module.exports = router
