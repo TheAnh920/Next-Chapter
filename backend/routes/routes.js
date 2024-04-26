@@ -1,6 +1,7 @@
 const express = require('express');
 const accountModel = require('../models/accountModel')
 const router = express.Router();
+const axios = require('axios');
 
 router.get('/', (req, res) => {
     res.json({
@@ -15,6 +16,25 @@ router.post('/books', (req, res) => {
                 author: "Idk lmao",
             })
 })
+
+router.get('/books/search', async (req, res) => {
+    try {
+        // const { q } = req.query; // Extract query parameter from the request
+        const  {q}  = req.query;
+        // const paramValue = req.query.param;
+        // const startIndex = paramValue*25 - 1;
+        const response = await axios.get('https://www.googleapis.com/books/v1/volumes', {
+          params: {
+            q, // Search query
+            maxResults : 25,// startIndex: startIndex,
+          },
+        });
+        res.json(response.data);
+      } catch (error) {
+        console.error('Error fetching book data:', error);
+        res.status(500).json({ error: 'Internal server error' });
+      }
+});
 
 // Sign up method prototype
 router.post('/account', async(req, res) => {

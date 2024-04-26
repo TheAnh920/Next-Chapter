@@ -9,6 +9,7 @@ import Register from './pages/Register'
 import Search from './pages/Search'
 import FavBooks from './pages/FavBooks'
 import FavTags from './pages/FavTags'
+import BookSearch from './pages/Testing'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/search' element={<Search />} />
         <Route path='/mybooks' element={<FavBooks />} />
         <Route path='/mytags' element={<FavTags />} />
+        <Route path='/booklist' element={<BookSearch />} />
       </Routes>
     </Router>
   )
