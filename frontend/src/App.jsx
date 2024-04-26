@@ -7,6 +7,8 @@ import SingleTagPage from './pages/SingleTagPage'
 import SignIn from './pages/SignIn'
 import Register from './pages/Register'
 import Search from './pages/Search'
+import FavBooks from './pages/FavBooks'
+import FavTags from './pages/FavTags'
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
         <Route path='/login' element={<SignIn />} />
         <Route path='/register' element={<Register />} />
         <Route path='/search' element={<Search />} />
+        <Route path='/mybooks' element={<FavBooks />} />
+        <Route path='/mytags' element={<FavTags />} />
       </Routes>
     </Router>
   )

@@ -4,8 +4,10 @@ import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
 import Logo from '../assets/react.svg'
 
 const NavBar = () => {
+  // const user = this.props.user;
+
   return (
-    <Navbar classname='bg-purple-300 h-20 flex justify-between'>
+    <Navbar>
       <Nav>
         <Link to={`/`}>
           <img src={Logo} alt="Next Chapter logo" />
@@ -20,8 +22,19 @@ const NavBar = () => {
         <Button variant='outline-info'>Search</Button>
       </Form>
       <Nav>
-        <Link to={`/login`}>Sign In</Link>
-        <Link to={'/register'}>Register</Link>
+        <Link to={`/search`}>Advanced Search</Link>
+        {/* {user ? (
+          <>
+            <Link to={`/login`}>Sign In</Link>
+            <Link to={`/register`}>Register</Link>
+          </>
+        ) : ( */}
+          <>
+            <Link to={`/mytags`}>Favorite Tags</Link>
+            <Link to={`/mybooks`}>Favorite Books</Link>
+            <Link to={`/`}>Sign Out</Link>
+          </>
+        {/* )} */}
       </Nav>
     </Navbar>
   )
