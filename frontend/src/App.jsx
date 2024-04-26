@@ -9,7 +9,6 @@ import Register from './pages/Register'
 import Search from './pages/Search'
 import FavBooks from './pages/FavBooks'
 import FavTags from './pages/FavTags'
-import BookSearch from './pages/Testing'
 
 const App = () => {
   return (
