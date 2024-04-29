@@ -23,7 +23,6 @@ const App = () => {
         <Route path='/search' element={<Search />} />
         <Route path='/mybooks' element={<FavBooks />} />
         <Route path='/mytags' element={<FavTags />} />
-        <Route path='/booklist' element={<BookSearch />} />
       </Routes>
     </Router>
   )
