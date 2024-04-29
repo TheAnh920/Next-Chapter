@@ -20,15 +20,10 @@ router.get('/', (req, res) => {
   router.get('/books/search', async (req, res) => {
     try {
         // const { q } = req.query; // Extract query parameter from the request
-        const  {q}  = req.query;
+        const  {q, authorTerm}  = req.query;
         // const paramValue = req.query.param;
         // const startIndex = paramValue*25 - 1;
-        const response = await axios.get('https://www.googleapis.com/books/v1/volumes', {
-          params: {
-            q, // Search query
-            maxResults : 25,
-          },
-        });
+        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${q}+inauthor:${authorTerm}`);
         res.json(response.data);
       } catch (error) {
         console.error('Error fetching book data:', error);

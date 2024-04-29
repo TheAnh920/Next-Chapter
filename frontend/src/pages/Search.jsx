@@ -5,13 +5,15 @@ import { Form, FormControl, Button } from 'react-bootstrap'
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [authorTerm, setAuthorTerm] = useState('')
   const [books, setBooks] = useState([]);
 
   const handleSearch = async () => {
     try {
       const response = await axios.get('http://localhost:5555/books/search', {
         params: {
-          q: searchTerm,
+          q : searchTerm,
+          authorTerm : authorTerm,
         },
       });
       setBooks(response.data.items || []);
@@ -27,9 +29,15 @@ const Search = () => {
         <Form>
           <FormControl
             type='Text'
-            placeholder='Search'
+            placeholder='Book title'
             className='mr-sm-2'
             onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <FormControl
+            type='Text'
+            placeholder='Author name'
+            className='mr-sm-2'
+            onChange={(e) => setAuthorTerm(e.target.value)}
           />
           <Button variant='outline-info' onClick={handleSearch}>Search</Button>
         </Form>
