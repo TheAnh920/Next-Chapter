@@ -9,22 +9,30 @@ import Register from './pages/Register'
 import Search from './pages/Search'
 import FavBooks from './pages/FavBooks'
 import FavTags from './pages/FavTags'
+import AuthProvider from './hooks/AuthProvider'
+import PrivateRoute from './router/route'
 
 const App = () => {
   return (
     <Router>
-      <NavBar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/book/:id' element={<SingleBookPage />} />
-        <Route path='/tag/:id' element={<SingleTagPage />} />
-        <Route path='/login' element={<SignIn />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/search' element={<Search />} />
-        <Route path='/mybooks' element={<FavBooks />} />
-        <Route path='/mytags' element={<FavTags />} />
-      </Routes>
+      <AuthProvider>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/book/:id' element={<SingleBookPage />} />
+          <Route path='/tag/:id' element={<SingleTagPage />} />
+          <Route path='/login' element={<SignIn />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/search' element={<Search />} />
+          <Route element={<PrivateRoute />}>
+            <Route path='/mybooks' element={<FavBooks />} />
+            <Route path='/mytags' element={<FavTags />} />
+          </Route>
+        </Routes>
+      </AuthProvider>
     </Router>
+
+
   )
 }
 

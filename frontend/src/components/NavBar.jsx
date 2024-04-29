@@ -3,9 +3,12 @@ import { NavLink as Link } from 'react-router-dom'
 import axios from 'axios'
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
 import Logo from '../assets/react.svg'
+import { useAuth } from '../hooks/AuthProvider'
 
 const NavBar = () => {
+  const auth = useAuth()
   // const user = this.props.user;
+
   // const [searchTerm, setSearchTerm] = useState('');
   // const [books, setBooks] = useState([]);
 
@@ -48,11 +51,11 @@ const NavBar = () => {
             <Link to={`/register`}>Register</Link>
           </>
         {/* ) : ( */}
-        {/* <>
+        <>
           <Link to={`/mytags`}>Favorite Tags</Link>
           <Link to={`/mybooks`}>Favorite Books</Link>
-          <Link to={`/`}>Sign Out</Link>
-        </> */}
+          <Button variant='outline-info' onClick={() => auth.logOut()}>Sign Out</Button>
+        </>
         {/* )} */}
       </Nav>
     </Navbar>

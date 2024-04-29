@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../hooks/AuthProvider';
 
 const SignIn = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const auth = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
