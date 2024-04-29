@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink as Link } from 'react-router-dom'
+import axios from 'axios'
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
 import Logo from '../assets/react.svg'
 
 const NavBar = () => {
   // const user = this.props.user;
+  // const [searchTerm, setSearchTerm] = useState('');
+  // const [books, setBooks] = useState([]);
+
+  // const handleSearch = async () => {
+  //   try {
+  //     const response = await axios.get('http://localhost:5555/books/search', {
+  //       params: {
+  //         q: searchTerm,
+  //       },
+  //     });
+  //     setBooks(response.data.items || []);
+  //   } catch (error) {
+  //     console.error('Error fetching book data:', error);
+  //   }
+  // };
 
   return (
     <Navbar>
@@ -13,27 +29,30 @@ const NavBar = () => {
           <img src={Logo} alt="Next Chapter logo" />
         </Link>
       </Nav>
-      <Form inline>
+      {/* <Form inline>
         <FormControl
           type='Text'
           placeholder='Search'
           className='mr-sm-2'
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <Button variant='outline-info'>Search</Button>
-      </Form>
+        <Link to={`/search`}>
+          <Button variant='outline-info' onClick={handleSearch}>Search</Button>
+        </Link>
+      </Form> */}
       <Nav>
         <Link to={`/search`}>Advanced Search</Link>
-        {/* {user ? (
+        {/* {user ? ( */}
           <>
             <Link to={`/login`}>Sign In</Link>
             <Link to={`/register`}>Register</Link>
           </>
-        ) : ( */}
-          <>
-            <Link to={`/mytags`}>Favorite Tags</Link>
-            <Link to={`/mybooks`}>Favorite Books</Link>
-            <Link to={`/`}>Sign Out</Link>
-          </>
+        {/* ) : ( */}
+        {/* <>
+          <Link to={`/mytags`}>Favorite Tags</Link>
+          <Link to={`/mybooks`}>Favorite Books</Link>
+          <Link to={`/`}>Sign Out</Link>
+        </> */}
         {/* )} */}
       </Nav>
     </Navbar>

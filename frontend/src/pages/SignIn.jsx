@@ -32,7 +32,6 @@ const SignIn = () => {
           <br />
           <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password' />
           <div>
-            <input type='submit' name='signin' value={`Sign In`} />
             <button type="submit">Login</button>
           </div>
           <div>
