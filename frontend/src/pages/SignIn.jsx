@@ -12,7 +12,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5555/login', { username, password });
+      const response = await axios.post('http://localhost:5555/account/signin', { username, password });
       console.log(response.data.message)
       if(response.data.success) {
         navigate('/', { replace: true });

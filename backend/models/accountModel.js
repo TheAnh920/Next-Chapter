@@ -18,9 +18,13 @@ const accountSchema = new Schema({
         required: true,
     },
 
-    favList: {
+    favBookList: {
         type: [{ type: String }],
-    }
+    },
+
+    favTagList: {
+        type: [{ type: String }],
+    },
 },
     // Just declaring this so that each time there's a new entry, there'll be a timestamp for when it was added.
     { timestamps: true})

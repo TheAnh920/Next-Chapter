@@ -10,14 +10,14 @@ router.get('/', (req, res) => {
             })
 })
 
-router.post('/books', (req, res) => {
+  router.post('/books', (req, res) => {
     res.json({
                 bookName: "Percy Jackson and the Sea of Monsters",
                 author: "Idk lmao",
             })
 })
 
-router.get('/books/search', async (req, res) => {
+  router.get('/books/search', async (req, res) => {
     try {
         // const { q } = req.query; // Extract query parameter from the request
         const  {q}  = req.query;
@@ -26,7 +26,7 @@ router.get('/books/search', async (req, res) => {
         const response = await axios.get('https://www.googleapis.com/books/v1/volumes', {
           params: {
             q, // Search query
-            maxResults : 25,// startIndex: startIndex,
+            maxResults : 25,
           },
         });
         res.json(response.data);
@@ -37,7 +37,7 @@ router.get('/books/search', async (req, res) => {
 });
 
 // Sign up method prototype
-router.post('/account', async(req, res) => {
+  router.post('/account/signup', async(req, res) => {
     try {
         const {username, password} = req.body
         const usernameExists = await accountModel.findOne({ username })
@@ -57,7 +57,7 @@ router.post('/account', async(req, res) => {
     }
 })
 
-router.post('/login', async (req, res) => {
+  router.post('/account/signin', async (req, res) => {
     const { username, password } = req.body;
   
     try {
@@ -75,6 +75,17 @@ router.post('/login', async (req, res) => {
         console.error(error);
         res.status(500).json({ success: false, message: 'Internal server error' });
       }
+  });
+
+  router.get('/books/single/*', async (req, res) => {
+    try {
+      const  address  = req.params[0] // Get the URL subdirectory directly
+      const response = await axios.get(`https://www.googleapis.com/books/v1/volumes/${address}`);
+      res.json(response.data || {});
+    } catch (error) {
+      console.error('Error fetching book details:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
   });
 
 module.exports = router
