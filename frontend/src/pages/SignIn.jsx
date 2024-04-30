@@ -47,15 +47,15 @@ const SignIn = () => {
           <br />
           <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password' />
           <div>
-            <button type="submit">Sign in</button>
+            <button type="submit">Sign In</button>
           </div>
           <div>
             <div>
               <a href='/register'>Register</a>
             </div>
-            <div>
+            {/* <div>
               <a href='#'>Forgot Account?</a>
-            </div>
+            </div> */}
           </div>
         </Form>
       </div>
