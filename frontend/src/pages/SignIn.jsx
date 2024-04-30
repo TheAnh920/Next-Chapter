@@ -9,16 +9,29 @@ const SignIn = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-  const auth = useAuth();
+  const { loginAction } = useAuth();
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.post('http://localhost:5555/account/signin', { username, password });
+  //     console.log(response.data.message)
+  //     if(response.data.success) {
+  //       loginAction(response.data)
+  //       navigate('/', { replace: true });
+  //     } else {
+  //       setError(response.data.message || 'Invalid login credentials')
+  //     }
+  //     // Handle successful login, e.g., redirect to dashboard
+  //   } catch (err) {
+  //     console.log('Invalid login credentials')
+  //   }
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5555/account/signin', { username, password });
-      console.log(response.data.message)
-      if(response.data.success) {
-        navigate('/', { replace: true });
-      }
+      loginAction(username, password)
       // Handle successful login, e.g., redirect to dashboard
     } catch (err) {
       console.log('Invalid login credentials')
@@ -34,7 +47,7 @@ const SignIn = () => {
           <br />
           <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password' />
           <div>
-            <button type="submit">Login</button>
+            <button type="submit">Sign in</button>
           </div>
           <div>
             <div>

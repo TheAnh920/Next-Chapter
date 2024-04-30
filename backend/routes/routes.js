@@ -3,35 +3,9 @@ const accountModel = require('../models/accountModel')
 const router = express.Router();
 const axios = require('axios');
 
-router.get('/', (req, res) => {
-    res.json({
-                name: "DIO Brando",
-                stand: "The World",
-            })
-})
-
-  router.post('/books', (req, res) => {
-    res.json({
-                bookName: "Percy Jackson and the Sea of Monsters",
-                author: "Idk lmao",
-            })
-})
-
-  router.get('/books/search', async (req, res) => {
-    try {
-        // const { q } = req.query; // Extract query parameter from the request
-        const  {q, authorTerm}  = req.query;
-        // const paramValue = req.query.param;
-        // const startIndex = paramValue*25 - 1;
-        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${q}+inauthor:${authorTerm}`);
-        res.json(response.data);
-      } catch (error) {
-        console.error('Error fetching book data:', error);
-        res.status(500).json({ error: 'Internal server error' });
-      }
-});
-
-// Sign up method prototype
+  
+//                                  ACCOUNT-RELATED API ROUTES
+// ------------------------------------------------------------------------------------------//
   router.post('/account/signup', async(req, res) => {
     try {
         const {username, password} = req.body
@@ -65,10 +39,48 @@ router.get('/', (req, res) => {
           return res.status(401).json({ success: false, message: 'Invalid password' });
         }
 
-        return res.json({ success: true, message: 'Login successful' });
+        return res.json({ success: true, message: 'Login successful', username: username });
       } catch (error) {
         console.error(error);
         res.status(500).json({ success: false, message: 'Internal server error' });
+      }
+  });
+
+  router.post('/account/addbook', async (req, res) => {
+    const { user, lastSubdirectory } = req.body;
+    try {
+      // Find the account by username
+      const account = await accountModel.findOne({ username: user });
+      res.json( {message: `${lastSubdirectory}`} )
+      if (account.favBookList.includes(lastSubdirectory)) {
+        return res.status(400).json({ success: false, message: "Book already exists in user's favorite list" });
+      }
+      const result = await accountModel.updateOne(
+        { _id: account._id },
+        { $push: { favBookList: lastSubdirectory } }
+      );
+      
+      return res.json({ success: true, message: "Book added successfully" });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ success: false, message: 'Internal server error' });
+    }
+  });
+// ------------------------------------------------------------------------------------------//
+
+//                                  BOOKS-RELATED API ROUTES
+// ------------------------------------------------------------------------------------------//
+  router.get('/books/search', async (req, res) => {
+    try {
+        // const { q } = req.query; // Extract query parameter from the request
+        const  {q, authorTerm}  = req.query;
+        // const paramValue = req.query.param;
+        // const startIndex = paramValue*25 - 1;
+        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${q}+inauthor:${authorTerm}`);
+        res.json(response.data);
+      } catch (error) {
+        console.error('Error fetching book data:', error);
+        res.status(500).json({ error: 'Internal server error' });
       }
   });
 

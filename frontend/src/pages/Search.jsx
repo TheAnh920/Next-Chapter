@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Form, FormControl, Button } from 'react-bootstrap'
+import { useAuth } from '../hooks/AuthProvider';
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
