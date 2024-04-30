@@ -1,6 +1,5 @@
 import React, { useState , useEffect } from 'react'
 import axios from 'axios'
-import { useLocation } from 'react-router-dom'
 import { useAuth } from '../hooks/AuthProvider';
 import { Button } from 'react-bootstrap';
 
@@ -32,7 +31,8 @@ const SingleBookPage = () => {
 
   const handleClick = async () => {
     const response = await axios.post('http://localhost:5555/account/addbook', { user , lastSubdirectory })
-    console.log(response.data.message)
+    console.log(response.data.message);
+    console.log(user);
   };
 
   return (

@@ -1,4 +1,4 @@
-import { useContext, createContext, useState } from 'react'
+import { useContext, createContext, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
@@ -8,13 +8,15 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [token, setToken] = useState(localStorage.getItem("site") || "")
     const navigate = useNavigate()
+
     const loginAction = async (username, password) => {
         try {
             const response = await axios.post("http://localhost:5555/account/signin", { username , password })
+            console.log(response.data)
             if (response.data) {
                 setUser(response.data.username)
-                setToken(response.token)
-                localStorage.setItem("site", response.token)
+                setToken(response.data.token)
+                localStorage.setItem("site", response.data.token)
                 navigate(`/`)
                 return
             }
