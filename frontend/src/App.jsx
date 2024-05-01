@@ -10,7 +10,8 @@ import Search from './pages/Search'
 import FavBooks from './pages/FavBooks'
 import FavTags from './pages/FavTags'
 import AuthProvider from './hooks/AuthProvider'
-import PrivateRoute from './router/route'
+import PrivateRoute from './router/PrivateRoute'
+import PublicRoute from './router/PublicRoute'
 
 const App = () => {
   return (
@@ -21,9 +22,11 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/book/:id' element={<SingleBookPage />} />
           <Route path='/tag/:id' element={<SingleTagPage />} />
-          <Route path='/login' element={<SignIn />} />
-          <Route path='/register' element={<Register />} />
           <Route path='/search' element={<Search />} />
+          <Route element={<PublicRoute />}>
+            <Route path='/login' element={<SignIn />} />
+            <Route path='/register' element={<Register />} />
+          </Route>
           <Route element={<PrivateRoute />}>
             <Route path='/mybooks' element={<FavBooks />} />
             <Route path='/mytags' element={<FavTags />} />
@@ -31,8 +34,6 @@ const App = () => {
         </Routes>
       </AuthProvider>
     </Router>
-
-
   )
 }
 
