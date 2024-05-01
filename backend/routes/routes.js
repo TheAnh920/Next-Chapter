@@ -84,7 +84,7 @@ const jwt = require('jsonwebtoken')
         const  {q, authorTerm}  = req.query;
         // const paramValue = req.query.param;
         // const startIndex = paramValue*25 - 1;
-        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${q}+inauthor:${authorTerm}`);
+        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${q}+inauthor:${authorTerm}&maxResults=25`);
         res.json(response.data);
       } catch (error) {
         console.error('Error fetching book data:', error);
