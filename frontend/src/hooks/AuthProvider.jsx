@@ -14,11 +14,12 @@ const AuthProvider = ({ children }) => {
             const response = await axios.post("http://localhost:5555/account/signin", { username , password })
             console.log(response.data)
             if (response.data) {
-                setUser(response.data.username)
-                setToken(response.data.token)
-                localStorage.setItem("site", response.data.token)
-                navigate(`/`)
-                return
+                setUser(response.data.username);
+                setToken(response.data.token);
+                localStorage.setItem("site", response.data.token);
+                localStorage.setItem("bookList", JSON.stringify(response.data.favBookList));
+                navigate(`/`);
+                return;
             }
             throw new Error(res.message)
         } catch (err) {
@@ -27,10 +28,11 @@ const AuthProvider = ({ children }) => {
     }
 
     const logOut = () => {
-        setUser(null)
-        setToken("")
-        localStorage.removeItem("site")
-        navigate(`/`)
+        setUser(null);
+        setToken("");
+        localStorage.removeItem("site");
+        localStorage.removeItem("bookList");
+        navigate(`/`);
     }
 
     return <AuthContext.Provider value={{ token, user, loginAction, logOut }}>

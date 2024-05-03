@@ -40,6 +40,8 @@ const jwt = require('jsonwebtoken')
           return res.status(401).json({ success: false, message: 'Invalid password' });
         }
 
+        const favBookList = account.favBookList;
+
         const payload = {
           userId : account._id,
           username : account.username,
@@ -47,7 +49,7 @@ const jwt = require('jsonwebtoken')
       };
 
         const token = jwt.sign(payload, 'secret_key', { expiresIn : '1h' });
-        return res.json({ success : true, message : 'Login successful', username : username, token });
+        return res.json({ success : true, message : 'Login successful', username : username, favBookList : favBookList, token });
       } catch (error) {
         console.error(error);
         res.status(500).json({ success : false, message : 'Internal server error' });
@@ -59,7 +61,6 @@ const jwt = require('jsonwebtoken')
     try {
       // Find the account by username
       const account = await accountModel.findOne({ username: user });
-      res.json( {message: `${lastSubdirectory}`} )
       if (account.favBookList.includes(lastSubdirectory)) {
         return res.status(400).json({ success: false, message: "Book already exists in user's favorite list" });
       }
@@ -106,11 +107,11 @@ const jwt = require('jsonwebtoken')
   router.get('/books/booklist', async (req, res) => {
     const { username } = req.query;
     try {
+      
       const account = await accountModel.findOne({ username });
       if (!account) {
         return res.json({})
       }
-      
       
       const bookIds = account.favBookList;
       // res.json({message : bookIds})
@@ -125,16 +126,24 @@ const jwt = require('jsonwebtoken')
         }
       }
       res.json({ bookList });
-      // for (let i = 0; i < bookIds.length; i++) {
-      //   const book = await axios.get(`https://www.googleapis.com/books/v1/volumes/${bookIds[i]}`).data;
-        
-      //   bookList.push(book)
-      // }
-      // res.json({ bookList : bookList })
     } catch (error) {
       console.error('Error fetching book details:', error);
       res.status(500).json({ error: 'Internal server error' });
     }
+  });
+
+  router.get('/books/algo-rec', async (req, res) => {
+    try {
+        // const { q } = req.query; // Extract query parameter from the request
+        const  {q, authorTerm}  = req.query;
+        // const paramValue = req.query.param;
+        // const startIndex = paramValue*25 - 1;
+        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${q}+inauthor:${authorTerm}&maxResults=25`);
+        res.json(response.data);
+      } catch (error) {
+        console.error('Error fetching book data:', error);
+        res.status(500).json({ error: 'Internal server error' });
+      }
   });
 
 module.exports = router

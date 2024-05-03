@@ -7,6 +7,11 @@ const Home = () => {
     const [books, setBooks] = useState([])
     const [loading, setLoading] = useState(false)
 
+    const fetchBookIds = async () => {
+        const response = await axios.get('http://localhost:5555/books/')
+    };
+
+
     return (
         <div className='p-4'>
             <div className='flex justify-between items-center'>

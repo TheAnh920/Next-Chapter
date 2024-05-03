@@ -31,8 +31,13 @@ const SingleBookPage = () => {
 
   const handleClick = async () => {
     const response = await axios.post('http://localhost:5555/account/addbook', { user , lastSubdirectory })
-    console.log(response.data.message);
-    console.log(user);
+    if (response.data.success) {
+      const fetchLocal = JSON.parse(localStorage.getItem('bookList')) || [];
+      const updatedBookIds = [...fetchLocal, lastSubdirectory];
+      localStorage.setItem('bookList', JSON.stringify(updatedBookIds))
+    }
+    
+    
   };
 
   return (
@@ -40,6 +45,7 @@ const SingleBookPage = () => {
       SingleBookPage <br />
       <Button onClick={handleClick} label="Add to favorites" />
       <Button onClick={handleClick}> Add to Favorites </Button>
+      <img src= {"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt= {book.volumeInfo.title} />
       <h1>{book.volumeInfo.title}</h1>
       <p>{book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author'}</p>
       <p>{book.volumeInfo.description || 'No description available'}</p>

@@ -6,6 +6,7 @@ const FavBooks = () => {
   
   const  [ bookList , setBookList ]  = useState([]);
   const { user } = useAuth();
+  const bookIds = JSON.parse(localStorage.getItem('bookList'));
 
   useEffect(() => {
     const favBookList = async () => {
