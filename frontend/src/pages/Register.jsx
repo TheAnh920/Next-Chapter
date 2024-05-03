@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Form } from 'react-bootstrap'
+import Logo from '../assets/logo-no-background.png'
 
 const Register = () => {
   return (
     <div>
+      <img src={Logo} alt="Next Chapter logo" className='h-44'/>
       <header>Register</header>
       <div>
         <Form>
@@ -18,7 +21,8 @@ const Register = () => {
             <input type='submit' name='register' value={`Register`} />
           </div>
           <div>
-            <a href='/login'>Sign In</a>
+            Existing User?
+            <Link to={`/login`}> Sign In</Link>
           </div>
         </Form>
       </div>

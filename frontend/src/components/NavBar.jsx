@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink as Link } from 'react-router-dom'
-import axios from 'axios'
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
 import Logo from '../assets/logo-no-background.png'
 import { useAuth } from '../hooks/AuthProvider'
@@ -8,7 +7,6 @@ import { useAuth } from '../hooks/AuthProvider'
 const NavBar = () => {
   const auth = useAuth()
   const user = useAuth()
-  // const user = this.props.user;
 
   // const [searchTerm, setSearchTerm] = useState('');
   // const [books, setBooks] = useState([]);
@@ -30,9 +28,8 @@ const NavBar = () => {
     <Navbar>
       <Nav>
         <Link to={`/`}>
-          <img src={Logo} alt="Next Chapter logo" className='h-20'/>
+          <img src={Logo} alt="Next Chapter logo" className='h-16'/>
         </Link>
-      </Nav>
       {/* <Form inline>
         <FormControl
           type='Text'
@@ -44,8 +41,7 @@ const NavBar = () => {
           <Button variant='outline-info' onClick={handleSearch}>Search</Button>
         </Link>
       </Form> */}
-      <Nav>
-        <Link to={`/search`}>Advanced Search</Link>
+        <Link to={`/search`}>Search</Link>
         {!user.token ? (
           <>
             <Link to={`/login`}>Sign In</Link>

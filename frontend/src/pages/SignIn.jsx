@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../hooks/AuthProvider';
+import Logo from '../assets/logo-no-background.png'
 
 const SignIn = () => {
   const [username, setUsername] = useState('');
@@ -40,6 +41,7 @@ const SignIn = () => {
 
   return (
     <div>
+      <img src={Logo} alt="Next Chapter logo" className='h-44'/>
       <header>Sign in to your account</header>
       <div>
         <Form onSubmit={handleSubmit}>
@@ -51,7 +53,8 @@ const SignIn = () => {
           </div>
           <div>
             <div>
-              <a href='/register'>Register</a>
+              New User?
+              <Link to={`/register`}> Register</Link>
             </div>
             {/* <div>
               <a href='#'>Forgot Account?</a>
