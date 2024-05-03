@@ -44,24 +44,22 @@ const Search = () => {
       </div>
       <div className='grid grid-cols-5 content-center gap-10 p-2.5'>
         {books.map(book => (
-          <table>
-            <tbody>
-              <tr className='h-8'>
-                <td>
-                  <Link to={`/book/${book.id}`}>
+          <Link to={`/book/${book.id}`} key={book.id}>
+            <table>
+              <tbody>
+                <tr className='h-8'>
+                  <td>
                     <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
-                  </Link>
-                </td>
-              </tr>
-              <tr className='h-8'>
-                <td className='text-center'>
-                  <Link to={`/book/${book.id}`}>
+                  </td>
+                </tr>
+                <tr className='h-8'>
+                  <td className='text-center'>
                     {book.volumeInfo.title}
-                  </Link>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </Link>
         ))}
       </div>
     </div>
