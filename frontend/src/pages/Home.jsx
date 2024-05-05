@@ -6,11 +6,8 @@ import { Link } from 'react-router-dom'
 const Home = () => {
     const [books, setBooks] = useState([])
     const [loading, setLoading] = useState(false)
-
-    const fetchBookIds = async () => {
-        const response = await axios.get('http://localhost:5555/books/')
-    };
-
+    const bookIds = JSON.parse(localStorage.getItem('bookList'));
+    console.log(bookIds)
 
     return (
         <div className='p-4'>

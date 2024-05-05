@@ -57,16 +57,22 @@ const jwt = require('jsonwebtoken')
   });
 
   router.post('/account/addbook', async (req, res) => {
-    const { user, lastSubdirectory } = req.body;
+    const { user, lastSubdirectory , bookTitle } = req.body;
+
+
     try {
       // Find the account by username
       const account = await accountModel.findOne({ username: user });
-      if (account.favBookList.includes(lastSubdirectory)) {
-        return res.status(400).json({ success: false, message: "Book already exists in user's favorite list" });
+
+      const isBookIdExists = account.favBookList.some(book => book.bookId === lastSubdirectory);
+
+      if (isBookIdExists) {
+        return res.json({ success: false, message: "Already added to favorites." });
       }
+
       const result = await accountModel.updateOne(
         { _id: account._id },
-        { $push: { favBookList: lastSubdirectory } }
+        { $push: { favBookList: { bookId: lastSubdirectory, bookTitle: bookTitle } } }
       );
       
       return res.json({ success: true, message: "Book added successfully" });
