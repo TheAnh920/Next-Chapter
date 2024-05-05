@@ -6,8 +6,8 @@ import Logo from '../assets/logo-no-background.png'
 const Register = () => {
   return (
     <div>
-      <img src={Logo} alt="Next Chapter logo" className='h-44'/>
-      <header>Register</header>
+      <img src={Logo} alt="Next Chapter logo" className='h-44' />
+      <header className='font-bold'>Register</header>
       <div>
         <Form>
           <input type='text' name='username' placeholder='username' />
@@ -18,11 +18,11 @@ const Register = () => {
           <br />
           <input type='email' name='email' placeholder='email' />
           <div>
-            <input type='submit' name='register' value={`Register`} />
+            <button type='submit' className='font-bold'>Register</button>
           </div>
           <div>
             Existing User?
-            <Link to={`/login`}> Sign In</Link>
+            <Link to={`/login`} className='font-bold'> Sign In</Link>
           </div>
         </Form>
       </div>
