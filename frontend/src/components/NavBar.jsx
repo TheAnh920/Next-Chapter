@@ -27,8 +27,8 @@ const NavBar = () => {
   // };
 
   return (
-    <Navbar>
-      <Nav>
+    <Navbar id= "Navbar">
+      <Nav id = "Logo">
         <Link to={`/`}>
           <img src={Logo} alt="Next Chapter logo" className='h-20'/>
         </Link>
@@ -44,18 +44,18 @@ const NavBar = () => {
           <Button variant='outline-info' onClick={handleSearch}>Search</Button>
         </Link>
       </Form> */}
-      <Nav>
-        <Link to={`/search`}>Advanced Search</Link>
+      <Nav id = "Nav-Content">
+        <Link to={`/search`}id= "Ad-Search">Advanced Search </Link>
         {!user.token ? (
           <>
-            <Link to={`/login`}>Sign In</Link>
-            <Link to={`/register`}>Register</Link>
+            <Link to={`/login`} id = "Sign-In"> Sign In </Link>
+            <Link to={`/register`} id = "Register">Register</Link>
           </>
         ) : (
           <>
-            <Link to={`/mytags`}>Favorite Tags</Link>
-            <Link to={`/mybooks`}>Favorite Books</Link>
-            <Button variant='outline-info' onClick={() => auth.logOut()}>Sign Out</Button>
+            <Link to={`/mytags`} id = "Fav-Tags">Favorite Tags </Link>
+            <Link to={`/mybooks`} id = "Fav-Books">Favorite Books </Link>
+            <Button variant='outline-info' id ="Sign-Out" onClick={() => auth.logOut()}> Sign Out</Button>
           </>
         )}
       </Nav>

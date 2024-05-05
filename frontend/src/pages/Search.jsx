@@ -24,9 +24,9 @@ const Search = () => {
   };
 
   return (
-    <div>
+    <div id = "Search-Container-All">
       <header>Search</header>
-      <div>
+      <div id = "SearchForm">
         <Form>
           <FormControl
             type='Text'
@@ -37,12 +37,19 @@ const Search = () => {
           <FormControl
             type='Text'
             placeholder='Author name'
-            className='mr-sm-2'
+            className='mr-sm-3'
             onChange={(e) => setAuthorTerm(e.target.value)}
           />
-          <Button variant='outline-info' onClick={handleSearch}>Search</Button>
+          
+          <Button id="SearchButton" variant='outline-info' onClick={handleSearch}>Search</Button>
         </Form>
       </div>
+
+      <div id="Separator"> 
+        ____________________________________________________________________________________________
+      </div> 
+
+      {/* Book cover */}
       <div className='grid grid-cols-5 content-center gap-10 p-2.5'>
         {books.map(book => (
           <div>
@@ -53,6 +60,8 @@ const Search = () => {
                 </Link>
               </td>
             </tr>
+
+            {/* Book Title */}
             <tr className='h-8'>
               <td className='text-center'>
                 <Link to={`/book/${book.id}`}>

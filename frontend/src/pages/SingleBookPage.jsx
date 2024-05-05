@@ -49,7 +49,7 @@ const SingleBookPage = () => {
         <div id = "bookCover">
         <img src= {"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt= {book.volumeInfo.title} />
         </div>
-        
+
         <div id = "bookInfo">
           <div id = "bookTitle">
           <h1 id = "h1BookTitle">{book.volumeInfo.title}</h1>
