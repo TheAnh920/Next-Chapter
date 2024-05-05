@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useAuth } from '../hooks/AuthProvider';
 import { Button } from 'react-bootstrap';
@@ -9,7 +9,7 @@ const SingleBookPage = () => {
   const currentUrl = window.location.href;
   const subdirectories = currentUrl.split('/');
   const lastSubdirectory = subdirectories[subdirectories.length - 1];
-  const { user } = useAuth();
+  const user = useAuth();
 
   useEffect(() => {
     const fetchBookDetails = async () => {
@@ -42,10 +42,8 @@ const SingleBookPage = () => {
 
   return (
     <div>
-      SingleBookPage <br />
-      <Button onClick={handleClick} label="Add to favorites" />
-      <Button onClick={handleClick}> Add to Favorites </Button>
-      <img src= {"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt= {book.volumeInfo.title} />
+      {user.token && <Button onClick={handleClick}>Add to Favorites</Button>}
+      <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
       <h1>{book.volumeInfo.title}</h1>
       <p>{book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author'}</p>
       <p>{book.volumeInfo.description || 'No description available'}</p>

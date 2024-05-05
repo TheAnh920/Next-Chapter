@@ -28,32 +28,34 @@ const NavBar = () => {
     <Navbar>
       <Nav>
         <Link to={`/`}>
-          <img src={Logo} alt="Next Chapter logo" className='h-16'/>
+          <img src={Logo} alt="Next Chapter logo" className='h-16 inline-block' />
         </Link>
-      {/* <Form inline>
-        <FormControl
-          type='Text'
-          placeholder='Search'
-          className='mr-sm-2'
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <Link to={`/search`}>
-          <Button variant='outline-info' onClick={handleSearch}>Search</Button>
-        </Link>
-      </Form> */}
+        {/* <Form inline>
+              <FormControl
+                type='Text'
+                placeholder='Search'
+                className='mr-sm-2'
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <Link to={`/search`}>
+                <Button variant='outline-info' onClick={handleSearch}>Search</Button>
+              </Link>
+            </Form> */}
         <Link to={`/search`}>Search</Link>
-        {!user.token ? (
-          <>
-            <Link to={`/login`}>Sign In</Link>
-            <Link to={`/register`}>Register</Link>
-          </>
-        ) : (
-          <>
-            <Link to={`/mytags`}>Favorite Tags</Link>
-            <Link to={`/mybooks`}>Favorite Books</Link>
-            <Button variant='outline-info' onClick={() => auth.logOut()}>Sign Out</Button>
-          </>
-        )}
+        <span>
+          {!user.token ? (
+            <>
+              <Link to={`/login`}>Sign In</Link>
+              <Link to={`/register`}>Register</Link>
+            </>
+          ) : (
+            <>
+              <Link to={`/mytags`}>Favorite Tags</Link>
+              <Link to={`/mybooks`}>Favorite Books</Link>
+              <Button variant='outline-info' onClick={() => auth.logOut()}>Sign Out</Button>
+            </>
+          )}
+        </span>
       </Nav>
     </Navbar>
   )
