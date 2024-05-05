@@ -21,10 +21,6 @@
     background-color: #353030;
     display: inline-block;
 
-    
-   
-   
-   
 
 }
 
@@ -42,17 +38,21 @@
 /* Book cover */
 #bookCover{
     width: 250px;
-    height: 150px;
+    height: 450px;
     float: left;
     margin-right: 25px;
     margin-left: 50px;
     margin-top: 30px;
-    /* max-width: 100%;
-    max-height: 100%; */
+    
 
 
 }
 
+#bookCover img {
+   
+   width: 250px;
+   height: 380px;
+}
 
 /* Book Information */
 
@@ -91,9 +91,11 @@
     color: #ff4000;
 }
 
+/* Book Description */
+
 #desSection{
     background-color: #353030;
-    margin-top: 250px;
+    /* margin-top: 50px; */
     margin-left: 48px;
   
 
