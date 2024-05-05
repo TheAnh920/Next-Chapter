@@ -19,8 +19,15 @@ const accountSchema = new Schema({
     },
 
     favBookList: {
-        type: [{ type: String }],
+        type: [
+          {
+            bookId: String,
+            bookTitle: String,
+          }
+        ]
     },
+
+    
 
     favTagList: {
         type: [{ type: String }],

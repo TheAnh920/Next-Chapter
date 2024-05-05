@@ -25,19 +25,19 @@ const SingleBookPage = () => {
     fetchBookDetails();
   }, [lastSubdirectory]);
 
-  if (loading) {
-    return (<div>Replace me with a loading component...</div>)
+  if (loading) { 
+    return (<div>Loading book data...</div>)
   }
 
   const handleClick = async () => {
-    const response = await axios.post('http://localhost:5555/account/addbook', { user, lastSubdirectory })
-    if (response.data.success) {
-      const fetchLocal = JSON.parse(localStorage.getItem('bookList')) || [];
-      const updatedBookIds = [...fetchLocal, lastSubdirectory];
-      localStorage.setItem('bookList', JSON.stringify(updatedBookIds))
-    }
-
-
+    const bookTitle = book.volumeInfo.title;
+    const response = await axios.post('http://localhost:5555/account/addbook', { user , lastSubdirectory , bookTitle })
+    // if (response.data.success) {
+    //   const fetchLocal = JSON.parse(localStorage.getItem('bookList')) || [];
+    //   const updatedBookIds = [...fetchLocal, lastSubdirectory];
+    //   localStorage.setItem('bookList', JSON.stringify(updatedBookIds))
+    // }
+    console.log(response.data.message);
   };
 
   return (

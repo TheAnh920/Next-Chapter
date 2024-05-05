@@ -5,22 +5,19 @@ import { useAuth } from '../hooks/AuthProvider'
 import Spinner from '../components/Spinner'
 
 const FavBooks = () => {
+  
   const [bookList, setBookList] = useState([])
+  const [loading, setLoading] = useState(true)
   const { user } = useAuth()
-  const bookIds = JSON.parse(localStorage.getItem('bookList'))
-  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    const favBookList = async () => {
-      setLoading(true)
-      const response = await axios.get('http://localhost:5555/books/booklist', { params: { username: user } })
-      setBookList(response.data.bookList)
-      setLoading(false)
+    // Load bookList from localStorage when component mounts
+    const storedBookList = localStorage.getItem('bookList');
+    if (storedBookList) {
+      setBookList(JSON.parse(storedBookList));
     }
-    if (user) {
-      favBookList()
-    }
-  }, [user])
+    setLoading(false); // Set loading to false once data is loaded
+  }, []);
 
   return (
     <div>
@@ -49,7 +46,6 @@ const FavBooks = () => {
           ))}
         </div>
       )}
-
     </div>
   )
 }
