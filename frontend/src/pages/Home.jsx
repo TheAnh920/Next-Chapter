@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import "../index.css"
 import Spinner from '../components/Spinner'
 import { Link } from 'react-router-dom'
 
@@ -15,7 +16,9 @@ const Home = () => {
     return (
         <div className='p-4'>
             <div className='flex justify-between items-center'>
+                <h1 className='poopoo'>Home</h1>
                 <h1 className='text-3xl my-8'>Home</h1>
+
             </div>
             {loading ? (
                 <Spinner />

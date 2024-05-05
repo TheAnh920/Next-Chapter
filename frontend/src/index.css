@@ -1,3 +1,121 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #353030;
+  }
+
+#header {
+  color: red;
+}
+
+.poopoo {
+  color: blue;
+}
+
+#containerAll{
+    width: auto;
+    background-color: #353030;
+    display: inline-block;
+
+    
+   
+   
+   
+
+}
+
+#container {
+    display: flex;
+    justify-content: space-around;
+    width: fit-content;
+    height: fit-content;
+    background-color: #353030;
+   
+    
+    
+    
+}
+/* Book cover */
+#bookCover{
+    width: 250px;
+    height: 150px;
+    float: left;
+    margin-right: 25px;
+    margin-left: 50px;
+    margin-top: 30px;
+    /* max-width: 100%;
+    max-height: 100%; */
+
+
+}
+
+
+/* Book Information */
+
+#bookInfo{
+    width: 700px;
+    height: 200px;
+    float: left;
+    background-color: #353030;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: auto;
+    
+}
+
+#h1BookTitle{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;   
+    color: #ffffff;
+  
+}
+
+#bookAuthor{
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 5px;
+    color: #c9c0c0;
+    margin-bottom: 20px;
+    
+}
+
+#favButton {
+    
+    font-size: 25px;
+    font-weight: normal;
+    color: #ff4000;
+}
+
+#desSection{
+    background-color: #353030;
+    margin-top: 250px;
+    margin-left: 48px;
+  
+
+    
+}
+
+
+#Description{
+    float: none;
+    font-size: 25px;
+    
+    font-weight:  normal;
+    color: #00C2FF;
+    margin-bottom: 20px;
+}
+
+#bookDescription{
+    font-size: 10px;
+    font-weight: lighter;
+    margin-right: 100px;
+    margin-left: none;
+    color: #c9c0c0;
+
+    
+}
