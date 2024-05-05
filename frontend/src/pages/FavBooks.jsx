@@ -27,17 +27,17 @@ const FavBooks = () => {
       ) : (
         <div className='grid grid-cols-1 min-[119px]:grid-cols-2 min-[501px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 p-2.5'>
           {bookList.map(book => (
-            <Link to={`/book/${book.id}`} key={book.id}>
+            <Link to={`/book/${book.bookId}`} key={book.bookId}>
               <table>
                 <tbody>
                   <tr className='h-8'>
                     <td>
-                      <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
+                      <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.bookId + "?fife=w400-h600&source=gbs_api"} alt={book.bookTitle} />
                     </td>
                   </tr>
                   <tr className='h-8'>
                     <td className='text-center'>
-                      {book.volumeInfo.title}
+                      {book.bookTitle}
                     </td>
                   </tr>
                 </tbody>
