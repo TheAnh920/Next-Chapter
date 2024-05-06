@@ -7,7 +7,6 @@ const Home = () => {
     const [books, setBooks] = useState([])
     const [loading, setLoading] = useState(false)
     const bookIds = JSON.parse(localStorage.getItem('bookList'));
-    console.log(bookIds)
 
     return (
         <div className='p-4'>

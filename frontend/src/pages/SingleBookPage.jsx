@@ -10,6 +10,7 @@ const SingleBookPage = () => {
   const subdirectories = currentUrl.split('/');
   const lastSubdirectory = subdirectories[subdirectories.length - 1];
   const user = useAuth();
+  const username = user.user;
 
   useEffect(() => {
     const fetchBookDetails = async () => {
@@ -31,12 +32,12 @@ const SingleBookPage = () => {
 
   const handleClick = async () => {
     const bookTitle = book.volumeInfo.title;
-    const response = await axios.post('http://localhost:5555/account/addbook', { user , lastSubdirectory , bookTitle })
-    // if (response.data.success) {
-    //   const fetchLocal = JSON.parse(localStorage.getItem('bookList')) || [];
-    //   const updatedBookIds = [...fetchLocal, lastSubdirectory];
-    //   localStorage.setItem('bookList', JSON.stringify(updatedBookIds))
-    // }
+    const response = await axios.post('http://localhost:5555/account/addbook', { username , lastSubdirectory , bookTitle })
+    if (response.data.success) {
+      const fetchLocal = JSON.parse(localStorage.getItem('bookList')) || [];
+      const updatedBookIds = [...fetchLocal, response.data.bookData];
+      localStorage.setItem('bookList', JSON.stringify(updatedBookIds))
+    }
     console.log(response.data.message);
   };
 
