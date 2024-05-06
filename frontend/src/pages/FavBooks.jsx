@@ -5,7 +5,7 @@ import { useAuth } from '../hooks/AuthProvider'
 import Spinner from '../components/Spinner'
 
 const FavBooks = () => {
-  
+
   const [bookList, setBookList] = useState([])
   const [loading, setLoading] = useState(true)
   const { user } = useAuth()

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useAuth } from '../hooks/AuthProvider';
 import { Button } from 'react-bootstrap';
+import Spinner from '../components/Spinner';
 
 const SingleBookPage = () => {
   const [book, setBook] = useState(null);
@@ -26,13 +27,13 @@ const SingleBookPage = () => {
     fetchBookDetails();
   }, [lastSubdirectory]);
 
-  if (loading) { 
-    return (<div>Loading book data...</div>)
+  if (loading) {
+    return (<Spinner />)
   }
 
   const handleClick = async () => {
     const bookTitle = book.volumeInfo.title;
-    const response = await axios.post('http://localhost:5555/account/addbook', { username , lastSubdirectory , bookTitle })
+    const response = await axios.post('http://localhost:5555/account/addbook', { username, lastSubdirectory, bookTitle })
     if (response.data.success) {
       const fetchLocal = JSON.parse(localStorage.getItem('bookList')) || [];
       const updatedBookIds = [...fetchLocal, response.data.bookData];
