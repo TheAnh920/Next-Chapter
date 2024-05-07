@@ -9,7 +9,7 @@ const Register = () => {
       <img src={Logo} alt="Next Chapter logo" className='h-44' />
       <header className='font-bold'>Register</header>
       <div>
-        <Form>
+        <Form id='container'>
           <input type='text' name='username' placeholder='username' />
           <br />
           <input type='password' name='password' placeholder='password' />
