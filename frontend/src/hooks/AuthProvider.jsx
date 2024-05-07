@@ -18,6 +18,7 @@ const AuthProvider = ({ children }) => {
                 setToken(response.data.token);
                 localStorage.setItem("site", response.data.token);
                 localStorage.setItem("bookList", JSON.stringify(response.data.favBookList));
+                localStorage.setItem("favBookTagList", JSON.stringify(response.data.favBookTagList))
                 navigate(`/`);
                 return;
             }
@@ -32,6 +33,7 @@ const AuthProvider = ({ children }) => {
         setToken("");
         localStorage.removeItem("site");
         localStorage.removeItem("bookList");
+        localStorage.removeItem("favBookTagList");
         navigate(`/`);
     }
 
