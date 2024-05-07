@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Form, FormControl, Button } from 'react-bootstrap'
+// import { tagsList, bigTags } from '../components/Categories'
 import tagsList from '../components/Categories'
 
 const Search = () => {
@@ -24,18 +25,28 @@ const Search = () => {
     }
   }
 
-  function listTags(tags) {
+  function listTags(tags, motherTagName) {
     return (
       tags.map(tag => (
-        <>
-          {typeof tag === 'string' && <Button className='border rounded-lg border-1 border-black h-14' key={tag}>{tag}</Button>}
-          {typeof tag === 'object' && (
-            <>
-              <Button className='border rounded-lg border-4 border-black h-14' key={tag.name}>{tag.name}</Button>
-              {/* {listTags(tag.subTags)} */}
-            </>
-          )}
-        </>
+        typeof tag === 'string' ?
+          <Button
+            className='border rounded-lg border-1 border-black h-14'
+            key={tag}
+            onClick={function () {
+              console.log(motherTagName.concat(' / ', tag))
+            }}>
+            {tag}
+          </Button> :
+          [
+            <Button
+              className='border rounded-lg border-4 border-black h-14'
+              key={tag.name}
+              onClick={function () {
+              }}>
+              {tag.name}
+            </Button>,
+            listTags(tag.subTags, motherTagName.concat(' / ', tag.name))
+          ]
       ))
     )
   }
@@ -45,16 +56,42 @@ const Search = () => {
       <header>Search</header>
       <div>
         <Form>
-          <FormControl type='Text' placeholder='search for books...' className='mr-sm-2' onChange={(e) => setSearchTerm(e.target.value)} />
+          <FormControl
+            type='Text'
+            name='title'
+            placeholder='search for books...'
+            className='mr-sm-2'
+            onChange={(e) => setSearchTerm(e.target.value)} />
           <Button onClick={function () { setAdvancedToggle(!advancedToggle) }}>Show advanced options</Button>
           {advancedToggle && (
             <>
               <div>
-                <FormControl type='Text' placeholder='search for authors...' className='mr-sm-2' onChange={(e) => setAuthorTerm(e.target.value)} />
+                <FormControl
+                  type='Text'
+                  name='author'
+                  placeholder='search for authors...'
+                  className='mr-sm-2'
+                  onChange={(e) => setAuthorTerm(e.target.value)} />
               </div>
               Filter tags
               <div className='grid grid-cols-1 min-[330px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 min-[896px]:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-1 p-1'>
-                {listTags(tagsList)}
+                {tagsList.map(tag => (
+                  typeof tag === 'string' ?
+                    <Button
+                      className='border rounded-lg border-1 border-black h-14'
+                      key={tag}
+                      onClick={function () {
+                        console.log(tag)
+                      }}>{tag}</Button> :
+                    [
+                      <Button
+                        className='border rounded-lg border-4 border-black h-14'
+                        key={tag.name}
+                        onClick={function () {
+                        }}>{tag.name}</Button>,
+                      // listTags(tag.subTags, tag.name)
+                    ]
+                ))}
               </div>
             </>)}
           <div>
