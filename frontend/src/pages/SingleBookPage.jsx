@@ -13,6 +13,9 @@ const SingleBookPage = () => {
   const user = useAuth();
   const username = user.user;
 
+  const testA = ['peepee', 'poopoo', 'penis']
+  const testB = ['peepee', 'poop']
+
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
@@ -31,13 +34,29 @@ const SingleBookPage = () => {
     return (<Spinner />)
   }
 
+  // console.log('Array A: ', testA)
+  // console.log('Array B: ', testB)
+  // const mergedArray = testA.concat(testB)
+  // console.log('After combining and removing dupes: ', removeDupeCat(mergedArray))
+
+
+  function removeDupeCat(array) {
+    const set = new Set(array);
+    const newArray = Array.from(set);
+    return newArray;
+  }
+
   const handleClick = async () => {
     const bookTitle = book.volumeInfo.title;
-    const response = await axios.post('http://localhost:5555/account/addbook', { username, lastSubdirectory, bookTitle })
+    const currentFavBookTagList = JSON.parse(localStorage.getItem('favBookTagList')) || [];
+    const updatedCatList = removeDupeCat(currentFavBookTagList.concat(book.volumeInfo.categories));
+    // const favBookCatList = removeDupeCat()
+    const response = await axios.post('http://localhost:5555/account/addbook', { username, lastSubdirectory, bookTitle, updatedCatList })
     if (response.data.success) {
       const fetchLocal = JSON.parse(localStorage.getItem('bookList')) || [];
       const updatedBookIds = [...fetchLocal, response.data.bookData];
       localStorage.setItem('bookList', JSON.stringify(updatedBookIds))
+      localStorage.setItem('favBookTagList', JSON.stringify(updatedCatList))
     }
     console.log(response.data.message);
   };
@@ -49,6 +68,7 @@ const SingleBookPage = () => {
       <h1>{book.volumeInfo.title}</h1>
       <p>{book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author'}</p>
       <p>{book.volumeInfo.description || 'No description available'}</p>
+      <p>{book.volumeInfo.categories.join(', ')}</p>
     </div>
   )
 }

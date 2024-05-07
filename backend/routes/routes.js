@@ -41,6 +41,7 @@ const jwt = require('jsonwebtoken')
         }
 
         const favBookList = account.favBookList;
+        const favBookTagList = account.favBookTagList
 
         const payload = {
           userId : account._id,
@@ -49,7 +50,7 @@ const jwt = require('jsonwebtoken')
       };
 
         const token = jwt.sign(payload, 'secret_key', { expiresIn : '1h' });
-        return res.json({ success : true, message : 'Login successful', username : username, favBookList : favBookList, token });
+        return res.json({ success : true, message : 'Login successful', username : username, favBookList : favBookList, favBookTagList : favBookTagList , token });
       } catch (error) {
         console.error(error);
         res.status(500).json({ success : false, message : 'Internal server error' });
@@ -57,7 +58,7 @@ const jwt = require('jsonwebtoken')
   });
 
   router.post('/account/addbook', async (req, res) => {
-    const { username, lastSubdirectory , bookTitle } = req.body;
+    const { username, lastSubdirectory , bookTitle , updatedCatList } = req.body;
 
     try {
       // Find the account by username
@@ -71,7 +72,20 @@ const jwt = require('jsonwebtoken')
 
       const result = await accountModel.updateOne(
         { _id: account._id },
-        { $push: { favBookList: { bookId: lastSubdirectory, bookTitle: bookTitle } } }
+        { 
+          $push: { 
+            favBookList: 
+              { 
+                bookId: lastSubdirectory, 
+                bookTitle: bookTitle 
+              } 
+          },
+
+          $set: {
+            favBookTagList : updatedCatList
+          }
+                    
+        }
       );
       
       return res.json({ success: true, message: "Book added successfully", bookData: { bookId: lastSubdirectory, bookTitle: bookTitle } });
@@ -150,5 +164,65 @@ const jwt = require('jsonwebtoken')
         res.status(500).json({ error: 'Internal server error' });
       }
   });
+
+  router.post('/books/similar', async (req, res) => {
+    const { favBookTagList } = req.body;
+    try {
+      const fetchBooksForCategory = async (category) => {
+        // Add a delay (in milliseconds) between each API call
+        const delay = 2000; // 2 second delay
+        await new Promise(resolve => setTimeout(resolve, delay));
+  
+        // Call Google Books API to fetch books for the category
+        return axios.get('https://www.googleapis.com/books/v1/volumes', {
+          params: {
+            q: `subject:"${category}"`,
+            maxResults: 10,
+          },
+        });
+      };
+  
+      // Make sequential requests for each category with a delay
+      const responses = [];
+      for (const category of favBookTagList) {
+        const response = await fetchBooksForCategory(category);
+        responses.push(response);
+      }
+
+      const books = responses.flatMap(response => response.data.items);
+
+      books.sort((a, b) => {
+        const categoriesA = a.volumeInfo.categories || [];
+        const categoriesB = b.volumeInfo.categories || [];
+  
+        // Check if books have the specified categories
+        const hasCategoriesA = favBookTagList.every(category =>
+          categoriesA.some(c => c.includes(category))
+        );
+        const hasCategoriesB = favBookTagList.every(category =>
+          categoriesB.some(c => c.includes(category))
+        );
+  
+        // Prioritize books that have all specified categories
+        if (hasCategoriesA && !hasCategoriesB) {
+          return -1; // Book A should come before Book B
+        } else if (!hasCategoriesA && hasCategoriesB) {
+          return 1; // Book B should come before Book A
+        }
+  
+        // If both books have all specified categories or neither have all categories, compare their titles
+        return a.volumeInfo.title.localeCompare(b.volumeInfo.title);
+      });
+  
+      // Select the top 10 most relevant books
+      const top10Books = books.slice(0, 10);
+  
+      // Send the top 10 books array in the response
+      res.json({ success : true, message : top10Books});
+    } catch (error) {
+      console.error('Error generating books: ', error);
+      res.status(500).json({ error : 'Internal server error' });
+    }
+  })
 
 module.exports = router
