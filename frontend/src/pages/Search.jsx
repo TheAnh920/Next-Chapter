@@ -57,7 +57,7 @@ const Search = () => {
       <div>
         <Form>
           <FormControl
-            type='Text'
+            type='text'
             name='title'
             placeholder='search for books...'
             className='mr-sm-2'
@@ -67,7 +67,7 @@ const Search = () => {
             <>
               <div>
                 <FormControl
-                  type='Text'
+                  type='text'
                   name='author'
                   placeholder='search for authors...'
                   className='mr-sm-2'
