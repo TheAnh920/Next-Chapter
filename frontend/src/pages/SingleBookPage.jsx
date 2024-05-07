@@ -68,7 +68,7 @@ const SingleBookPage = () => {
       <h1>{book.volumeInfo.title}</h1>
       <p>{book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author'}</p>
       <p>{book.volumeInfo.description || 'No description available'}</p>
-      <p>{book.volumeInfo.categories.join(', ')}</p>
+      <p>{book.volumeInfo.categories && book.volumeInfo.categories.join('; ')}</p>
     </div>
   )
 }

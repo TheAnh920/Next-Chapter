@@ -51,6 +51,16 @@ const Search = () => {
     )
   }
 
+  function truncateTitle(title) {
+    if (title.length <= 60) {
+      return title
+    }
+    title = title.substring(0, 60)
+    const lastSpace = title.lastIndexOf(' ')
+    title = title.substring(0, lastSpace)
+    return title + '...'
+  }
+
   return (
     <div>
       <header>Search</header>
@@ -99,19 +109,25 @@ const Search = () => {
           </div>
         </Form>
       </div>
-      <div className='grid grid-cols-1 min-[119px]:grid-cols-2 min-[501px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 p-2.5'>
+      <div className='grid
+                      grid-cols-[auto]
+                      min-[119px]:grid-cols-[auto_auto]
+                      min-[501px]:grid-cols-[auto_auto_auto]
+                      md:grid-cols-[auto_auto_auto_auto]
+                      lg:grid-cols-[auto_auto_auto_auto_auto]
+                      gap-10 p-2.5'>
         {books.map(book => (
           <Link to={`/book/${book.id}`} key={book.id}>
-            <table>
+            <table className='border-2'>
               <tbody>
-                <tr className='h-8'>
+                <tr>
                   <td>
                     <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
                   </td>
                 </tr>
-                <tr className='h-8'>
+                <tr>
                   <td className='text-center'>
-                    {book.volumeInfo.title}
+                    {truncateTitle(book.volumeInfo.title)}
                   </td>
                 </tr>
               </tbody>

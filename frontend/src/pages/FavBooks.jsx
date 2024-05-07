@@ -12,12 +12,22 @@ const FavBooks = () => {
 
   useEffect(() => {
     // Load bookList from localStorage when component mounts
-    const storedBookList = localStorage.getItem('bookList');
+    const storedBookList = localStorage.getItem('bookList')
     if (storedBookList) {
-      setBookList(JSON.parse(storedBookList));
+      setBookList(JSON.parse(storedBookList))
     }
-    setLoading(false); // Set loading to false once data is loaded
-  }, []);
+    setLoading(false) // Set loading to false once data is loaded
+  }, [])
+  
+  function truncateTitle(title) {
+    if (title.length <= 60) {
+      return title
+    }
+    title = title.substring(0, 60)
+    const lastSpace = title.lastIndexOf(' ')
+    title = title.substring(0, lastSpace)
+    return title + '...'
+  }
 
   return (
     <div>
@@ -25,19 +35,25 @@ const FavBooks = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className='grid grid-cols-1 min-[119px]:grid-cols-2 min-[501px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 p-2.5'>
+        <div className='grid
+                        grid-cols-[auto]
+                        min-[119px]:grid-cols-[auto_auto]
+                        min-[501px]:grid-cols-[auto_auto_auto]
+                        md:grid-cols-[auto_auto_auto_auto]
+                        lg:grid-cols-[auto_auto_auto_auto_auto]
+                        gap-10 p-2.5'>
           {bookList.map(book => (
             <Link to={`/book/${book.bookId}`} key={book.bookId}>
               <table>
                 <tbody>
-                  <tr className='h-8'>
+                  <tr>
                     <td>
                       <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.bookId + "?fife=w400-h600&source=gbs_api"} alt={book.bookTitle} />
                     </td>
                   </tr>
-                  <tr className='h-8'>
+                  <tr>
                     <td className='text-center'>
-                      {book.bookTitle}
+                      {truncateTitle(book.bookTitle)}
                     </td>
                   </tr>
                 </tbody>
