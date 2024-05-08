@@ -13,6 +13,9 @@ const SingleBookPage = () => {
   const user = useAuth();
   const username = user.user;
 
+
+
+  console.log(user)
   const testA = ['peepee', 'poopoo', 'penis']
   const testB = ['peepee', 'poop']
 
