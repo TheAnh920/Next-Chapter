@@ -55,8 +55,7 @@ const tagsList = ['Antiques & Collectibles', 'Architecture', 'Art', 'Bibles', bi
     'Psychology', 'Reference', 'Religion', 'Science', 'Self-Help', 'Social Science', 'Sports & Recreation', 'Study Aids', 'Technology & Engineering', 'Transportation', 'Travel',
     'True Crime', 'Young Adult Fiction*', 'Young Adult Nonfiction*']
 
-const bigTags = [biographyAndAutobiography, manga, eastAsianStyle, fantasy, historicalFiction, lgbtqPlus, nonfiction, scienceFiction, comicsAndGraphicNovels, american, asian,
+const motherTags = [biographyAndAutobiography, manga, eastAsianStyle, fantasy, historicalFiction, lgbtqPlus, nonfiction, scienceFiction, comicsAndGraphicNovels, american, asian,
     european, type, drama, actionAndAdventure, africanAmericanAndBlack, fiction, tagsList]
 
-// export { tagsList, bigTags }
 export default tagsList

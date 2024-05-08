@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Form, FormControl, Button } from 'react-bootstrap'
-// import { tagsList, bigTags } from '../components/Categories'
 import tagsList from '../components/Categories'
 
 const Search = () => {
@@ -10,6 +9,7 @@ const Search = () => {
   const [authorTerm, setAuthorTerm] = useState('')
   const [books, setBooks] = useState([])
   const [advancedToggle, setAdvancedToggle] = useState(false)
+  const [tagVisibility, setTagVisibility] = useState({})
 
   const handleSearch = async () => {
     try {
@@ -23,6 +23,21 @@ const Search = () => {
     } catch (error) {
       console.error('Error fetching book data:', error)
     }
+  }
+
+  function toggleTagVisibility(tag, motherTagName) {
+    if (motherTagName) {
+      setTagVisibility({
+        ...tagVisibility,
+        [motherTagName.concat(' / ', tag.name)]: !tagVisibility[motherTagName.concat(' / ', tag.name)],
+      })
+    } else {
+      setTagVisibility({
+        ...tagVisibility,
+        [tag.name]: !tagVisibility[tag.name],
+      })
+    }
+    console.log(tagVisibility)
   }
 
   function listTags(tags, motherTagName) {
@@ -41,11 +56,10 @@ const Search = () => {
             <Button
               className='border rounded-lg border-4 border-black h-14'
               key={tag.name}
-              onClick={function () {
-              }}>
+              onClick={() => toggleTagVisibility(tag, motherTagName)}>
               {tag.name}
             </Button>,
-            listTags(tag.subTags, motherTagName.concat(' / ', tag.name))
+            tagVisibility[motherTagName.concat(' / ', tag.name)] && listTags(tag.subTags, motherTagName.concat(' / ', tag.name))
           ]
       ))
     )
@@ -92,14 +106,17 @@ const Search = () => {
                       key={tag}
                       onClick={function () {
                         console.log(tag)
-                      }}>{tag}</Button> :
+                      }}>
+                      {tag}
+                    </Button> :
                     [
                       <Button
                         className='border rounded-lg border-4 border-black h-14'
                         key={tag.name}
-                        onClick={function () {
-                        }}>{tag.name}</Button>,
-                      // listTags(tag.subTags, tag.name)
+                        onClick={() => toggleTagVisibility(tag, null)}>
+                        {tag.name}
+                      </Button>,
+                      tagVisibility[tag.name] && listTags(tag.subTags, tag.name)
                     ]
                 ))}
               </div>

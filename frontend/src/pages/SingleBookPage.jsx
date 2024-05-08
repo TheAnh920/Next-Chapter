@@ -13,12 +13,6 @@ const SingleBookPage = () => {
   const user = useAuth();
   const username = user.user;
 
-
-
-  console.log(user)
-  const testA = ['peepee', 'poopoo', 'penis']
-  const testB = ['peepee', 'poop']
-
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
@@ -36,12 +30,6 @@ const SingleBookPage = () => {
   if (loading) {
     return (<Spinner />)
   }
-
-  // console.log('Array A: ', testA)
-  // console.log('Array B: ', testB)
-  // const mergedArray = testA.concat(testB)
-  // console.log('After combining and removing dupes: ', removeDupeCat(mergedArray))
-
 
   function removeDupeCat(array) {
     const set = new Set(array);
