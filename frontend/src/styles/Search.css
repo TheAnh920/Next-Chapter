@@ -42,41 +42,6 @@
     transition: transform 0.5s;
 }
 
-#show-advanced-button {
-    padding-left: 1.5rem;
-    color: #fff;
-    font-size: 23px;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.15em;
-    display: inline-block;
-    padding: 25px 30px;
-    position: relative;
-}
-
-#show-advanced-button:hover {
-    color: #ff00e1;
-    transition: color 0.25s ease;
-}
-
-#show-advanced-button::after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #000000;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-}
-
-#show-advanced-button:hover:after {
-    width: 100%;
-    left: 0;
-}
-
 #SearchButton {
     padding-left: 1.5rem;
     color: #fff;
@@ -120,7 +85,7 @@
 }
 
 /* resize image */
-#book-img {
+#book-img img {
     /* max-width: 230px;
     max-height: 350px; */
     padding-left: 10px;
@@ -136,7 +101,7 @@ body {
 }
 
 /* hover effect */
-#book-img:hover {
+#book-img img:hover {
     transform: scale(1.1);
     transition: transform 0.5s;
 }
@@ -157,4 +122,40 @@ body {
 
 #search-res {
     color: #353030;
+}
+
+/* Advanced Search */
+#show-advanced-button {
+    padding-left: 1.5rem;
+    color: #fff;
+    font-size: 23px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 25px 30px;
+    position: relative;
+}
+
+#show-advanced-button:hover {
+    color: #ff00e1;
+    transition: color 0.25s ease;
+}
+
+#show-advanced-button::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #000000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+#show-advanced-button:hover:after {
+    width: 100%;
+    left: 0;
 }
