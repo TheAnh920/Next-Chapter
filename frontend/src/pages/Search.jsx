@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Form, FormControl, Button } from 'react-bootstrap'
-import tagsList from '../components/Categories'
+import { tagsList, uniqueTags } from '../components/Categories'
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -25,44 +25,64 @@ const Search = () => {
     }
   }
 
-  function toggleTagVisibility(tag, motherTagName) {
+  const concatTags = (tagName, motherTagName) => {
     if (motherTagName) {
-      setTagVisibility({
-        ...tagVisibility,
-        [motherTagName.concat(' / ', tag.name)]: !tagVisibility[motherTagName.concat(' / ', tag.name)],
-      })
-    } else {
-      setTagVisibility({
-        ...tagVisibility,
-        [tag.name]: !tagVisibility[tag.name],
-      })
+      return motherTagName.concat(' / ', tagName)
     }
-    console.log(tagVisibility)
+    return tagName
   }
 
-  function listTags(tags, motherTagName) {
+  function toggleTagVisibility(tag, motherTagName) {
+    setTagVisibility({
+      ...tagVisibility,
+      [concatTags(tag.name, motherTagName)]: !tagVisibility[concatTags(tag.name, motherTagName)],
+    })
+  }
+
+  function listTags(tags, motherTagName, tagLevel) {
     return (
       tags.map(tag => (
         typeof tag === 'string' ?
           <Button
-            className='border rounded-lg border-1 border-black h-14'
+            className={'border rounded-lg border-1 border-black h-14 bg-yellow-' + tagLevel}
             key={tag}
             onClick={function () {
-              console.log(motherTagName.concat(' / ', tag))
+              console.log(concatTags(tag, motherTagName))
             }}>
             {tag}
           </Button> :
           [
-            <Button
-              className='border rounded-lg border-4 border-black h-14'
-              key={tag.name}
-              onClick={() => toggleTagVisibility(tag, motherTagName)}>
-              {tag.name}
-            </Button>,
-            tagVisibility[motherTagName.concat(' / ', tag.name)] && listTags(tag.subTags, motherTagName.concat(' / ', tag.name))
+            tagVisibility[concatTags(tag.name, motherTagName)] ?
+              <Button
+                className={'border rounded-lg border-4 border-green-500 h-14 bg-yellow-' + tagLevel}
+                key={tag.name}
+                onClick={() => toggleTagVisibility(tag, motherTagName)}>
+                {tag.name}
+              </Button> :
+              <Button
+                className={'border rounded-lg border-4 border-black h-14 bg-yellow-' + tagLevel}
+                key={tag.name}
+                onClick={() => toggleTagVisibility(tag, motherTagName)}>
+                {tag.name}
+              </Button>,
+            tagVisibility[concatTags(tag.name, motherTagName)] && listTags(tag.subTags, concatTags(tag.name, motherTagName), tagLevel + 100)
           ]
       ))
     )
+  }
+
+  function onlyUnique(value, index, array) {
+    return array.indexOf(value) === index
+  }
+  const notUniqueTagList = []
+  function getAllTags(tagList) {
+    tagList.map(tag => (
+      typeof tag === 'string' ?
+        [notUniqueTagList.push(tag),
+        ] :
+        [notUniqueTagList.push(tag.name),
+        getAllTags(tag.subTags)]
+    ))
   }
 
   function truncateTitle(title) {
@@ -98,27 +118,27 @@ const Search = () => {
                   onChange={(e) => setAuthorTerm(e.target.value)} />
               </div>
               Filter tags
-              <div className='grid grid-cols-1 min-[330px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 min-[896px]:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-1 p-1'>
-                {tagsList.map(tag => (
-                  typeof tag === 'string' ?
-                    <Button
-                      className='border rounded-lg border-1 border-black h-14'
-                      key={tag}
-                      onClick={function () {
-                        console.log(tag)
-                      }}>
-                      {tag}
-                    </Button> :
-                    [
-                      <Button
-                        className='border rounded-lg border-4 border-black h-14'
-                        key={tag.name}
-                        onClick={() => toggleTagVisibility(tag, null)}>
-                        {tag.name}
-                      </Button>,
-                      tagVisibility[tag.name] && listTags(tag.subTags, tag.name)
-                    ]
-                ))}
+              {/* <Button onClick={function () {
+                console.log(tagVisibility)
+              }}>log</Button> */}
+              {/* <Button onClick={function () {
+                getAllTags(tagsList)
+                console.log(notUniqueTagList.filter(onlyUnique).sort())
+                console.log(notUniqueTagList.filter(onlyUnique).sort().slice(100))
+                console.log(notUniqueTagList.filter(onlyUnique).sort().slice(200))
+                console.log(notUniqueTagList.filter(onlyUnique).sort().slice(300))
+              }}>get tags</Button> */}
+              <div className='grid
+                              grid-cols-1
+                              min-[330px]:grid-cols-2
+                              sm:grid-cols-3
+                              md:grid-cols-4
+                              min-[896px]:grid-cols-5
+                              lg:grid-cols-6
+                              xl:grid-cols-7
+                              2xl:grid-cols-8
+                              gap-1 p-1'>
+                {listTags(tagsList, null, 100)}
               </div>
             </>)}
           <div>
