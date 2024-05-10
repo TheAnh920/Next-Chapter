@@ -29,7 +29,7 @@ const SingleBookPage = () => {
   }, [lastSubdirectory]);
 
   if (loading) {
-    return (<Spinner />)
+    return (<div id='spinner'><Spinner /></div>)
   }
 
   function removeDupeCat(array) {
@@ -66,19 +66,27 @@ const SingleBookPage = () => {
         <div id="bookInfo">
           <div id="bookTitle">
             <h1 id="h1BookTitle">{book.volumeInfo.title}</h1>
-
-            <Button onClick={handleClick} label="Add to favorites" />
-            <Button id="favButton" onClick={handleClick}> Add to Favorites </Button>
-
+            {user.token && <Button id="favButton" onClick={handleClick}> Add to Favorites </Button>}
             <p id="bookAuthor">{book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author'}</p>
           </div>
         </div>
       </div>
 
       <div id="desSection">
-        <h2 id="Description">Description</h2>
-        <p id="bookDescription">{book.volumeInfo.description || 'No description available'}</p>
-        <p>{book.volumeInfo.categories && book.volumeInfo.categories.join('; ')}</p>
+        <h2 id="Description">Descriptions</h2>
+        {book.volumeInfo.description ?
+          <p id="bookDescription" dangerouslySetInnerHTML={{ __html: book.volumeInfo.description }} />
+          :
+          <p id="bookDescription">No descriptions available. </p>
+        }
+        <h2 id='Categories'>Tags</h2>
+        {book.volumeInfo.categories ?
+          book.volumeInfo.categories.map(category => (
+            <p id='bookCategory' key={category}>{category}</p>
+          ))
+          :
+          <p id='bookCategory'>No tags available. </p>
+        }
       </div>
     </div>
   )
