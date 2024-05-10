@@ -45,7 +45,7 @@ const Search = () => {
       tags.map(tag => (
         typeof tag === 'string' ?
           <Button
-            className={'border rounded-lg border-1 border-black h-14 bg-yellow-' + tagLevel}
+            // className={'border rounded-lg border-1 border-black h-14 bg-yellow-' + tagLevel}
             key={tag}
             onClick={function () {
               console.log(concatTags(tag, motherTagName))
@@ -55,13 +55,13 @@ const Search = () => {
           [
             tagVisibility[concatTags(tag.name, motherTagName)] ?
               <Button
-                className={'border rounded-lg border-4 border-green-500 h-14 bg-yellow-' + tagLevel}
+                // className={'border rounded-lg border-4 border-green-500 h-14 bg-yellow-' + tagLevel}
                 key={tag.name}
                 onClick={() => toggleTagVisibility(tag, motherTagName)}>
                 {tag.name}
               </Button> :
               <Button
-                className={'border rounded-lg border-4 border-black h-14 bg-yellow-' + tagLevel}
+                // className={'border rounded-lg border-4 border-black h-14 bg-yellow-' + tagLevel}
                 key={tag.name}
                 onClick={() => toggleTagVisibility(tag, motherTagName)}>
                 {tag.name}
