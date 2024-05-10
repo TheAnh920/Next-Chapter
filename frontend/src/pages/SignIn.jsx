@@ -1,33 +1,15 @@
 import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../hooks/AuthProvider';
+import { Link } from 'react-router-dom'
+import { useAuth } from '../hooks/AuthProvider'
+import Logo from '../assets/logo-no-background.png'
+import "../index.css"
 
 
 const SignIn = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const navigate = useNavigate();
-  const { loginAction } = useAuth();
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const response = await axios.post('http://localhost:5555/account/signin', { username, password });
-  //     console.log(response.data.message)
-  //     if(response.data.success) {
-  //       loginAction(response.data)
-  //       navigate('/', { replace: true });
-  //     } else {
-  //       setError(response.data.message || 'Invalid login credentials')
-  //     }
-  //     // Handle successful login, e.g., redirect to dashboard
-  //   } catch (err) {
-  //     console.log('Invalid login credentials')
-  //   }
-  // };
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const { loginAction } = useAuth()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,26 +19,34 @@ const SignIn = () => {
     } catch (err) {
       console.log('Invalid login credentials')
     }
-  };
+  }
 
   return (
     <div>
-      <header>Sign in to your account</header>
+      <img src={Logo} alt="Next Chapter logo" className='h-44' />
+      <header className='font-bold'>Sign in to your account</header>
       <div>
-        <Form onSubmit={handleSubmit}>
-          <input type='text' name='username' value={username} onChange={(e) => setUsername(e.target.value)} placeholder='username' />
+        <Form onSubmit={handleSubmit}
+          className='w-[25rem] p-5 border-[1px] border-solid border-black rounded-[10px] shadow-[0_0px_10px_-0px_rgba(0,0,0,0.5)] my-0 mx-auto'>
+          <input type='text' name='username' value={username} onChange={(e) => setUsername(e.target.value)} placeholder='username'
+            className='w-full p-2.5 rounded-[5px] border-[1px] border-solid border-black mb-5 text-[16px] text-black' />
           <br />
-          <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password' />
+          <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'
+            className='w-full p-2.5 rounded-[5px] border-[1px] border-solid border-black mb-5 text-[16px] text-black' />
           <div>
-            <button type="submit">Sign In</button>
+            <button type="submit"
+              className='font-bold bg-[#ffc0cb] text-white py-3 px-5 border-2 border-solid border-[#ffc0cb] rounded cursor-pointer mb-5 w-full'>
+              Sign In
+            </button>
           </div>
           <div>
             <div>
-              <a href='/register'>Register</a>
+              New User?
+              <Link to={`/register`}
+                className='font-bold text-black no-underline ml-1 hover:underline'>
+                Register
+              </Link>
             </div>
-            {/* <div>
-              <a href='#'>Forgot Account?</a>
-            </div> */}
           </div>
         </Form>
       </div>

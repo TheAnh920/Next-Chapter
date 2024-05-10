@@ -5,7 +5,7 @@ import axios from 'axios';
 const AuthContext = createContext()
 
 const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState(localStorage.getItem("user") || "")
     const [token, setToken] = useState(localStorage.getItem("site") || "")
     const navigate = useNavigate()
 
@@ -17,7 +17,9 @@ const AuthProvider = ({ children }) => {
                 setUser(response.data.username);
                 setToken(response.data.token);
                 localStorage.setItem("site", response.data.token);
+                localStorage.setItem("user", response.data.username);
                 localStorage.setItem("bookList", JSON.stringify(response.data.favBookList));
+                localStorage.setItem("favBookTagList", JSON.stringify(response.data.favBookTagList))
                 navigate(`/`);
                 return;
             }
@@ -32,6 +34,7 @@ const AuthProvider = ({ children }) => {
         setToken("");
         localStorage.removeItem("site");
         localStorage.removeItem("bookList");
+        localStorage.removeItem("favBookTagList");
         navigate(`/`);
     }
 
