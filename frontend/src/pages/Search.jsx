@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Form, FormControl, Button } from 'react-bootstrap'
-// import "../styles/Search.css"
 import { tagsList, uniqueTags } from '../components/Categories'
 import '../styles/Search.css'
 
@@ -99,8 +98,8 @@ const Search = () => {
 
   return (
     <div id="Search-Container-All">
-      <div id="SearchForm">
-        <Form>
+      <Form>
+        <div id="SearchForm">
           <FormControl
             id='book-search-input'
             type='text'
@@ -108,7 +107,6 @@ const Search = () => {
             placeholder='search for books...'
             className='mr-sm-2'
             onChange={(e) => setSearchTerm(e.target.value)} />
-          
           {advancedToggle && (
             <>
               <FormControl
@@ -128,66 +126,56 @@ const Search = () => {
                 console.log(notUniqueTagList.filter(onlyUnique).sort().slice(200))
                 console.log(notUniqueTagList.filter(onlyUnique).sort().slice(300))
               }}>get tags</Button> */}
-              
-              
             </>)}
-          
-          <Button id="SearchButton" variant='outline-info' onClick={handleSearch}>Search</Button>
-        </Form>
-      </div>
-
-      <div id="Advanced-Search">
-      <Button id='show-advanced-button' onClick={function () { setAdvancedToggle(!advancedToggle) }}>Show advanced options</Button>
-      <div className='grid
-                              grid-cols-1
-                              min-[330px]:grid-cols-2
-                              sm:grid-cols-3
-                              md:grid-cols-4
-                              min-[896px]:grid-cols-5
-                              lg:grid-cols-6
-                              xl:grid-cols-7
-                              2xl:grid-cols-8
-                              gap-1 p-1' id = "all-tags">
-                {listTags(tagsList, null, 100)}
-              </div>
-      </div>
-
-
-
-
-
-
+          <Button id="SearchButton" onClick={handleSearch}>Search</Button>
+        </div>
+        <Button id='show-advanced-button' onClick={function () { setAdvancedToggle(!advancedToggle) }}>Show advanced options</Button>
+        {advancedToggle && (
+          <div className='grid
+                          grid-cols-1
+                          min-[330px]:grid-cols-2
+                          sm:grid-cols-3
+                          md:grid-cols-4
+                          min-[896px]:grid-cols-5
+                          lg:grid-cols-6
+                          xl:grid-cols-7
+                          2xl:grid-cols-8
+                          gap-1 p-1'>
+            {listTags(tagsList, null, 100)}
+          </div>
+        )}
+      </Form>
       <div id="Separator">
         ____________________________________________________________________________________________
       </div>
       {/* Book cover */}
-        <div id="search-res"
-          className='grid
+      <div id="search-res"
+        className='grid
           grid-cols-[auto]
           min-[119px]:grid-cols-[auto_auto]
           min-[501px]:grid-cols-[auto_auto_auto]
           md:grid-cols-[auto_auto_auto_auto]
           lg:grid-cols-[auto_auto_auto_auto_auto]
           gap-10 p-2.5'>
-          {books.map(book => (
-            <Link to={`/book/${book.id}`} key={book.id}>
-              <table>
-                <tbody>
-                  <tr id="book-img">
-                    <td>
-                      <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td id='book-title' className='text-center'>
-                      {truncateTitle(book.volumeInfo.title)}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </Link>
-          ))}
-        </div>
+        {books.map(book => (
+          <Link to={`/book/${book.id}`} key={book.id}>
+            <table>
+              <tbody>
+                <tr id="book-img">
+                  <td>
+                    <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
+                  </td>
+                </tr>
+                <tr>
+                  <td id='book-title' className='text-center'>
+                    {truncateTitle(book.volumeInfo.title)}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }
