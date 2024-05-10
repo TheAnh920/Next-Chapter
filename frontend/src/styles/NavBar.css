@@ -1,6 +1,6 @@
 /* Navigation bar */
 
-#Navbar{
+#Navbar {
     width: 100%;
     height: 100%;
     background-color: #000000;
@@ -13,17 +13,16 @@
     text-decoration: none;
     letter-spacing: 0.15em;
     /* display: inline-block; */
-    padding: 15px 20px ;
+    padding: 15px 20px;
     position: relative;
 }
-    
 
-#Nav-Content{
+
+#Nav-Content {
     padding-left: 1rem;
     padding-right: 10rem;
     background-color: #000000;
     color: #ffffff;
-    
 }
 
 #Ad-Search {
@@ -34,9 +33,7 @@
     display: inline-block;
     padding: 25px 30px;
     position: relative;
-    
 }
-
 
 #Ad-Search:after {
     background: none repeat scroll 0 0 transparent;
@@ -56,7 +53,7 @@
     left: 0;
 }
 
-#Fav-Tags{
+#Fav-Tags {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
@@ -65,7 +62,6 @@
     padding: 25px 30px;
     position: relative;
 }
-
 
 #Fav-Tags:after {
     background: none repeat scroll 0 0 transparent;
@@ -85,7 +81,7 @@
     left: 0;
 }
 
-#Fav-Books{
+#Fav-Books {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
@@ -113,7 +109,7 @@
     left: 0;
 }
 
-#Sign-In{
+#Sign-In {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
@@ -141,8 +137,7 @@
     left: 0;
 }
 
-
-#Sign-Out{
+#Sign-Out {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
@@ -170,7 +165,7 @@
     left: 0;
 }
 
-#Register{
+#Register {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
@@ -197,15 +192,3 @@
     width: 100%;
     left: 0;
 }
-
-
-/* Home */
-.p-4{
-    width: 100%;
-    height: 1000px;
-    background-color: #353030;
-}
-
-/* .animate-ping{
-    background-color: #353030;
-} */    

@@ -97,23 +97,25 @@ const Search = () => {
   }
 
   return (
-    <div id = "Search-Container-All">
-      <div id = "SearchForm">
+    <div id="Search-Container-All">
+      <div id="SearchForm">
         <Form>
           <FormControl
+            id='book-search-input'
             type='text'
             name='title'
             placeholder='search for books...'
             className='mr-sm-2'
             onChange={(e) => setSearchTerm(e.target.value)} />
-          <Button onClick={function () { setAdvancedToggle(!advancedToggle) }}>Show advanced options</Button>
+          <Button id='show-advanced-button' onClick={function () { setAdvancedToggle(!advancedToggle) }}>Show advanced options</Button>
           {advancedToggle && (
             <>
               <FormControl
+                id='author-search-input'
                 type='text'
                 name='author'
                 placeholder='search for authors...'
-                className='mr-sm-3'
+                className='mr-sm-2'
                 onChange={(e) => setAuthorTerm(e.target.value)} />
               {/* <Button onClick={function () {
                 console.log(tagVisibility)
@@ -141,12 +143,11 @@ const Search = () => {
           <Button id="SearchButton" variant='outline-info' onClick={handleSearch}>Search</Button>
         </Form>
       </div>
-      <div id="Separator"> 
+      <div id="Separator">
         ____________________________________________________________________________________________
-      </div> 
-
+      </div>
       {/* Book cover */}
-      <div id='penis'> 
+      <div id='penis'>
         <div id="search-res"
           className='grid
           grid-cols-[auto]
@@ -156,45 +157,25 @@ const Search = () => {
           lg:grid-cols-[auto_auto_auto_auto_auto]
           gap-10 p-2.5'>
           {books.map(book => (
-            <div>
-              <tr className='h-8'>
-                <td>
-                  <Link to={`/book/${book.id}`}>
-                    <img src= {"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt= {book.volumeInfo.title} />
-                  </Link>
-                </td>
-              </tr>
-
-              {/* Book Title */}
-              <tr className='h-8'>
-                <td className='text-center'>
-                  <Link to={`/book/${book.id}`}>
-                    {book.volumeInfo.title}
-                  </Link>
-                </td>
-              </tr>
-            </div>
-          ))}
-          {/* {books.map(book => (
             <Link to={`/book/${book.id}`} key={book.id}>
-              <table className='border-2'>
+              <table>
                 <tbody>
-                  <tr>
+                  <tr id='book-img'>
                     <td>
                       <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
                     </td>
                   </tr>
                   <tr>
-                    <td className='text-center'>
+                    <td id='book-title' className='text-center'>
                       {truncateTitle(book.volumeInfo.title)}
                     </td>
                   </tr>
                 </tbody>
               </table>
             </Link>
-          ))} */}
+          ))}
         </div>
-      </div> 
+      </div>
     </div>
   )
 }
