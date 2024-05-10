@@ -2,6 +2,7 @@ import React, { useState , useEffect } from 'react'
 import axios from 'axios'
 import { useAuth } from '../hooks/AuthProvider';
 import { Button } from 'react-bootstrap';
+// import "../styles/SingleBookPage.css"
 
 const SingleBookPage = () => {
   const [book, setBook] = useState(null);

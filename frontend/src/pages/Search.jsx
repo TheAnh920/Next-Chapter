@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Form, FormControl, Button } from 'react-bootstrap'
 import { useAuth } from '../hooks/AuthProvider';
+// import "../styles/Search.css"
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,7 +26,6 @@ const Search = () => {
 
   return (
     <div id = "Search-Container-All">
-      <header>Search</header>
       <div id = "SearchForm">
         <Form>
           <FormControl
@@ -50,28 +50,30 @@ const Search = () => {
       </div> 
 
       {/* Book cover */}
-      <div className='grid grid-cols-5 content-center gap-10 p-2.5'>
-        {books.map(book => (
-          <div>
-            <tr className='h-8'>
-              <td>
-                <Link to={`/book/${book.id}`}>
-                  <img src= {"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt= {book.volumeInfo.title} />
-                </Link>
-              </td>
-            </tr>
+      <div id='penis'> 
+        <div className='grid grid-cols-5 content-center gap-10 p-2.5' id="search-res">
+          {books.map(book => (
+            <div>
+              <tr className='h-8'>
+                <td>
+                  <Link to={`/book/${book.id}`}>
+                    <img src= {"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt= {book.volumeInfo.title} />
+                  </Link>
+                </td>
+              </tr>
 
-            {/* Book Title */}
-            <tr className='h-8'>
-              <td className='text-center'>
-                <Link to={`/book/${book.id}`}>
-                  {book.volumeInfo.title}
-                </Link>
-              </td>
-            </tr>
-          </div>
-        ))}
-      </div>
+              {/* Book Title */}
+              <tr className='h-8'>
+                <td className='text-center'>
+                  <Link to={`/book/${book.id}`}>
+                    {book.volumeInfo.title}
+                  </Link>
+                </td>
+              </tr>
+            </div>
+          ))}
+        </div>
+      </div> 
     </div>
   )
 }

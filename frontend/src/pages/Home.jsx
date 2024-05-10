@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import "../index.css"
+import "../styles/NavBar.css"
+import "../styles/Search.css"
+import "../styles/SingleBookPage.css"
+
+
+
 import Spinner from '../components/Spinner'
 import { Link } from 'react-router-dom'
 

@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
 import Logo from '../assets/logo-no-background.png'
 import { useAuth } from '../hooks/AuthProvider'
+// import "../styles/NavBar.css"
 
 const NavBar = () => {
   const auth = useAuth()
