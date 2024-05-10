@@ -112,3 +112,23 @@
     color: #cdcaca;
     padding-bottom: 2rem;
 }
+
+#Categories {
+    float: none;
+    font-size: 35px;
+    font-weight: normal;
+    color: #00C2FF;
+    text-shadow: -5px 4px #000000;
+    padding-bottom: 20px;
+}
+
+#bookCategory {
+    height: 100%;
+    font-size: 17px;
+    font-weight: lighter;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    margin-right: 100px;
+    margin-left: none;
+    color: #cdcaca;
+}

@@ -121,6 +121,12 @@ body {
     transition: color 0.5s;
 }
 
+#search-no-results {
+    color: white;
+    font-size: 23px;
+    padding: 0.625rem;
+}
+
 #search-res {
     color: #353030;
 }
@@ -166,7 +172,6 @@ body {
     left: 0;
 }
 
-
 #all-tags{
     padding-top: 20px;
     color:#ffffff;
@@ -176,4 +181,56 @@ body {
 #all-tags :hover{
     color:#000000;
     transition: color 0.25s ease;
+}
+
+[id|="tag-button"],
+[id|="mother-tag-button"] {
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    height: 56px;
+}
+
+[id|="tag-button"] {
+    border-width: 1px;
+    border-color: black;
+}
+
+[id|="mother-tag-button"] {
+    border-width: 2px;
+}
+
+[id|="tag-button"]:hover {
+    color: #ff00e1;
+    transition: color 0.25s ease;
+}
+
+[id|="mother-tag-button"]:hover {
+    color: orange;
+    transition: color 0.25s ease;
+}
+
+[id|="mother-tag-button-undefined"],
+[id|="mother-tag-button-false"] {
+    border-color: black;
+}
+
+[id|="mother-tag-button-true"] {
+    border-color: orange;
+}
+
+[id$="level-1"] {
+    background-color: #2b2727;
+}
+
+[id$="level-2"] {
+    background-color: #211e1e;
+}
+
+[id$="level-3"] {
+    background-color: #171515;
+}
+
+[id$="level-4"] {
+    background-color: #0d0c0c;
 }
