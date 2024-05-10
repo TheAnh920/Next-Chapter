@@ -99,7 +99,7 @@ const Search = () => {
             id='book-search-input'
             type='text'
             name='title'
-            placeholder='Search for books...'
+            placeholder='search for books...'
             className='mr-sm-2'
             onChange={(e) => setSearchTerm(e.target.value)} />
           {advancedToggle && (

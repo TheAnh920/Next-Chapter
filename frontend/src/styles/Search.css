@@ -178,11 +178,6 @@ body {
 
 }
 
-#all-tags :hover{
-    color:#000000;
-    transition: color 0.25s ease;
-}
-
 [id|="tag-button"],
 [id|="mother-tag-button"] {
     color: #fff;
