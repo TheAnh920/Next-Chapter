@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useAuth } from '../hooks/AuthProvider';
 import { Button } from 'react-bootstrap';
 import Spinner from '../components/Spinner';
-// import "../styles/SingleBookPage.css"
+import "../styles/SingleBookPage.css"
 
 const SingleBookPage = () => {
   const [book, setBook] = useState(null);
