@@ -99,7 +99,7 @@ const Search = () => {
             id='book-search-input'
             type='text'
             name='title'
-            placeholder='search for books...'
+            placeholder='Search for books...'
             className='mr-sm-2'
             onChange={(e) => setSearchTerm(e.target.value)} />
           {advancedToggle && (
@@ -111,8 +111,7 @@ const Search = () => {
               className='mr-sm-2'
               onChange={(e) => setAuthorTerm(e.target.value)} />
           )}
-          <Button id="SearchButton" onClick={handleSearch}>Search
-          </Button>
+          <Button id="SearchButton" onClick={handleSearch}>Search</Button>
         </div>
         <Button id='show-advanced-button' onClick={function () { setAdvancedToggle(!advancedToggle) }}>Show advanced options</Button>
         {/* <Button onClick={function () {
@@ -135,7 +134,7 @@ const Search = () => {
                           lg:grid-cols-6
                           xl:grid-cols-7
                           2xl:grid-cols-8
-                          gap-1 p-1'>
+                          gap-1 p-1' id="all-tags">
             {listTags(tagsList, null, 1)}
           </div>
         )}
