@@ -136,7 +136,7 @@
     width: 95%;
     left: 0;
 }
-
+/* sign out */
 #Sign-Out {
     color: #fff;
     text-transform: uppercase;
@@ -145,6 +145,7 @@
     display: inline-block;
     padding: 25px 30px;
     position: relative;
+    
 }
 
 #Sign-Out::after {

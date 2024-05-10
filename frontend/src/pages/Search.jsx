@@ -104,7 +104,7 @@ const Search = () => {
             id='book-search-input'
             type='text'
             name='title'
-            placeholder='search for books...'
+            placeholder='Search for books...'
             className='mr-sm-2'
             onChange={(e) => setSearchTerm(e.target.value)} />
           {advancedToggle && (
@@ -113,7 +113,7 @@ const Search = () => {
                 id='author-search-input'
                 type='text'
                 name='author'
-                placeholder='search for authors...'
+                placeholder='Search for authors...'
                 className='mr-sm-2'
                 onChange={(e) => setAuthorTerm(e.target.value)} />
               {/* <Button onClick={function () {
@@ -140,7 +140,7 @@ const Search = () => {
                           lg:grid-cols-6
                           xl:grid-cols-7
                           2xl:grid-cols-8
-                          gap-1 p-1'>
+                          gap-1 p-1' id="all-tags">
             {listTags(tagsList, null, 100)}
           </div>
         )}
@@ -156,7 +156,7 @@ const Search = () => {
           min-[501px]:grid-cols-[auto_auto_auto]
           md:grid-cols-[auto_auto_auto_auto]
           lg:grid-cols-[auto_auto_auto_auto_auto]
-          gap-10 p-2.5'>
+          gap-10 p-2.5' >
         {books.map(book => (
           <Link to={`/book/${book.id}`} key={book.id}>
             <table>

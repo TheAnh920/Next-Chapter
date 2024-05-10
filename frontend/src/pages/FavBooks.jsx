@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import { useAuth } from '../hooks/AuthProvider'
 import Spinner from '../components/Spinner'
+import "../styles/FavBooks.css"
 
 const FavBooks = () => {
 
@@ -41,23 +42,25 @@ const FavBooks = () => {
                         min-[501px]:grid-cols-[auto_auto_auto]
                         md:grid-cols-[auto_auto_auto_auto]
                         lg:grid-cols-[auto_auto_auto_auto_auto]
-                        gap-10 p-2.5'>
+                        gap-10 p-2.5' >
           {bookList.map(book => (
             <Link to={`/book/${book.bookId}`} key={book.bookId}>
-              <table>
-                <tbody>
-                  <tr>
-                    <td>
-                      <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.bookId + "?fife=w400-h600&source=gbs_api"} alt={book.bookTitle} />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className='text-center'>
-                      {truncateTitle(book.bookTitle)}
-                    </td>
-                  </tr>
-                </tbody>
+              <div id="fav-container">
+                <table>
+                  <tbody>
+                    <tr id="fav-book">
+                      <td>
+                        <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.bookId + "?fife=w400-h600&source=gbs_api"} alt={book.bookTitle} />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td  id='book-title' className='text-center'>
+                        {truncateTitle(book.bookTitle)}
+                      </td>
+                    </tr>
+                  </tbody>
               </table>
+              </div>
             </Link>
           ))}
         </div>
