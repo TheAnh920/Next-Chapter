@@ -3,59 +3,33 @@ import { NavLink as Link } from 'react-router-dom'
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
 import Logo from '../assets/logo-no-background.png'
 import { useAuth } from '../hooks/AuthProvider'
+// import "../styles/NavBar.css"
 
 const NavBar = () => {
   const auth = useAuth()
   const user = useAuth()
 
-  // const [searchTerm, setSearchTerm] = useState('');
-  // const [books, setBooks] = useState([]);
-
-  // const handleSearch = async () => {
-  //   try {
-  //     const response = await axios.get('http://localhost:5555/books/search', {
-  //       params: {
-  //         q: searchTerm,
-  //       },
-  //     });
-  //     setBooks(response.data.items || []);
-  //   } catch (error) {
-  //     console.error('Error fetching book data:', error);
-  //   }
-  // };
-
   return (
-    <Navbar>
-      <Nav>
+    <Navbar id= "Navbar">
+      <Nav id = "Logo">
         <Link to={`/`}>
           <img src={Logo} alt="Next Chapter logo" className='h-16 inline-block' />
         </Link>
-        {/* <Form inline>
-              <FormControl
-                type='Text'
-                placeholder='Search'
-                className='mr-sm-2'
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-              <Link to={`/search`}>
-                <Button variant='outline-info' onClick={handleSearch}>Search</Button>
-              </Link>
-            </Form> */}
-        <Link to={`/search`}>Search</Link>
-        <span>
-          {!user.token ? (
-            <>
-              <Link to={`/login`}>Sign In</Link>
-              <Link to={`/register`}>Register</Link>
-            </>
-          ) : (
-            <>
-              <Link to={`/mytags`}>Favorite Tags</Link>
-              <Link to={`/mybooks`}>Favorite Books</Link>
-              <Button variant='outline-info' onClick={() => auth.logOut()}>Sign Out</Button>
-            </>
-          )}
-        </span>
+      </Nav>
+      <Nav id = "Nav-Content">
+        <Link to={`/search`}id= "Ad-Search">Search</Link>
+        {!user.token ? (
+          <>
+            <Link to={`/login`} id = "Sign-In">Sign In</Link>
+            <Link to={`/register`} id = "Register">Register</Link>
+          </>
+        ) : (
+          <>
+            <Link to={`/mytags`} id = "Fav-Tags">Favorite Tags</Link>
+            <Link to={`/mybooks`} id = "Fav-Books">Favorite Books</Link>
+            <Button variant='outline-info' id ="Sign-Out" onClick={() => auth.logOut()}>Sign Out</Button>
+          </>
+        )}
       </Nav>
     </Navbar>
   )

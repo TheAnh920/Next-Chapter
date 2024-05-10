@@ -1,0 +1,145 @@
+/* Search Page */
+/* Search form */
+
+
+
+#Search-Container-All{
+    width: 100%;
+    height: 100%;
+    background-color: #353030;
+    
+
+}
+
+#SearchForm{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    padding-left: 20rem;
+    padding-top: 30px;
+    font-size: 30px;
+    
+
+}
+
+#SearchForm .mr-sm-2:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.mr-sm-2{
+    background-color: #d9d9d9;
+    padding-left: 1rem;
+    border: #d9d9d9 2px solid;
+    border-radius: 30px;
+}
+
+
+.mr-sm-3{
+    background-color: #d9d9d9;
+    padding-left: 1rem;
+    border: #d9d9d9 2px solid;
+    border-radius: 30px;
+    margin-left: 1.5rem;
+
+}
+
+.mr-sm-3:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+#SearchButton {
+    padding-left: 1.5rem;
+    color: #fff;
+    font-size: 23px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 25px 30px;
+    position: relative;
+}
+
+#SearchButton:hover{
+    color: #ff00e1;
+
+    transition: color 0.25s ease;
+ 
+}
+
+
+
+#SearchButton::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #000000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+
+}
+
+#SearchButton:hover:after{
+    width: 100%;
+    left: 0;
+}
+
+.grid{
+    padding-top: 2rem;
+} 
+
+#Separator{
+    text-align: center;
+    font-size: 30px;
+    color: #a33db1;
+    padding-bottom: 2rem;
+}
+
+
+
+/* resize image */
+.h-8 img{
+    /* max-width: 230px;
+    max-height: 350px; */
+    padding-left: 10px;
+    width: 250px;
+    height: 400px;
+    display: block;
+    /* object-fit: cover; */
+    /* border: #000000 2px solid; */
+}
+
+body {
+    background: #353030;
+}
+
+/* hover effect */
+.h-8 img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+/* book title */
+.text-center {
+    padding-left: 10px;
+    font-size: 20px;
+    width: 250px;
+    color: #cfcccc;
+    padding-top: 1.5rem;
+    
+}
+
+.text-center:hover{
+    color: #ab07c1;
+    transition: color 0.5s;
+
+}
+
+
+#search-res{
+    color: #353030;
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Form, FormControl, Button } from 'react-bootstrap'
+// import "../styles/Search.css"
 import { tagsList, uniqueTags } from '../components/Categories'
 
 const Search = () => {
@@ -96,9 +97,8 @@ const Search = () => {
   }
 
   return (
-    <div>
-      <header>Search</header>
-      <div>
+    <div id = "Search-Container-All">
+      <div id = "SearchForm">
         <Form>
           <FormControl
             type='text'
@@ -109,15 +109,12 @@ const Search = () => {
           <Button onClick={function () { setAdvancedToggle(!advancedToggle) }}>Show advanced options</Button>
           {advancedToggle && (
             <>
-              <div>
-                <FormControl
-                  type='text'
-                  name='author'
-                  placeholder='search for authors...'
-                  className='mr-sm-2'
-                  onChange={(e) => setAuthorTerm(e.target.value)} />
-              </div>
-              Filter tags
+              <FormControl
+                type='text'
+                name='author'
+                placeholder='search for authors...'
+                className='mr-sm-3'
+                onChange={(e) => setAuthorTerm(e.target.value)} />
               {/* <Button onClick={function () {
                 console.log(tagVisibility)
               }}>log</Button> */}
@@ -141,37 +138,63 @@ const Search = () => {
                 {listTags(tagsList, null, 100)}
               </div>
             </>)}
-          <div>
-            <Button onClick={handleSearch}>Search</Button>
-          </div>
+          <Button id="SearchButton" variant='outline-info' onClick={handleSearch}>Search</Button>
         </Form>
       </div>
-      <div className='grid
-                      grid-cols-[auto]
-                      min-[119px]:grid-cols-[auto_auto]
-                      min-[501px]:grid-cols-[auto_auto_auto]
-                      md:grid-cols-[auto_auto_auto_auto]
-                      lg:grid-cols-[auto_auto_auto_auto_auto]
-                      gap-10 p-2.5'>
-        {books.map(book => (
-          <Link to={`/book/${book.id}`} key={book.id}>
-            <table className='border-2'>
-              <tbody>
-                <tr>
-                  <td>
-                    <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
-                  </td>
-                </tr>
-                <tr>
-                  <td className='text-center'>
-                    {truncateTitle(book.volumeInfo.title)}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </Link>
-        ))}
-      </div>
+      <div id="Separator"> 
+        ____________________________________________________________________________________________
+      </div> 
+
+      {/* Book cover */}
+      <div id='penis'> 
+        <div id="search-res"
+          className='grid
+          grid-cols-[auto]
+          min-[119px]:grid-cols-[auto_auto]
+          min-[501px]:grid-cols-[auto_auto_auto]
+          md:grid-cols-[auto_auto_auto_auto]
+          lg:grid-cols-[auto_auto_auto_auto_auto]
+          gap-10 p-2.5'>
+          {books.map(book => (
+            <div>
+              <tr className='h-8'>
+                <td>
+                  <Link to={`/book/${book.id}`}>
+                    <img src= {"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt= {book.volumeInfo.title} />
+                  </Link>
+                </td>
+              </tr>
+
+              {/* Book Title */}
+              <tr className='h-8'>
+                <td className='text-center'>
+                  <Link to={`/book/${book.id}`}>
+                    {book.volumeInfo.title}
+                  </Link>
+                </td>
+              </tr>
+            </div>
+          ))}
+          {/* {books.map(book => (
+            <Link to={`/book/${book.id}`} key={book.id}>
+              <table className='border-2'>
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className='text-center'>
+                      {truncateTitle(book.volumeInfo.title)}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </Link>
+          ))} */}
+        </div>
+      </div> 
     </div>
   )
 }

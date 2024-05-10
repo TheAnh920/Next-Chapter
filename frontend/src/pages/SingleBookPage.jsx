@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useAuth } from '../hooks/AuthProvider';
 import { Button } from 'react-bootstrap';
 import Spinner from '../components/Spinner';
+// import "../styles/SingleBookPage.css"
 
 const SingleBookPage = () => {
   const [book, setBook] = useState(null);
@@ -53,14 +54,34 @@ const SingleBookPage = () => {
   };
 
   return (
-    <div>
-      {user.token && <Button onClick={handleClick}>Add to Favorites</Button>}
-      <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
-      <h1>{book.volumeInfo.title}</h1>
-      <p>{book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author'}</p>
-      <p>{book.volumeInfo.description || 'No description available'}</p>
-      <p>{book.volumeInfo.categories && book.volumeInfo.categories.join('; ')}</p>
+    <div id = "containerAll">
+      <div id = "container">
+        {/* SingleBookPage<br/>  */}
+        {/* <Button onClick={handleClick} label="Add to favorites" />
+        <Button onClick={handleClick}> Add to Favorites </Button> */}
+        <div id = "bookCover">
+        <img src= {"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt= {book.volumeInfo.title} />
+        </div>
+
+        <div id = "bookInfo">
+          <div id = "bookTitle">
+          <h1 id = "h1BookTitle">{book.volumeInfo.title}</h1>
+          
+          <Button  onClick={handleClick} label="Add to favorites" />
+          <Button id = "favButton" onClick={handleClick}> Add to Favorites </Button>
+        
+          <p id = "bookAuthor">{book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author'}</p>
+          </div>   
+        </div>
+      </div>
+      
+      <div id = "desSection">
+          <h2 id = "Description">Description</h2>
+        <p id = "bookDescription">{book.volumeInfo.description || 'No description available'}</p>
+        <p>{book.volumeInfo.categories && book.volumeInfo.categories.join('; ')}</p>
+      </div>
     </div>
+
   )
 }
 
