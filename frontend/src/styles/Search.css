@@ -113,6 +113,11 @@
     /* object-fit: cover; */
     /* border: #000000 2px solid; */
 }
+
+body {
+    background: #353030;
+}
+
 /* hover effect */
 .h-8 img:hover {
     transform: scale(1.1);
