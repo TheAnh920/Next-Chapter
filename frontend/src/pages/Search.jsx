@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Form, FormControl, Button } from 'react-bootstrap'
-import { tagsList, uniqueTags } from '../components/Categories'
+import tagsList from '../components/Categories'
 import '../styles/Search.css'
 
 const Search = () => {
