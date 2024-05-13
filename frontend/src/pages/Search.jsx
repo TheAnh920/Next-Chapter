@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Form, FormControl, Button } from 'react-bootstrap'
@@ -8,10 +8,15 @@ import '../styles/Search.css'
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [authorTerm, setAuthorTerm] = useState('')
+  const [tagTerms, setTagTerms] = useState([])
   const [books, setBooks] = useState([])
   const [searched, setSearched] = useState(false)
   const [advancedToggle, setAdvancedToggle] = useState(false)
   const [tagVisibility, setTagVisibility] = useState({})
+
+  useEffect(() => {
+    document.title = 'Search | Next Chapter'
+  }, [])
 
   const handleSearch = async () => {
     try {
@@ -30,7 +35,11 @@ const Search = () => {
 
   const concatTags = (tagName, motherTagName) => {
     if (motherTagName) {
-      return motherTagName.concat(' / ', tagName)
+      if (tagName == 'All') {
+        return motherTagName
+      } else {
+        return motherTagName.concat(' / ', tagName)
+      }
     }
     return tagName
   }

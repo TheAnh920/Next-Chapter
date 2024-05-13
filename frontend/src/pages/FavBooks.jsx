@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios';
-import { useAuth } from '../hooks/AuthProvider'
 import Spinner from '../components/Spinner'
 import "../styles/FavBooks.css"
 
 const FavBooks = () => {
-
   const [bookList, setBookList] = useState([])
   const [loading, setLoading] = useState(true)
-  const { user } = useAuth()
 
   useEffect(() => {
+    document.title = 'Favorite Books | Next Chapter'
     // Load bookList from localStorage when component mounts
     const storedBookList = localStorage.getItem('bookList')
     if (storedBookList) {

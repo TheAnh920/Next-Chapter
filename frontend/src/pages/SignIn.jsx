@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../hooks/AuthProvider'
@@ -11,8 +11,12 @@ const SignIn = () => {
   const [password, setPassword] = useState('')
   const { loginAction } = useAuth()
 
+  useEffect(() => {
+    document.title = 'Sign In | Next Chapter'
+  }, [])
+
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
       loginAction(username, password)
       // Handle successful login, e.g., redirect to dashboard

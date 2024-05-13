@@ -1,14 +1,3 @@
-const biographyAndAutobiography = {
-    name: 'Biography & Autobiography',
-    subTags: ['All', 'General', 'Adventurers & Explorers', 'African American & Black', 'Arab & Middle Eastern', 'Artists, Architects, Photographers', 'Asian & Asian American',
-        'Aviation & Nautical', 'Business', 'Composers & Musicians', 'Criminals & Outlaws', 'Culinary', 'Cultural & Regional', 'Doctors', 'Editors, Journalists, Publishers',
-        'Educators', 'Entertainment & Performing Arts', 'Environmentalists & Naturalists', 'Famous', 'Fashion', 'Fire & Emergency Services', 'Hispanic & Latino', 'Historical',
-        'Indigenous', 'Indigenous Peoples of Turtle Island', 'Jewish', 'Judges', 'Law Enforcement', 'Lawyers & Judges', 'LGBTQ+', 'Literary Figures', 'Medical', 'Memoirs', 'Military',
-        'Music', 'Native American', 'Nurses', 'People with Disabilities', 'Performing Arts', 'Philosophers', 'Photographers', 'Physicians', 'Political', 'Presidents & Heads of State',
-        'Psychologists', 'Reference', 'Religious', 'Rich & Famous', 'Royalty', 'Science & Technology', 'Social Activists', 'Social Scientists & Psychologists', 'Sports', 'Surgeons',
-        'Survival', 'Teachers', 'Women'
-    ]
-}
 const manga = { name: 'Manga', subTags: ['All', 'General', 'Erotica & Hentai', 'Isekai', 'Magical Girl', 'Mecha', "Yaoi (Boys' Love)", "Yuri (Girls' Love)"] }
 const eastAsianStyle = { name: 'East Asian Style', subTags: ['All', 'General', manga, 'Manhua', 'Manhwa'] }
 const fantasy = { name: 'Fantasy', subTags: ['All', 'General', 'Dark Fantasy', 'Dragons & Mythical Creatures', 'Epic'] }
@@ -41,7 +30,7 @@ const drama = {
         'Middle Eastern', 'Monologues', 'Native American', 'Russian & Soviet', 'Shakespeare', type, 'Women Authors'
     ]
 }
-const actionAndAdventure = { name: 'Action & Adventure', subTags: ['', 'Fantasy', 'Romance'] }
+const actionAndAdventure = { name: 'Action & Adventure', subTags: ['All', 'Fantasy', 'Romance'] }
 const africanAmericanAndBlack = {
     name: 'African American & Black',
     subTags: ['All', 'General', 'Christian', 'Erotica', 'Historical', 'Mystery & Detective', 'Romance', 'Urban & Street Lit', 'Women']
@@ -239,14 +228,14 @@ const places = {
     ]
 }
 const readers = { name: 'Readers', subTags: ['All', 'Beginner', 'Intermediate', 'Chapter Books', 'Hi-Lo'] }
-const religiouChristian = {
+const religiousChristian = {
     name: 'Christian',
     subTags: ['All', 'General', 'Action & Adventure', 'Animals', 'Bedtime & Dreams', 'Comics & Graphic Novels', 'Early Readers', 'Emotions & Feelings', 'Family',
         'Fantasy & Science Fiction', 'Friendship', 'Historical', 'Holidays & Celebrations', 'Humorous', 'Inspirational', 'Learning Concepts', 'Mysteries & Detective Stories',
         'People & Places', 'Relationships', 'Social Issues', 'Sports & Recreation', 'Values & Virtues'
     ]
 }
-const religious = { name: 'Religious', subTags: ['All', 'General', 'Buddhist', religiouChristian, 'Hindu', 'Jewish', 'Muslim'] }
+const religious = { name: 'Religious', subTags: ['All', 'General', 'Buddhist', religiousChristian, 'Hindu', 'Jewish', 'Muslim'] }
 const scienceAndNature = { name: 'Science & Nature', subTags: ['All', 'General', 'Disasters', 'Environment', 'Flowers & Plants', 'Trees & Forests', 'Weather'] }
 const juvenileFictionScienceFiction = { name: 'Science Fiction', subTags: ['All', 'General', 'Alien Contact', 'Space Exploration', 'Time Travel'] }
 const socialThemes = {
@@ -283,17 +272,137 @@ const juvenileFiction = {
         'Work', 'Zombies'
     ]
 }
-const juvenileNonfictionActivityBooks = { name: 'Activity Books', subTags: ['All', 'General', 'Coloring', 'Sticker'] }
-const juvenileNonfiction = {
-    name: 'Juvenile Nonfiction',
-    subTags: ['All', 'General', 'Activism & Social Justice', 'Activities', juvenileNonfictionActivityBooks, 'Adventure & Adventurers', 'African American & Black', 'Alphabet',
+const literaryCollectionsAmerican = { name: 'American', subTags: ['All', 'General', 'African American & Black', 'Asian American & Pacific Islander', 'Hispanic & Latino'] }
+const literaryCollectionsAsian = { name: 'Asian', subTags: ['All', 'General', 'Chinese', 'Indic', 'Japanese'] }
+const literaryCollectionsEuropean = {
+    name: 'European',
+    subTags: ['All', 'General', 'Eastern', 'English, Irish, Scottish, Welsh', 'French', 'German', 'Italian', 'Scandinavian', 'Spanish & Portuguese'
     ]
 }
-const tagsList = ['Antiques & Collectibles', 'Architecture', 'Art', 'Bibles', biographyAndAutobiography, 'Body, Mind & Spirit', 'Business & Economics', comicsAndGraphicNovels,
+const subjectsAndThemes = { name: 'Subjects & Themes', subTags: ['All', 'General', 'Animals & Nature', 'Love & Erotica', 'Places', 'Religious & Inspirational', 'War'] }
+const literaryCollections = {
+    name: 'Literary Collections',
+    subTags: ['All', 'General', 'African', literaryCollectionsAmerican, 'Ancient & Classical', literaryCollectionsAsian, 'Australian & Oceanian', 'Canadian',
+        'Caribbean & Latin American', 'Diaries & Journals', literaryCollectionsEuropean, 'Essays', 'Indigenous', 'Indigenous Peoples of Turtle Island', 'Interviews', 'Letters',
+        'LGBTQ+', 'Medieval', 'Middle Eastern', 'Native American', "Prisoners' Writings", 'Russian & Soviet', 'Speeches', subjectsAndThemes, 'Women Authors'
+    ]
+}
+const poetryAmerican = { name: 'American', subTags: ['All', 'General', 'African American & Black', 'Asian American & Pacific Islander', 'Hispanic & Latino'] }
+const poetryAsian = { name: 'Asian', subTags: ['All', 'General', 'Chinese', 'Japanese'] }
+const poetryEuropean = { name: 'European', subTags: ['All', 'General', 'Eastern', 'English, Irish, Scottish, Welsh', 'French', 'German', 'Italian', 'Spanish & Portuguese'] }
+const poetrySubjectsAndThemes = {
+    name: 'Subjects & Themes',
+    subTags: ['All', 'General', 'Animals & Nature', 'Death, Grief, Loss', 'Family', 'Humorous', 'Love & Erotica', 'Motivational & Inspirational', 'Places', 'Political & Protest',
+        'Religious', 'War'
+    ]
+}
+const poetry = {
+    name: 'Poetry',
+    subTags: ['All', 'General', 'African', poetryAmerican, 'Ancient & Classical', 'Anthologies (multiple authors)', poetryAsian, 'Australian & Oceanian', 'Canadian',
+        'Caribbean & Latin American', poetryEuropean, 'Epic', 'Haiku', 'History & Criticism', 'Indigenous', 'Indigenous Peoples of Turtle Island', 'Jewish', 'LGBTQ+', 'Medieval',
+        'Middle Eastern', 'Native American', 'Nursery Rhymes', 'Russian & Soviet', 'Shakespeare', 'Sonnets', poetrySubjectsAndThemes, 'Turkic', 'Women Authors'
+    ]
+}
+const youngAdultFictionActionAndAdventure = { name: 'Action & Adventure', subTags: ['All', 'General', 'Pirates', 'Survival Stories'] }
+const youngAdultFictionAnimals = { name: 'Animals', subTags: ['All', 'General', 'Horses', 'Marine Life', 'Mythical Creatures', 'Pets'] }
+const youngAdultFictionComicsAndGraphicNovels = {
+    name: 'Comics & Graphic Novels',
+    subTags: ['All', 'General', 'Action & Adventure', 'African American & Black', 'Asian American & Pacific Islander', 'Classic Adaptation', 'Coming of Age',
+        'Diversity & Multicultural', 'Dystopian', 'Fairy Tales, Folklore, Legends & Mythology', 'Fantasy', 'Hispanic & Latino', 'Historical', 'Horror', 'Humorous', 'Indigenous',
+        'Indigenous Peoples of Turtle Island', 'LGBTQ+', 'Light Novel', 'Manga', 'Media Tie-In', 'Mystery & Detective', 'Native American', 'Paranormal', 'Romance', 'Science Fiction',
+        'Superheroes'
+    ]
+}
+const youngAdultFictionFairyTalesAndFolklore = { name: 'Fairy Tales & Folklore', subTags: ['All', 'General', 'Adaptations', 'Anthologies', 'Country & Cultural'] }
+const youngAdultFictionFamily = {
+    name: 'Family',
+    subTags: ['All', 'General', 'Adoption', 'Alternative Family', 'Blended Families', 'Marriage & Divorce', 'Multigenerational', 'Orphans & Foster Homes', 'Parents', 'Siblings'
+    ]
+}
+const youngAdultFictionFantasy = { name: 'Fantasy', subTags: ['All', 'General', 'Contemporary', 'Dark Fantasy', 'Epic', 'Historical', 'Indigenous', 'Romance', 'Wizards & Witches'] }
+const youngAdultFictionHealthAndDailyLiving = { name: 'Health & Daily Living', subTags: ['All', 'General', 'Diseases, Illnesses & Injuries'] }
+const historicalUnitedStates = {
+    name: 'United States',
+    subTags: ['All', 'General', 'Colonial & Revolutionary Periods', '19th Century', 'Civil War Period (1850-1877)', '20th Century', '21st Century'
+    ]
+}
+const youngAdultFictionHistorical = {
+    name: 'Historical',
+    subTags: ['All', 'General', 'Africa', 'Ancient Civilizations', 'Asia', 'Australia & Oceania', 'Canada', 'Europe', 'Exploration & Discovery', 'Holocaust', 'Medieval',
+        'Middle East', 'Military & Wars', 'Prehistory', 'Renaissance', historicalUnitedStates
+    ]
+}
+const youngAdultFictionHumorous = { name: 'Humorous', subTags: ['All', 'General', 'Dark Humor'] }
+const youngAdultFictionIndigenous = {
+    name: 'Indigenous',
+    subTags: ['All', 'General', 'Cautionary Tales', 'City Life', 'Family Life', 'Historical', 'Life Stories', 'Oral Stories', 'Retellings', 'Teachings'
+    ]
+}
+const youngAdultFictionLegendsMythsFables = { name: 'Legends, Myths, Fables', subTags: ['All', 'General', 'Arthurian', 'Greek & Roman'] }
+const youngAdultFictionLgbtqPlus = { name: 'LGBTQ+', subTags: ['All', 'General', 'Bisexual', 'Gay', 'Lesbian', 'Transgender', 'Two-Spirited & Indigiqueer'] }
+const youngAdultFictionLifestyles = { name: 'Lifestyles', subTags: ['City & Town Life', 'Country Life', 'Farm & Ranch Life'] }
+const youngAdultFictionPerformingArts = { name: 'Performing Arts', subTags: ['All', 'General', 'Dance', 'Film', 'Music', 'Television & Radio', 'Theater & Musicals'] }
+const youngAdultFictionPlaces = {
+    name: 'Places',
+    subTags: ['All', 'General', 'Africa', 'Asia', 'Australia & Oceania', 'Canada', 'Caribbean & Latin America', 'Europe', 'Mexico', 'Middle East', 'Polar Regions', 'United States'
+    ]
+}
+const youngAdultFictionChristian = {
+    name: 'Christian',
+    subTags: ['All', 'General', 'Action & Adventure', 'Comics & Graphic Novels', 'Fantasy', 'Historical', 'Mysteries & Detective Stories', 'Relationships', 'Science Fiction',
+        'Social Issues'
+    ]
+}
+const youngAdultFictionReligious = { name: 'Religious', subTags: ['All', 'General', 'Agnostic & Atheist', 'Buddhist', youngAdultFictionChristian, 'Hindu', 'Jewish', 'Muslim'] }
+const youngAdultFictionRomance = {
+    name: 'Romance',
+    subTags: ['All', 'General', 'Clean & Wholesome', 'Contemporary', 'Historical', 'Indigenous', 'LGBTQ+', 'Multicultural & Interracial', 'Paranormal', 'Romantic Comedy'
+    ]
+}
+const schoolAndEducation = { name: 'School & Education', subTags: ['All', 'General', 'Boarding School & Prep School', 'College & University'] }
+const youngAdultFictionScienceAndNature = { name: 'Science & Nature', subTags: ['All', 'General', 'Environment'] }
+const youngAdultFictionScienceFiction = {
+    name: 'Science Fiction',
+    subTags: ['All', 'General', 'Alien Contact', 'Apocalyptic & Post-Apocalyptic', 'Indigenous Futurism', 'Romance', 'Space Opera', 'Time Travel'
+    ]
+}
+const youngAdultFictionSocialThemes = {
+    name: 'Social Themes',
+    subTags: ['All', 'General', 'Activism & Social Justice', 'Assimilation', 'Bullying', 'Class Differences', 'Cutting & Self-Harm', 'Dating & Sex', 'Death, Grief, Bereavement',
+        'Depression', 'Drugs, Alcohol, Substance Abuse', 'Eating Disorders & Body Image', 'Emigration & Immigration', 'Emotions & Feelings', 'Friendship', 'Mental Illness',
+        'New Experience', 'Peer Pressure', 'Physical & Emotional Abuse', 'Poverty & Homelessness', 'Pregnancy', 'Prejudice & Racism', 'Religion & Faith', 'Runaways',
+        'Self-Esteem & Self-Reliance', 'Sexual Abuse', 'Suicide', 'Values & Virtues', 'Violence'
+    ]
+}
+const youngAdultFictionSportsAndRecreation = {
+    name: 'Sports & Recreation',
+    subTags: ['All', 'General', 'Baseball & Softball', 'Basketball', 'Camping & Outdoor Activities', 'Equestrian', 'Extreme Sports', 'Football', 'Gymnastics', 'Hockey',
+        'Martial Arts', 'Skateboarding', 'Soccer', 'Track & Field', 'Water Sports', 'Winter Sports'
+    ]
+}
+const thrillersAndSuspense = { name: 'Thrillers & Suspense', subTags: ['All', 'General', 'Crime', 'Espionage', 'Psychological', 'Supernatural'] }
+const travelAndTransportation = { name: 'Travel & Transportation', subTags: ['All', 'General', 'Car & Road Trips'] }
+const youngAdultFiction = {
+    name: 'Young Adult Fiction',
+    subTags: ['All', 'General', youngAdultFictionActionAndAdventure, 'African American & Black', 'Alternative History', youngAdultFictionAnimals, 'Art',
+        'Asian American & Pacific Islander', 'Biographical', 'Biracial & Multiracial', 'Books & Libraries', 'Boys & Men', 'Careers, Occupations, Internships', 'Classics',
+        'Clean & Nonviolent', youngAdultFictionComicsAndGraphicNovels, 'Coming of Age', 'Computers & Digital Media', 'Cooking & Food', 'Disabilities', 'Diversity & Multicultural',
+        'Dystopian', 'Epistolary (Letters & Diaries)', youngAdultFictionFairyTalesAndFolklore, youngAdultFictionFamily, youngAdultFictionFantasy, 'Fashion & Beauty', 'First Nations',
+        'Ghost Stories', 'Girls & Women', youngAdultFictionHealthAndDailyLiving, 'Hispanic & Latino', youngAdultFictionHistorical, 'Holidays & Celebrations', 'Horror',
+        youngAdultFictionHumorous, youngAdultFictionIndigenous, 'Indigenous Peoples of Turtle Island', 'Interactive Adventures', 'Inuit', 'Law & Crime',
+        youngAdultFictionLegendsMythsFables, youngAdultFictionLgbtqPlus, youngAdultFictionLifestyles, 'Literary', 'Loners & Outcasts', 'Magical Realism', 'Media Tie-In',
+        'Mermaids & Mermen', 'Métis', 'Middle Eastern & Arab American', 'Monsters', 'Mysteries & Detective Stories', 'Native American', 'Neurodiversity', 'Novels in Verse',
+        'Own Voices', 'Paranormal, Occult & Supernatural', youngAdultFictionPerformingArts, youngAdultFictionPlaces, 'Poetry', 'Politics & Government', 'Recycling & Green Living',
+        youngAdultFictionReligious, youngAdultFictionRomance, 'Royalty', 'Satire', schoolAndEducation, youngAdultFictionScienceAndNature, youngAdultFictionScienceFiction,
+        'Short Stories, Collections & Anthologies', youngAdultFictionSocialThemes, youngAdultFictionSportsAndRecreation, 'Steampunk', 'Superheroes', 'Technology',
+        thrillersAndSuspense, travelAndTransportation, 'Urban & Street Lit', 'Vampires', 'Visionary & Metaphysical', 'War & Military', 'Werewolves & Shifters', 'Westerns', 'Zombies'
+    ]
+}
+const tagsList = ['Antiques & Collectibles', 'Architecture', 'Art', 'Bibles', 'Biography & Autobiography', 'Body, Mind & Spirit', 'Business & Economics', comicsAndGraphicNovels,
     'Computers', 'Cooking', 'Crafts & Hobbies', 'Design', drama, 'Education', 'Family & Relationships', fiction, 'Foreign Language Study', 'Games & Activities', 'Gardening',
-    'Health & Fitness', 'History', 'House & Home', humor, juvenileFiction, 'Juvenile Nonfiction', 'Language Arts & Disciplines', 'Law',
-    'Literary Collections', 'Literary Criticism', 'Mathematics', 'Medical', 'Music', 'Nature', 'Performing Arts', 'Pets', 'Philosophy', 'Photography', 'Poetry', 'Political Science',
+    'Health & Fitness', 'History', 'House & Home', humor, juvenileFiction, 'Juvenile Nonfiction', 'Language Arts & Disciplines', 'Law', literaryCollections, 'Literary Criticism',
+    'Mathematics', 'Medical', 'Music', 'Nature', 'Performing Arts', 'Pets', 'Philosophy', 'Photography', poetry, 'Political Science',
     'Psychology', 'Reference', 'Religion', 'Science', 'Self-Help', 'Social Science', 'Sports & Recreation', 'Study Aids', 'Technology & Engineering', 'Transportation', 'Travel',
-    'True Crime', 'Young Adult Fiction', 'Young Adult Nonfiction']
+    'True Crime', youngAdultFiction, 'Young Adult Nonfiction']
 
 export default tagsList

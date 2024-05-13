@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const SingleTagPage = () => {
+  useEffect(() => {
+    document.title = 'Tag | Next Chapter'
+  }, [])
   return (
     <div>SingleTagPage</div>
   )

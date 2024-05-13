@@ -229,3 +229,7 @@ body {
 [id$="level-4"] {
     background-color: #0d0c0c;
 }
+
+[id$="level-5"] {
+    background-color: #030202;
+}

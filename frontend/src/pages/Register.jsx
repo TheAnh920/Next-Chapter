@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Form } from 'react-bootstrap'
 import Logo from '../assets/logo-no-background.png'
 
 const Register = () => {
+  useEffect(() => {
+    document.title = 'Register | Next Chapter'
+  }, [])
+
   return (
     <div>
       <img src={Logo} alt="Next Chapter logo" className='h-44' />

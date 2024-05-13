@@ -1,57 +1,58 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useAuth } from '../hooks/AuthProvider';
-import { Button } from 'react-bootstrap';
-import Spinner from '../components/Spinner';
+import { useAuth } from '../hooks/AuthProvider'
+import { Button } from 'react-bootstrap'
+import Spinner from '../components/Spinner'
 import "../styles/SingleBookPage.css"
 
 const SingleBookPage = () => {
-  const [book, setBook] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const currentUrl = window.location.href;
-  const subdirectories = currentUrl.split('/');
-  const lastSubdirectory = subdirectories[subdirectories.length - 1];
-  const user = useAuth();
-  const username = user.user;
+  const [book, setBook] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const currentUrl = window.location.href
+  const subdirectories = currentUrl.split('/')
+  const lastSubdirectory = subdirectories[subdirectories.length - 1]
+  const user = useAuth()
+  const username = user.user
 
   useEffect(() => {
+    document.title = 'Book Details | Next Chapter'
     const fetchBookDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5555/books/single/${lastSubdirectory}`);
-        setBook(response.data || null);
-        setLoading(false);
+        const response = await axios.get(`http://localhost:5555/books/single/${lastSubdirectory}`)
+        setBook(response.data || null)
+        setLoading(false)
       } catch (error) {
-        console.error('Error fetching book details:', error);
+        console.error('Error fetching book details:', error)
       }
-    };
+    }
 
-    fetchBookDetails();
-  }, [lastSubdirectory]);
+    fetchBookDetails()
+  }, [lastSubdirectory])
 
   if (loading) {
     return (<div id='spinner'><Spinner /></div>)
   }
 
   function removeDupeCat(array) {
-    const set = new Set(array);
-    const newArray = Array.from(set);
-    return newArray;
+    const set = new Set(array)
+    const newArray = Array.from(set)
+    return newArray
   }
 
   const handleClick = async () => {
-    const bookTitle = book.volumeInfo.title;
-    const currentFavBookTagList = JSON.parse(localStorage.getItem('favBookTagList')) || [];
-    const updatedCatList = removeDupeCat(currentFavBookTagList.concat(book.volumeInfo.categories));
+    const bookTitle = book.volumeInfo.title
+    const currentFavBookTagList = JSON.parse(localStorage.getItem('favBookTagList')) || []
+    const updatedCatList = removeDupeCat(currentFavBookTagList.concat(book.volumeInfo.categories))
     // const favBookCatList = removeDupeCat()
     const response = await axios.post('http://localhost:5555/account/addbook', { username, lastSubdirectory, bookTitle, updatedCatList })
     if (response.data.success) {
-      const fetchLocal = JSON.parse(localStorage.getItem('bookList')) || [];
-      const updatedBookIds = [...fetchLocal, response.data.bookData];
+      const fetchLocal = JSON.parse(localStorage.getItem('bookList')) || []
+      const updatedBookIds = [...fetchLocal, response.data.bookData]
       localStorage.setItem('bookList', JSON.stringify(updatedBookIds))
       localStorage.setItem('favBookTagList', JSON.stringify(updatedCatList))
     }
-    console.log(response.data.message);
-  };
+    console.log(response.data.message)
+  }
 
   return (
     <div id="containerAll">

@@ -12,14 +12,18 @@ import "../styles/SingleBookPage.css"
 const Home = () => {
     const [books, setBooks] = useState([])
     const [loading, setLoading] = useState(false)
-    const bookIds = JSON.parse(localStorage.getItem('bookList'));
-    const user = useAuth();
+    const bookIds = JSON.parse(localStorage.getItem('bookList'))
+    const user = useAuth()
 
-    const favBookTagList = JSON.parse(localStorage.getItem('favBookTagList')) || [];
+    useEffect(() => {
+        document.title = 'Home | Next Chapter'
+    }, [])
+
+    const favBookTagList = JSON.parse(localStorage.getItem('favBookTagList')) || []
 
     const handleClick = async () => {
-        const response = await axios.post('http://localhost:5555/books/similar', { favBookTagList });
-        console.log(response.data.message);
+        const response = await axios.post('http://localhost:5555/books/similar', { favBookTagList })
+        console.log(response.data.message)
     }
 
     return (
