@@ -15,6 +15,7 @@ const Search = () => {
   const [advancedToggle, setAdvancedToggle] = useState(false)
   const [tagVisibility, setTagVisibility] = useState({})
   const [tagSelection, setTagSelection] = useState({})
+  const [maxResults, setMaxResults] = useState(25)
 
   useEffect(() => {
     document.title = 'Search | Next Chapter'
@@ -123,7 +124,9 @@ const Search = () => {
           )}
           <Button id="SearchButton" onClick={handleSearch}>Search</Button>
         </div>
-        <Button id='show-advanced-button' onClick={function () { setAdvancedToggle(!advancedToggle) }}>Show advanced options</Button>
+        <div id='show-advanced-container'>
+          <Button id='show-advanced-button' onClick={function () { setAdvancedToggle(!advancedToggle) }}>Show advanced options</Button>
+        </div>
         {/* <Button onClick={function () {
           // console.log(tagVisibility)
           // setTagTerms([])
@@ -154,39 +157,46 @@ const Search = () => {
         )}
       </Form>
       <div id="Separator">
-        ____________________________________________________________________________________________
+        __________________________________________________________________________
       </div>
       {/* Book cover */}
       {searched && (
         books.length == 0 ?
           <div id="search-no-results">No results found. </div> :
-          <div id="search-res"
-            className='grid
-                       grid-cols-[auto]
-                       min-[119px]:grid-cols-[auto_auto]
-                       min-[501px]:grid-cols-[auto_auto_auto]
-                       md:grid-cols-[auto_auto_auto_auto]
-                       lg:grid-cols-[auto_auto_auto_auto_auto]
-                       gap-10 p-2.5'>
-            {books.map(book => (
-              <Link to={`/book/${book.id}`} key={book.id}>
-                <table>
-                  <tbody>
-                    <tr id="book-img">
-                      <td>
-                        <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td id='book-title' className='text-center'>
-                        {truncateTitle(book.volumeInfo.title)}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </Link>
-            ))}
-          </div>
+          [
+            <div id="search-res" key='search-res'
+              className='grid
+                         grid-cols-[auto]
+                         min-[119px]:grid-cols-[auto_auto]
+                         min-[501px]:grid-cols-[auto_auto_auto]
+                         md:grid-cols-[auto_auto_auto_auto]
+                         lg:grid-cols-[auto_auto_auto_auto_auto]
+                         gap-10 p-2.5'>
+              {books.map(book => (
+                <Link to={`/book/${book.id}`} key={book.id}>
+                  <table>
+                    <tbody>
+                      <tr id="book-img">
+                        <td>
+                          <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td id='book-title' className='text-center'>
+                          {truncateTitle(book.volumeInfo.title)}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </Link>
+              ))}
+            </div>,
+            <div id='load-more-container' key='load-more-results'>
+              <Button id='load-more-button' onClick={function () {
+                setMaxResults(maxResults + 25)
+              }}>Load more results</Button>
+            </div>
+          ]
       )}
     </div>
   )
