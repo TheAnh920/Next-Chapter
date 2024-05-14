@@ -183,16 +183,12 @@ body {
     color: #fff;
     font-size: 16px;
     border-radius: 8px;
+    border-color: black;
     height: 56px;
 }
 
 [id|="tag-button"] {
     border-width: 1px;
-    border-color: black;
-}
-
-[id|="mother-tag-button"] {
-    border-width: 2px;
 }
 
 [id|="tag-button"]:hover {
@@ -200,14 +196,18 @@ body {
     transition: color 0.25s ease;
 }
 
+[id|="tag-button-true"] {
+    color: #04d000;
+    border-color: #04d000;
+}
+
+[id|="mother-tag-button"] {
+    border-width: 2px;
+}
+
 [id|="mother-tag-button"]:hover {
     color: orange;
     transition: color 0.25s ease;
-}
-
-[id|="mother-tag-button-undefined"],
-[id|="mother-tag-button-false"] {
-    border-color: black;
 }
 
 [id|="mother-tag-button-true"] {

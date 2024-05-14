@@ -13,7 +13,7 @@ const NavBar = () => {
     <Navbar id="Navbar">
       <Nav id="Logo">
         <Link to={`/`}>
-          <img src={Logo} alt="Next Chapter logo" className='h-16 inline-block' />
+          <img src={Logo} alt="Next Chapter logo" className='h-20 inline-block' />
         </Link>
       </Nav>
       <Nav id="Nav-Content">

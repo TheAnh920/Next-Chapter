@@ -8,17 +8,25 @@ import '../styles/Search.css'
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [authorTerm, setAuthorTerm] = useState('')
-  const [tagTerms, setTagTerms] = useState([])
+  // const [tagTerms, setTagTerms] = useState([])
+  const tagTerms = []
   const [books, setBooks] = useState([])
   const [searched, setSearched] = useState(false)
   const [advancedToggle, setAdvancedToggle] = useState(false)
   const [tagVisibility, setTagVisibility] = useState({})
+  const [tagSelection, setTagSelection] = useState({})
 
   useEffect(() => {
     document.title = 'Search | Next Chapter'
   }, [])
 
   const handleSearch = async () => {
+    for (const tag in tagSelection) {
+      if (tagSelection[tag]) {
+        tagTerms.push(tag)
+      }
+    }
+    // console.log(tagTerms)
     try {
       const response = await axios.get('http://localhost:5555/books/search', {
         params: {
@@ -51,15 +59,22 @@ const Search = () => {
     })
   }
 
+  function toggleTagSelection(tagName, motherTagName) {
+    setTagSelection({
+      ...tagSelection,
+      [concatTags(tagName, motherTagName)]: !tagSelection[concatTags(tagName, motherTagName)],
+    })
+  }
+
   function listTags(tags, motherTagName, tagLevel) {
     return (
       tags.map(tag => (
         typeof tag === 'string' ?
           <Button
-            id={'tag-button-level-' + tagLevel}
+            id={'tag-button-' + tagSelection[concatTags(tag, motherTagName)] + '-level-' + tagLevel}
             key={tag}
             onClick={function () {
-              console.log(concatTags(tag, motherTagName))
+              toggleTagSelection(tag, motherTagName)
             }}>
             {tag}
           </Button> :
@@ -74,20 +89,6 @@ const Search = () => {
           ]
       ))
     )
-  }
-
-  function onlyUnique(value, index, array) {
-    return array.indexOf(value) === index
-  }
-  const notUniqueTagList = []
-  function getAllTags(tagList) {
-    tagList.map(tag => (
-      typeof tag === 'string' ?
-        [notUniqueTagList.push(tag),
-        ] :
-        [notUniqueTagList.push(tag.name),
-        getAllTags(tag.subTags)]
-    ))
   }
 
   function truncateTitle(title) {
@@ -124,15 +125,19 @@ const Search = () => {
         </div>
         <Button id='show-advanced-button' onClick={function () { setAdvancedToggle(!advancedToggle) }}>Show advanced options</Button>
         {/* <Button onClick={function () {
-          console.log(tagVisibility)
-        }}>log</Button> */}
+          // console.log(tagVisibility)
+          // setTagTerms([])
+          console.log(tagSelection)
+          for (const tag in tagSelection) {
+            if (tagSelection[tag]) {
+              // setTagTerms([...tagTerms, tag])
+              tagTerms.push(tag)
+            }
+          }
+        }}>Add to tagTerms</Button> */}
         {/* <Button onClick={function () {
-          getAllTags(tagsList)
-          console.log(notUniqueTagList.filter(onlyUnique).sort())
-          console.log(notUniqueTagList.filter(onlyUnique).sort().slice(100))
-          console.log(notUniqueTagList.filter(onlyUnique).sort().slice(200))
-          console.log(notUniqueTagList.filter(onlyUnique).sort().slice(300))
-        }}>get tags</Button> */}
+          console.log(tagTerms)
+        }}>Show tagTerms</Button> */}
         {advancedToggle && (
           <div className='grid
                           grid-cols-1
