@@ -3,7 +3,7 @@ import { Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../hooks/AuthProvider'
 import Logo from '../assets/logo-no-background.png'
-import "../index.css"
+import "../styles/SignIn.css"
 
 
 const SignIn = () => {
@@ -26,30 +26,21 @@ const SignIn = () => {
   }
 
   return (
-    <div>
-      <img src={Logo} alt="Next Chapter logo" className='h-44' />
-      <header className='font-bold'>Sign in to your account</header>
+    <div className='w-[25rem] p-5 border-[1px] border-solid border-black rounded-[10px] shadow-[0_0px_10px_-0px_rgba(0,0,0,0.5)] mt-40 mx-auto'>
+      <img src={Logo} alt="Next Chapter logo" className='h-44 mx-auto' />
+      <header id='sign-in-header'>Sign in to your account</header>
       <div>
-        <Form onSubmit={handleSubmit}
-          className='w-[25rem] p-5 border-[1px] border-solid border-black rounded-[10px] shadow-[0_0px_10px_-0px_rgba(0,0,0,0.5)] my-0 mx-auto'>
-          <input type='text' name='username' value={username} onChange={(e) => setUsername(e.target.value)} placeholder='username'
-            className='w-full p-2.5 rounded-[5px] border-[1px] border-solid border-black mb-5 text-[16px] text-black' />
+        <Form onSubmit={handleSubmit} id='sign-in-input-form'>
+          <input type='text' name='username' value={username} onChange={(e) => setUsername(e.target.value)} placeholder='username' />
           <br />
-          <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'
-            className='w-full p-2.5 rounded-[5px] border-[1px] border-solid border-black mb-5 text-[16px] text-black' />
-          <div>
-            <button type="submit"
-              className='font-bold bg-[#ffc0cb] text-white py-3 px-5 border-2 border-solid border-[#ffc0cb] rounded cursor-pointer mb-5 w-full'>
-              Sign In
-            </button>
+          <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password' />
+          <div id='sign-in-container'>
+            <button type="submit" id='sign-in-button'>Sign In</button>
           </div>
           <div>
-            <div>
+            <div id='new-user-prompt'>
               New User?
-              <Link to={`/register`}
-                className='font-bold text-black no-underline ml-1 hover:underline'>
-                Register
-              </Link>
+              <Link to={`/register`} id='to-register-button'>Register</Link>
             </div>
           </div>
         </Form>

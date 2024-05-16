@@ -1,0 +1,102 @@
+#register-header {
+    padding: 1.5rem;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+#register-input-form input {
+    padding: 0.625rem;
+    margin-bottom: 1.25rem;
+    width: 100%;
+    background-color: #313131;
+    padding-left: 1rem;
+    border: #d9d9d9 2px solid;
+    border-radius: 30px;
+}
+
+#register-input-form input:hover {
+    background-color: #d9d9d9;
+    transition: color 0.25s ease;
+}
+
+#register-container {
+    width: fit-content;
+    margin: auto;
+}
+
+#register-button {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1.25rem;
+    color: #fff;
+    font-size: 23px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    position: relative;
+}
+
+#register-button:hover {
+    color: #ff00e1;
+    transition: color 0.25s ease;
+}
+
+#register-button::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #000000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+#register-button:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+#existing-user-prompt {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+#to-sign-in-button {
+    margin-left: 0.25rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+#to-sign-in-button:hover {
+    color: #ff00e1;
+    transition: color 0.25s ease;
+}
+
+#to-sign-in-button::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #000000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+#to-sign-in-button:hover:after {
+    width: 100%;
+    left: 0;
+}
