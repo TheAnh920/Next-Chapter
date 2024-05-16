@@ -100,20 +100,54 @@ const jwt = require('jsonwebtoken')
 // ------------------------------------------------------------------------------------------//
   router.get('/books/search', async (req, res) => {
     try {
-        const { q, authorTerm, tagTerms } = req.query;
+        const { q, authorTerm, tagTerms, startIndex } = req.query;
         let searchQuery = `${q}+inauthor:${authorTerm}`;
         if (tagTerms) {
           const genresQuery = tagTerms.split(',').map(tag => `subject:${tag}`).join('+');
           searchQuery += `+${genresQuery}`;
         }
 
-        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=25`);
+        // const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=25`);
+        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=25&startIndex=${startIndex}`);
+        console.log(response.data.items);
         res.json(response.data);
       } catch (error) {
         console.error('Error fetching book data:', error);
         res.status(500).json({ error: 'Internal server error' });
       }
   });
+
+  // router.get('/books/search', async (req, res) => {
+  //   try {
+  //     const { q, authorTerm, tagTerms, maxResults } = req.query;
+  //     let searchQuery = `${q}+inauthor:${authorTerm}`;
+  //     if (tagTerms) {
+  //       const genresQuery = tagTerms.split(',').map(tag => `subject:${tag}`).join('+');
+  //       searchQuery += `+${genresQuery}`;
+  //     }
+      
+  //     let allBooks = [];
+  //     let startIndex = 0;
+
+  //     while (allBooks.length < maxResults) {
+  //       const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=${Math.min(40, maxResults - allBooks.length)}&startIndex=${startIndex}`);
+  //       allBooks = allBooks.concat(response.data.items);
+  //       // console.log(allBooks.length)
+  //       // console.log(response.data.items)
+  //       startIndex += 25;
+
+  //       // If there are no more results to fetch, break out of the loop
+  //       if (!response.data.items || response.data.items.length < 25) {
+  //         break;
+  //       }
+  //     }
+  //     console.log(allBooks.length)
+  //     res.json(allBooks.slice(0, maxResults));
+  //   } catch (error) {
+  //     console.error('Error fetching book data:', error);
+  //     res.status(500).json({ error: 'Internal server error' });
+  //   }
+  // });
 
   router.get('/books/single/*', async (req, res) => {
     try {

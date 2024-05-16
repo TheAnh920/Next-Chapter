@@ -15,7 +15,7 @@ const Search = () => {
   const [advancedToggle, setAdvancedToggle] = useState(false)
   const [tagVisibility, setTagVisibility] = useState({})
   const [tagSelection, setTagSelection] = useState({})
-  const [maxResults, setMaxResults] = useState(25)
+  const [startIndex, setStartIndex] = useState(0)
 
   useEffect(() => {
     document.title = 'Search | Next Chapter'
@@ -34,6 +34,31 @@ const Search = () => {
           q: searchTerm,
           authorTerm: authorTerm,
           tagTerms: tagTerms.join(','),
+          startIndex: startIndex,
+        },
+      })
+      setBooks(response.data.items || [])
+      setSearched(true)
+    } catch (error) {
+      console.error('Error fetching book data:', error)
+    }
+  }
+
+  const updateSearch = async () => {
+    setStartIndex(startIndex + 24)
+    for (const tag in tagSelection) {
+      if (tagSelection[tag]) {
+        tagTerms.push(tag)
+      }
+    }
+    // console.log(tagTerms)
+    try {
+      const response = await axios.get('http://localhost:5555/books/search', {
+        params: {
+          q: searchTerm,
+          authorTerm: authorTerm,
+          tagTerms: tagTerms.join(','),
+          maxResults: startIndex,
         },
       })
       setBooks(response.data.items || [])
@@ -193,9 +218,9 @@ const Search = () => {
               ))}
             </div>,
             <div id='load-more-container' key='load-more-results'>
-              <Button id='load-more-button' onClick={function () {
-                setMaxResults(maxResults + 25)
-              }}>Load more results</Button>
+              <Button id='load-more-button'
+                // onClick={updateSearch}
+              >Next page</Button>
             </div>
           ]
       )}
