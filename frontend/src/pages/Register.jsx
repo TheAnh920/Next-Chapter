@@ -1,27 +1,45 @@
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, Navigate } from 'react-router-dom'
 import { Form } from 'react-bootstrap'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 import Logo from '../assets/logo-no-background.png'
-
 const Register = () => {
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = 'Register | Next Chapter'
   }, [])
 
+  const handleClick = async (e) => {
+    e.preventDefault();
+    if (password === confirmPassword) {
+      const response = await axios.post('http://localhost:5555/account/signup', { username , password })
+      console.log(response.data.message)
+      if (response.data.success) {
+        navigate(`/login`);
+      }
+    }
+  }
   return (
     <div>
       <img src={Logo} alt="Next Chapter logo" className='h-44' />
       <header className='font-bold'>Register</header>
       <div>
-        <Form
+        <Form onSubmit={handleClick}
           className='w-[25rem] p-5 border-[1px] border-solid border-black rounded-[10px] shadow-[0_0px_10px_-0px_rgba(0,0,0,0.5)] my-0 mx-auto'>
-          <input type='text' name='username' placeholder='username'
+          <input type='text' name='username' value={username} onChange={(e) => setUsername(e.target.value)} placeholder='username'
             className='w-full p-2.5 rounded-[5px] border-[1px] border-solid border-black mb-5 text-[16px] text-black' />
           <br />
-          <input type='password' name='password' placeholder='password'
+          <input type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='password'
             className='w-full p-2.5 rounded-[5px] border-[1px] border-solid border-black mb-5 text-[16px] text-black' />
           <br />
-          <input type='password' name='confirm-password' placeholder='confirm password'
+          <input type='password' name='confirm-password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder='confirm password'
             className='w-full p-2.5 rounded-[5px] border-[1px] border-solid border-black mb-5 text-[16px] text-black' />
           <br />
           <input type='email' name='email' placeholder='email'
