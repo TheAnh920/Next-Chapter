@@ -33,6 +33,7 @@ const Search = () => {
         params: {
           q: searchTerm,
           authorTerm: authorTerm,
+          tagTerms: tagTerms.join(','),
         },
       })
       setBooks(response.data.items || [])

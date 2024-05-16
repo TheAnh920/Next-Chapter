@@ -9,17 +9,17 @@ const jwt = require('jsonwebtoken')
 // ------------------------------------------------------------------------------------------//
   router.post('/account/signup', async(req, res) => {
     try {
-        const {username, password} = req.body
+        const { username, password } = req.body
         const usernameExists = await accountModel.findOne({ username })
 
         if (usernameExists) {
-            res.status(400).json({ error : "Username is already taken."})
+            res.status(400).json({ message : "Username is already taken."})
         } else {
             try {
                 const account = await accountModel.create({username, password})
-                res.status(200).json(account)
+                res.status(200).json({ success : true , message : "Account created successfully"})
             } catch (error) {
-                res.status(400).json({error : error.message})
+                res.status(400).json({message : error.message})
             }
         }
     } catch (error) {
@@ -100,11 +100,14 @@ const jwt = require('jsonwebtoken')
 // ------------------------------------------------------------------------------------------//
   router.get('/books/search', async (req, res) => {
     try {
-        // const { q } = req.query; // Extract query parameter from the request
-        const  {q, authorTerm}  = req.query;
-        // const paramValue = req.query.param;
-        // const startIndex = paramValue*25 - 1;
-        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${q}+inauthor:${authorTerm}&maxResults=25`);
+        const { q, authorTerm, tagTerms } = req.query;
+        let searchQuery = `${q}+inauthor:${authorTerm}`;
+        if (tagTerms) {
+          const genresQuery = tagTerms.split(',').map(tag => `subject:${tag}`).join('+');
+          searchQuery += `+${genresQuery}`;
+        }
+
+        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&maxResults=25`);
         res.json(response.data);
       } catch (error) {
         console.error('Error fetching book data:', error);
