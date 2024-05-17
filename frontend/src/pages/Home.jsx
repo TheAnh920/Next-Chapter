@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     document.title = 'Home | Next Chapter'
-    generateRecs()
+    user.token && generateRecs()
   }, [])
 
   const favBookTagList = JSON.parse(localStorage.getItem('favBookTagList')) || []
@@ -21,7 +21,6 @@ const Home = () => {
   const generateRecs = async () => {
     setLoading(true)
     const response = await axios.post('http://localhost:5555/books/similar', { favBookTagList })
-    console.log(response.data.message)
     setRcmBooks(response.data.message)
     setLoading(false)
   }
