@@ -1,0 +1,1477 @@
+{
+    "fiction": [
+        {
+            "kind": "books#volume",
+            "id": "GZHQEAAAQBAJ",
+            "etag": "H2gwb8HUd+U",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/GZHQEAAAQBAJ",
+            "volumeInfo": {
+                "title": "The Flower Sisters",
+                "authors": [
+                    "Michelle Collins Anderson"
+                ],
+                "publisher": "Kensington Books",
+                "publishedDate": "2024-04-23",
+                "description": "<b>Drawing on the little-known true story of one tragic night at an Ozarks dance hall in the author’s Missouri hometown, this beautifully written, endearingly nostalgic novel picks up 50 years later for a</b><i></i><b>folksy, character-driven portrayal of small-town life, split second decisions, and the ways family secrets reverberate through generations.</b><br><br><i><b>From the new Fannie Flagg of the Ozarks, a richly-woven story of family, forgiveness, and reinvention for readers of Kristy Woodson Harvey, Donna Everhart, Sue Monk Kidd, Jeannette Walls, and Rita Mae Brown…</b></i><br><br><b>\"Anderson weaves a rich and poignant tale of a small Ozarks town's factual tragedy, its generational secrets and the juxtapose of searching and belonging. Vivid and evocative, this is a debut to savor.\" —Kim Michele Richardson, <i>New York Times</i> bestselling author of <i>The Book Woman of Troublesome Creek</i> series on <i>The Flowers Sisters</i></b><br><br> Daisy Flowers is fifteen in 1978 when her free-spirited mother dumps her in Possum Flats, Missouri. It’s a town that sounds like roadkill and, in Daisy’s eyes, is every bit as dead. Sentenced to spend the summer living with her grandmother, the wry and irreverent town mortician, Daisy draws the line at working for the family business, Flowers Funeral Home. Instead, she maneuvers her way into an internship at the local newspaper where, sorting through the basement archives, she learns of a mysterious tragedy from fifty years earlier…<br><br> On a sweltering, terrible night in 1928, an explosion at the local dance hall left dozens of young people dead, shocking and scarring a town that still doesn’t know how or why it happened. Listed among the victims is a name that’s surprisingly familiar to Daisy, revealing an irresistible family connection to this long-ago accident.<br><br> Obsessed with investigating the horrors and heroes of that night, Daisy soon discovers Possum Flats holds a multitude of secrets for a small town. And hardly anyone who remembers the tragedy is happy to have some teenaged hippie asking questions about it – not the fire-and-brimstone preacher who found his calling that tragic night; not the fed-up police chief; not the mayor’s widow <i>or </i>his mistress; not even Daisy’s own grandmother, a woman who’s never been afraid to raise eyebrows in the past, whether it’s for something she’s worn, sworn, or done for a living.<br><br> Some secrets are guarded by the living, while others are kept by the dead, but as buried truths gradually come into the light, they’ll force a reckoning at last.<br><br><b>“A vivid blend of sensorial writing, historical detail, and memorable characters await in this compelling, surprising, insightful story of the weight of long-held secrets and the resulting hunger for truth.” – Susan Meissner<i>, USA Today</i> bestselling author of <i>Only the Beautiful</i></b><br><br><b>Inspired by the true story of the Bond Dance Hall explosion, a tragedy that took place in the author’s hometown of West Plains, Missouri on April 13, 1928.<br><br> The cause of the blast has never been determined.</b>",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1496748298"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781496748294"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 368,
+                "printedPageCount": 431,
+                "dimensions": {
+                    "thickness": "2.40 cm"
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction / Historical / 20th Century / General",
+                    "Fiction / Coming of Age",
+                    "Fiction / World Literature / American / 20th Century"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "1.3.3.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=GZHQEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE708R0gELP-hmCFS5q2Vp4Qjo7ecimxLDi81VJd7u-JMKOgjB1SxtPCmwkxVrrcnfqaeebMX1y2OhdiLGiF334S-FityJ8vChdVW7NL4WUl92iH4JcTO0phHkI67-hrD-n9jeUbz&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=GZHQEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73fooIXBi5liideLt5wCJw0sTkFWmn9IsozvktnKcONQapzN2qsoiq0EJQoUwY4c80lmRxHhn7zmYrxBVFknOvpJkpTKILlRwlBcCuKfeWU3O69PyHww_6S0H7lPi6RlqmVeHv6&source=gbs_api",
+                    "small": "http://books.google.com/books/publisher/content?id=GZHQEAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE70GodywtciKZD8LcgvplB-ZLWURLR-SVu0xjOZVwpNsSUWpO3P1DQrW1_L3GIHuzDRSfippJMd-4_6njC4aq0z-MoBG0v6gXVFbtnTChlIg8rJ9p-osaErC6l4mX4bm5-XK7tiC&source=gbs_api",
+                    "medium": "http://books.google.com/books/publisher/content?id=GZHQEAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE72x2LUhqeYzjtpiuF-9c0nB4OjmDZp6AfI4GN503hUqgnED4gy6pyOUaEHR0Xm9i0HaXJ29pQSdYB0MoJ9Y9Cbk-62KKwmjrQRxnkTW3iqa05rQxwrCb1QOPEJhv9L33UTWVvwl&source=gbs_api",
+                    "large": "http://books.google.com/books/publisher/content?id=GZHQEAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE710ltRW5N2T8jEF3Fvkk9T3K257zWuq5UiukyBiYdUTTM1qL26mBrHqtN35QzaulxhHkpLSWy2ul36ujX5GN0UkoE0ueJXJvwCMmABi6mYxYB-BqBFewM9omVW-TRUz8VB3x-se&source=gbs_api",
+                    "extraLarge": "http://books.google.com/books/publisher/content?id=GZHQEAAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE7049b1Kzgh4RXLPBJTdW9PGBPytE8ilLV4-6TuJD8cjb-LSPup0lrO-iSZjPT2lwRpRkuVqXlq93tziCc_wff7JY-hqBJIQqsY9pY57MuVvWGgrh6soB8Cda1ET3GyV_d0EvHYc&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=GZHQEAAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=GZHQEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=GZHQEAAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "3"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 390415,
+                    "currencyCode": "VND"
+                },
+                "retailPrice": {
+                    "amount": 265482,
+                    "currencyCode": "VND"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=GZHQEAAAQBAJ&rdid=book-GZHQEAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 390415000000,
+                            "currencyCode": "VND"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 265482000000,
+                            "currencyCode": "VND"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/The_Flower_Sisters-sample-epub.acsm?id=GZHQEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/The_Flower_Sisters-sample-pdf.acsm?id=GZHQEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=GZHQEAAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "MJvEEAAAQBAJ",
+            "etag": "iA9I6LLbjaA",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/MJvEEAAAQBAJ",
+            "volumeInfo": {
+                "title": "A Short Walk Through a Wide World",
+                "subtitle": "A Novel",
+                "authors": [
+                    "Douglas Westerbeke"
+                ],
+                "publisher": "Simon and Schuster",
+                "publishedDate": "2024-04-02",
+                "description": "<b>“Imagine <i>The Life of Pi</i>, <i>The Alchemist</i>, and <i>The Midnight Library</i> rolled into one fantastical fable.” —</b><b><i>The </i></b><b><i>New York Times Book Review</i></b><b> </b><br> <br><b>NATIONAL BESTSELLER</b> <b>• A dazzlingly epic debut that charts the incredible, adventurous life of one woman as she journeys the globe trying to outrun a mysterious curse that will destroy her if she stops moving.</b><br><br>Paris, 1885: Aubry Tourvel, a spoiled and stubborn nine-year-old girl, comes across a wooden puzzle ball on her walk home from school. She tosses it over the fence, only to find it in her backpack that evening. Days later, at the family dinner table, she starts to bleed to death.<br> <br>When medical treatment only makes her worse, she flees to the outskirts of the city, where she realizes that it is this very act of movement that keeps her alive. So begins her lifelong journey on the run from her condition, which won’t allow her to stay anywhere for longer than a few days nor return to a place where she’s already been.<br> <br>From the scorched dunes of the Calashino Sand Sea to the snow-packed peaks of the Himalayas; from a bottomless well in a Parisian courtyard, to the shelves of an infinite underground library, we follow Aubry as she learns what it takes to survive and ultimately, to truly live. But the longer Aubry wanders and the more desperate she is to share her life with others, the clearer it becomes that the world she travels through may not be quite the same as everyone else’s...<br> <br>Fiercely independent and hopeful, yet full of longing, Aubry Tourvel is an unforgettable character fighting her way through a world of wonders to find a place she can call home. A spellbinding and inspiring story about discovering meaning in a life that seems otherwise impossible, <i>A Short Walk Through a Wide World</i> reminds us that it’s not the destination, but rather the journey—no matter how long it lasts—that makes us who we are.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1668026082"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781668026083"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 400,
+                "printedPageCount": 400,
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction / Action & Adventure",
+                    "Fiction / Magical Realism",
+                    "Fiction / Coming of Age"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.5.4.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=MJvEEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72VknKSm1OkKS2o-4I25E-fGET0CetF_WAPka6Ole87wzDW4csvwctTlpi6qwCIsgtYEVPGRfaQqaFeez-9QSEUa4h1iSQ5p13srlM6IL1EC-8MVfsBKuLN893fjiHgabE77zOy&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=MJvEEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72sm5ZSj29PVL7GXYYhp73Mw1CQ0zSzdY4JWqHkRMJiUBAM8y0QQuIaP_fjUTrkgI4YouwfSBv_gx_qp0H2Ibovx-2WIJLfqx94X5Amh17bWiVRyDD5cIbqQ4-dKs2rmpBgKqf1&source=gbs_api",
+                    "small": "http://books.google.com/books/publisher/content?id=MJvEEAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE70_62AoHcWhHkZQO-wkC5oGVlOIEqAPB2b44vUfHt3E-95H8QeK2RUEBYj2LW-5ktFUsZ03JoqygIXwdNfMEg9x_LrF-VUkos9Od8XkA5-SkaUVWN9zY_Q5BbktAmgE14x8k1de&source=gbs_api",
+                    "medium": "http://books.google.com/books/publisher/content?id=MJvEEAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73X1lepMZyBqUAHT72tOaytY7JLIlrmLI-HVIpkRy0EcBfA9-wdB86TkXLKLcgzeABBdmII3nECKVx3UsCLevK0c62Ze6Dl41ahv2ZJSiyZA7xSug-HXATcjQWCWA6Y4uyWM1fV&source=gbs_api",
+                    "large": "http://books.google.com/books/publisher/content?id=MJvEEAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE73mKVAKqD2kR5MfM3X9ddGymMN8OVXGWNlcVvSj4_FTCYjj_rjLMamJJVYY_3fl0t2GPvV7tn_5DG5kq7ziKGlFBPGr_2WvvN5EsvxgdzAxfRrJ5V17p8_e7Tb9LQ5KfUqxu53Q&source=gbs_api",
+                    "extraLarge": "http://books.google.com/books/publisher/content?id=MJvEEAAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE73jkdazOGCz2e9q0m7oRjYLNmhlGsxrHGYX1X2UWoq7lko4z8IBcSKWkU36h9iCwPsK3KjhZB1-sGgQ9O7O6Idd1QJj3m4x91vITpDxHet6ae8HsVQCfJwshOBjo7WrdcAHf_jA&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=MJvEEAAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=MJvEEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=MJvEEAAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "5"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/A_Short_Walk_Through_a_Wide_World-sample-epub.acsm?id=MJvEEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=MJvEEAAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "mXjeEAAAQBAJ",
+            "etag": "xsZWDlJvyyE",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/mXjeEAAAQBAJ",
+            "volumeInfo": {
+                "title": "Saltblood",
+                "subtitle": "An epic historical fiction debut inspired by real life female pirates",
+                "authors": [
+                    "Francesca De Tores"
+                ],
+                "publisher": "Bloomsbury Publishing",
+                "publishedDate": "2024-04-25",
+                "description": "<b>**LONGLISTED FOR THE WILBUR SMITH ADVENURE WRITING PRIZE **</b><br><br><b>'A gripping tale of one woman's extraordinary adventures ...</b> <i><b>Saltblood</b></i><b> is a triumph of the imagination'</b><br><b>ELODIE HARPER, author of 'The Wolf Den' trilogy</b><br><b><br></b><b>'A ravishing picaresque told with fireworks, finesse and gusto' </b><br><b>PAUL LYNCH, author of <i>Prophet Song</i></b><br><b><i><br></i></b>'A <b>well crafted</b>, salty, old-fashioned <b>adventure </b>about identity and freedom' <i>The Times</i><br><b><i><br></i></b>In a rented room outside Plymouth in 1685, a daughter is born as her half-brother is dying. Her mother makes a decision: Mary will become Mark, and Ma will continue to collect his inheritance money.<br><br>Mary's dual existence as Mark will lead to a role as a footman in a grand house, serving a French mistress; to the navy, learning who to trust and how to navigate by the stars; and to the army and the battlegrounds of Flanders, finding love among the bloodshed and the mud. But none of this will stop Mary yearning for the sea.<br><br>Drawn back to the water, Mary must reinvent herself yet again, for a woman aboard a ship is a dangerous thing. This time Mary will become something more dangerous than a woman.<br><br>She will become a pirate.<br><br>Breathing life into the Golden Age of Piracy, <i>Saltblood</i> is a wild adventure, a treasure trove, weaving an intoxicating tale of gender and survival, passion and loss, journeys and transformation, through the story of Mary Read, one of history's most remarkable figures.<br><b><i><br></i></b><b><i>'Saltblood </i>is exquisite. The writing is sumptuous and lyrical, the story fascinating'</b><br><b>LOUISE O'NEILL, author of <i>Asking for It </i>and <i>Idol</i></b><br><b><i><br></i>'Startling, fresh and brilliant' </b><br><b>ANNA MAZZOLA, author of <i>The Clockwork Girl </i></b><br><b><i><br></i></b><b>'A wonderful tale and so exquisitely told ... <i>Master and Commander </i>meets <i>Thelma & Louise'</i></b><br><b>JAMES OSWALD, author of the 'Inspector McLean' series</b><br><br><b>'A thrilling, gender-shaking roar of a tale every reader will enjoy'</b><br><b>NEIL BLACKMORE, author of <i>Radical Love </i></b><br><b><i><br></i></b><b>'<i>Saltblood</i> is a complete triumph. A glittering jewel of a novel; a treasure chest of delight. I cannot bring myself to put it down' E.S. THOMSON, author of <i>Beloved Poison</i></b>",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1526661365"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781526661364"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 368,
+                "printedPageCount": 248,
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction / General",
+                    "Fiction / Historical / General",
+                    "Fiction / Literary"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.2.2.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=mXjeEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE713a9nSh63V4c-UUitVPUhXW-hPWG1X1nH4wbrwMzsY4dfPFfSDNuMGH-E1hy5ia7wP2_Ft2q8XndoDx2srt_JItcTL1zCgpd4BrP6VBaZKCGj_Yx1Uvs8gRxv8RNhJZDLWv5So&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=mXjeEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72cgMYV85R-rv1L2RR32qrDlwt3K4BNyF_bfw_KerCnlqMeI_-QvrdXYNiTeuRPwnFOXMunsQM0a5jG8yBVONbR6vhFj3iqU-gb2nMwvJMKoce0iHI2GHy95MuFWyl-PNYCjRA5&source=gbs_api",
+                    "small": "http://books.google.com/books/publisher/content?id=mXjeEAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE73jdSYeeylcHS0TjdW_HDA4Y19fLeWxXjqBRxLeHEfaXOnrE27MRaTiiRqBVEpJW_Vhi5Gt21mGcb8CAZyXeSHuTnBxOYC0EsY6DT1ljJ5mo6DYb0LVab__Kx6wq1uR_Eq_MBgZ&source=gbs_api",
+                    "medium": "http://books.google.com/books/publisher/content?id=mXjeEAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73iPD7HPB8Bk0w1smN_bxUfAmNW2nsmm6jhniQ4Tfq6Yi6JqgyEvC2eafsUK1_mv-mLY4cbeAwC3rOGiKH3tk4-XY1Dy1FAZlhS2zFp7TaxJ4Q7kgNUjfzvhWjB4P9tYIuHwpZu&source=gbs_api",
+                    "large": "http://books.google.com/books/publisher/content?id=mXjeEAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70VRiuOajYWpFh__ycJYm5h0YYIoeKHa0zcBaCllPLKUx6NfA8iJpoBEYJc850vNNbHlnRb3dpIfn1FFqyvZcs4oM7J3VbgZZJuVyQim8FbZpyaO-4g0nEZH4UdjFeLxhRlp9Ub&source=gbs_api",
+                    "extraLarge": "http://books.google.com/books/publisher/content?id=mXjeEAAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71kpezyhWVG95Y4SsSSyFZaPOl6OfiBu1q_r0SSMIWqOXrlEsxYxMYPR-NpK57l2Uh3aBg85FPkyzp_Eg7fkG_eMCRFOii6AQlqHl-ahN3y_tFAvy_3uxrQdpevg_lNkA7fG_su&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=mXjeEAAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=mXjeEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=mXjeEAAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "1"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 394639,
+                    "currencyCode": "VND"
+                },
+                "retailPrice": {
+                    "amount": 268355,
+                    "currencyCode": "VND"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=mXjeEAAAQBAJ&rdid=book-mXjeEAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 394639000000,
+                            "currencyCode": "VND"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 268355000000,
+                            "currencyCode": "VND"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/Saltblood-sample-epub.acsm?id=mXjeEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/Saltblood-sample-pdf.acsm?id=mXjeEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=mXjeEAAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "FSO7EAAAQBAJ",
+            "etag": "nMhkcJWnka4",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/FSO7EAAAQBAJ",
+            "volumeInfo": {
+                "title": "The Familiar",
+                "subtitle": "A Novel",
+                "authors": [
+                    "Leigh Bardugo"
+                ],
+                "publisher": "Flatiron Books",
+                "publishedDate": "2024-04-09",
+                "description": "<p><b>#1 NATIONAL BESTSELLER * #1 INDIE BESTSELLER *<i> NEW YORK TIMES </i>BESTSELLER<br></b><br><b>“An immersive, sensual experience.” —<i>The New York Times</i><br><br>\"Essential.\"<i> —The Washington Post</i><br></b><br><b>From the #1 New York Times bestselling author Leigh Bardugo comes a spellbinding novel set in the Spanish Golden Age.</b><br><br>In a shabby house, on a shabby street, in the new capital of Madrid, Luzia Cotado uses scraps of magic to get through her days of endless toil as a scullion. But when her scheming mistress discovers the lump of a servant cowering in the kitchen is actually hiding a talent for little miracles, she demands Luzia use those gifts to improve the family's social position.<br><br>What begins as simple amusement for the nobility takes a perilous turn when Luzia garners the notice of Antonio Pérez, the disgraced secretary to Spain's king. Still reeling from the defeat of his armada, the king is desperate for any advantage in the war against England's heretic queen—and Pérez will stop at nothing to regain the king's favor. <br><br>Determined to seize this one chance to better her fortunes, Luzia plunges into a world of seers and alchemists, holy men and hucksters, where the lines between magic, science, and fraud are never certain. But as her notoriety grows, so does the danger that her Jewish blood will doom her to the Inquisition's wrath. She will have to use every bit of her wit and will to survive—even if that means enlisting the help of Guillén Santángel, an embittered immortal familiar whose own secrets could prove deadly for them both.</p>",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1250884268"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781250884268"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 400,
+                "printedPageCount": 380,
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction / Fantasy / Historical",
+                    "Fiction / Historical / Renaissance",
+                    "Fiction / Magical Realism"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.2.2.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=FSO7EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73yF-9SAcB1OZlJlsY5JbPSvRUZlDNrTjcUtaYcGVWnE3KFqs7iqceL-ARbyFZit71LUrvv2gKa21aAefMPNKuX68i9oMlVpShXSH0zZL8kOYfumqrZVJw894rkVUF56mvFflb6&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=FSO7EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73M5jHufI09p6pBDK_38SCHP8Kaig8lTS5IkFPh-s-0ubj7x_c4eaYNsrwWUBYrTeQtUNUdKnJD8I_w8BLgx5dlOK7DEQ__h3tt-q9stE83M_AbnHOxj2_Lcu6U7MA5szhLWafN&source=gbs_api",
+                    "small": "http://books.google.com/books/publisher/content?id=FSO7EAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE71lYwqvadWH1KLxdLmhe9wL6T0wJUsHrsfK-ukGQoYXFzBXFWWk3XjvjVJFb0cFNDGyZFJzMwga7kmriQ6PA0YPo31JM-5R2o_6r2ufaGDR26bqMumQo56NCcNz2D1vrjU_7NUP&source=gbs_api",
+                    "medium": "http://books.google.com/books/publisher/content?id=FSO7EAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73xsBd6Lf3aLg8rybsd_sysr8HIAeVBqg14USZljfDsbtyy6TohI04kB49FAZvmqDuEoo8m_c9bZvuYOozX19RACa_ZdC-UYiQzNkzuckybP92PP5TeffhnbvwmrbuPVWQFNIGl&source=gbs_api",
+                    "large": "http://books.google.com/books/publisher/content?id=FSO7EAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE71IMV32Ao7E70GBtADy_vg_BOMAlr5kVKrn6PIYzz10Ms-mrdoA_R7DnwNVW1aLtf7gTvbpvNrwTHERpJoFTKIhzc7xs0dyxquHto7gfYlLl9CRgrRSw5leM3qfNsCy4EqkKjh-&source=gbs_api",
+                    "extraLarge": "http://books.google.com/books/publisher/content?id=FSO7EAAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE700BBM37jku01hftuJPRoX_j90xzJqHuLGecs9LyQpyPUE8Mwxi5M3XXxFf7XOitS4osIGNMLGpKoAKVunSIDuF83pJmeLhQzo_nO3JOU_nHQEx6xrMqBGb85ndvHNbKIKYPcfr&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=FSO7EAAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=FSO7EAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=FSO7EAAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "1"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 322178,
+                    "currencyCode": "VND"
+                },
+                "retailPrice": {
+                    "amount": 219081,
+                    "currencyCode": "VND"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=FSO7EAAAQBAJ&rdid=book-FSO7EAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 322178000000,
+                            "currencyCode": "VND"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 219081000000,
+                            "currencyCode": "VND"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/The_Familiar-sample-epub.acsm?id=FSO7EAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=FSO7EAAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "u27KEAAAQBAJ",
+            "etag": "bRoji25mrW4",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/u27KEAAAQBAJ",
+            "volumeInfo": {
+                "title": "The House on Biscayne Bay",
+                "authors": [
+                    "Chanel Cleeton"
+                ],
+                "publisher": "Penguin",
+                "publishedDate": "2024-04-02",
+                "description": "<b>Named an Anticipated Read of 2024 by <i>Entertainment Weekly </i>and a Best Historical Fiction novel of 2024 by BookBub.<br><br>As death stalks a gothic mansion in Miami, the lives of two women intertwine as the past and present collide in <i>New York Times</i> bestselling author Chanel Cleeton’s atmospheric new novel.</b><br><br>With the Great War finally behind them, many Americans flock to South Florida with their sights set on making a fortune. When wealthy industrialist Robert Barnes and his wife, Anna, build Marbrisa, a glamorous estate on Biscayne Bay, they become the toast of the newly burgeoning society. Anna and Robert appear to have it all, but in a town like Miami, appearances can be deceiving, and one scandal can change everything.<br><br>Years later following the tragic death of her parents in Havana, Carmen Acosta journeys to Marbrisa, the grand home of her estranged older sister, Carolina, and her husband, Asher Wyatt. On the surface, the gilded estate looks like paradise, but Carmen quickly learns that nothing at Marbrisa is as it seems. The house has a treacherous legacy, and Carmen’s own life is soon in jeopardy . . . unless she can unravel the secrets buried beneath the mansion’s facade and stop history from repeating itself.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0593440528"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780593440520"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 336,
+                "printedPageCount": 337,
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction / Hispanic & Latino",
+                    "Fiction / Gothic",
+                    "Fiction / Cultural Heritage"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "2.2.2.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=u27KEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71ULo2j7gLOLefEyrRwhQ7LRSfNmfnAlsZrs1RYcYgSeO_-uVU_zjqy_amuoHK0INUOrUmam3hKiFwhXido84puoXvc2X5URW_LXqDiJvu66r-V90aJm4uEm9SVuX8fPncOOE8v&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=u27KEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE738-Pp_qtK9oKX-GFYHzn8xp-WdmbQHIb20vQaLBfB6TYwSVZ-TJXpvxe4xJckOUyIbh8OQHuh553rNw5r0-xnq2Rmwrj5Py73EE7P8KMKJbBWtJsGu6a5G3JzyfvU_ViwQ1GtS&source=gbs_api",
+                    "small": "http://books.google.com/books/publisher/content?id=u27KEAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE70VS2dqAsMfzyGeIoqIk-162jC2K1bpSd6wHc885m8szWLzq-vrm0G_B-TUjF58FvbAMFew2DiPpZvIYqOcfVcQlzsm13FV2jD2kGBw2WnIQmFMZ09Qy4Q9zke083u_x_zOPAPl&source=gbs_api",
+                    "medium": "http://books.google.com/books/publisher/content?id=u27KEAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71NhAeC-CyGO8DU7ltG1tpNAXKHeZUJatJyV2eNhG-hu0KtPzHhZQO62HlOpvxp1QKFxPQyPQpTvb_2OY-7EQLrat_sl7kykbeO09k-VdGqECsNRsmphR2WAD7J5dve4IbQnJeO&source=gbs_api",
+                    "large": "http://books.google.com/books/publisher/content?id=u27KEAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE72yufCe2lDB91akjcvkU4E4ZQU5EF1Gak6QNxsUJfSULK7wUlJRILIzDTFQ8sKgQMI8HNiSZ4JeTqtbV8_PwFkjsmJlwi7WXX7PkpvaDpQ1kuk2_II4Etwox84Qnl8mVi-92M7P&source=gbs_api",
+                    "extraLarge": "http://books.google.com/books/publisher/content?id=u27KEAAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71JAVK5wGWNaCrzzU4Wy6ogFG1TRw1EHO2HI0QKwUtYybYPgSATD_y1uwfmF1Rjy_UIpeojdZxExudy3r9l9EalHweWzg23eTOUZMNdEVt5wkrstYM_eEcAUibP39iZmHskXi3q&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=u27KEAAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=u27KEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=u27KEAAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "1"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 405297,
+                    "currencyCode": "VND"
+                },
+                "retailPrice": {
+                    "amount": 275602,
+                    "currencyCode": "VND"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=u27KEAAAQBAJ&rdid=book-u27KEAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 405297000000,
+                            "currencyCode": "VND"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 275602000000,
+                            "currencyCode": "VND"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/The_House_on_Biscayne_Bay-sample-epub.acsm?id=u27KEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=u27KEAAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        }
+    ],
+    "comicsAndGraphicNovels": [
+        {
+            "kind": "books#volume",
+            "id": "ud3lDwAAQBAJ",
+            "etag": "AD6pdIubjHo",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/ud3lDwAAQBAJ",
+            "volumeInfo": {
+                "title": "Spy x Family, Vol. 1",
+                "authors": [
+                    "Tatsuya Endo"
+                ],
+                "publisher": "VIZ Media",
+                "publishedDate": "2020-06-02",
+                "description": "<p>Not one to depend on others, Twilight has his work cut out for him procuring both a wife and a child for his mission to infiltrate an elite private school. What he doesn’t know is that the wife he’s chosen is an assassin and the child he’s adopted is a telepath!</p> -- VIZ Media",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1974720284"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781974720286"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 215,
+                "printedPageCount": 217,
+                "printType": "BOOK",
+                "categories": [
+                    "Comics & Graphic Novels / Manga / Action & Adventure",
+                    "Comics & Graphic Novels / Manga / Humorous",
+                    "Comics & Graphic Novels / Manga / Crime & Mystery"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.3.3.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": true,
+                    "containsImageBubbles": true,
+                    "epubBubbleVersion": "9609f34087959b73",
+                    "imageBubbleVersion": "9609f34087959b73"
+                },
+                "comicsContent": true,
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=ud3lDwAAQBAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE71JkiMI1UciXnwULbTYp8GAmZeqR7SAr006thggJtnwOd8Jkqc-GnAXubdb6bEglC1lomBkN_ZXpOaVcx470UEYMQjRfDtb-YWJda_A0Y7WM282bS826fEkXoJae0S4pQkCxAi5&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=ud3lDwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71PkbXP8y8aE3cCtsYgFh-qLRLR3R0D61kla9WFiaT0arQ6IKe33XWEmbsPwAF-LW0mcagsFYeDxxnG2AXS5zBSlpYqnbwJYDPj0HgMUMLUyUoi9fBtpavOhNN5bAbLRxj_XEqy&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=ud3lDwAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=ud3lDwAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=ud3lDwAAQBAJ",
+                "seriesInfo": {
+                    "kind": "books#volume_series_info",
+                    "bookDisplayNumber": "1",
+                    "volumeSeries": [
+                        {
+                            "seriesId": "FI4rGwAAABA-lM",
+                            "seriesBookType": "COLLECTED_EDITION",
+                            "orderNumber": 1
+                        }
+                    ]
+                }
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "5"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "NO_PAGES",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true
+                },
+                "pdf": {
+                    "isAvailable": true
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=ud3lDwAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "NONE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "a8Z1zgEACAAJ",
+            "etag": "Eils4oBcvpc",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/a8Z1zgEACAAJ",
+            "volumeInfo": {
+                "title": "Lore Olympus",
+                "subtitle": "Volume one",
+                "authors": [
+                    "Rachel Smythe"
+                ],
+                "publisher": "Del Rey",
+                "publishedDate": "2021",
+                "description": "<b>Scandalous gossip, wild parties, and forbidden love - witness what the gods do after dark in this stylish and contemporary reimagining of one of mythology's best-known stories.</b><br> <i><br> 'Steamy, often laugh-out-loud funny and emotional' <b>Jennifer L. Armentrout, # 1 New York Times bestselling author of From Blood and Ash</b><b><br></b></i><i><b>____________________________________</b></i><br> Persephone, young goddess of spring, is new to Olympus. Her mother, Demeter, has raised her in the mortal realm, but after Persephone promises to train as a sacred virgin, she's allowed to live in the fast-moving, glamorous world of the gods.<br> <br> When her roommate, Artemis, takes her to a party, her entire life changes- she ends up meeting Hades and feels an immediate spark with the charming yet misunderstood ruler of the Underworld.<br> <br> Now Persephone must navigate the confusing politics and relationships that rule Olympus, while also figuring out her own place - and her own power.<br> <br> <b>This edition of Smythe's original Eisner-nominated webcomic <i>Lore Olympus</i> features a brand-new, exclusive short story, and brings the Greek pantheon into the modern age in a sharply perceptive and romantic graphic novel.</b><br> <b><br> This volume collects episodes 1-25 of the #1 WEBTOON comic <i>Lore Olympus</i>.</b>",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1529150442"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781529150445"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 384,
+                "printedPageCount": 384,
+                "dimensions": {
+                    "height": "24.00 cm",
+                    "width": "18.60 cm",
+                    "thickness": "2.80 cm"
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Comics & Graphic Novels / General",
+                    "Comics & Graphic Novels / Fantasy",
+                    "Comics & Graphic Novels / Literary",
+                    "Fiction / General",
+                    "Fiction / Fantasy / General"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "comicsContent": true,
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=a8Z1zgEACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE73VmbUNDBI60J7mMZMqxIko8VLd-MiPPXFGrhs0jZGRxkFQMiWEWo-0gvORtjizXJ_TZmZihuFx1NKpzqpeINzcgSylL8WnoB93iFa76MDbMk2czU26Qav6-C38tGnsPHVb8JvG&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=a8Z1zgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE715UD_S9Cqa0p2kNp_FmJuAwEBlFeroezMRETlQktC4bgCZG0t0XIF1TPMHubt5YphbSJkHCt-ffuXqe_XxRrrNsSwmaoDafTcQohsdJzABxYFOu6eyBO7QgJgMRE-htCq44T_x&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=a8Z1zgEACAAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=a8Z1zgEACAAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=a8Z1zgEACAAJ"
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "NO_PAGES",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=a8Z1zgEACAAJ&hl=&source=gbs_api",
+                "accessViewStatus": "NONE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "nSFEvgEACAAJ",
+            "etag": "z84DOfbDkU8",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/nSFEvgEACAAJ",
+            "volumeInfo": {
+                "title": "Gender Queer: A Memoir",
+                "authors": [
+                    "Maia Kobabe"
+                ],
+                "publisher": "Oni Press",
+                "publishedDate": "2019-05-28",
+                "description": "<b>2020 ALA Alex Award Winner</b><br> <b>2020 Stonewall — Israel Fishman Non-fiction Award Honor Book</b><br><br>In 2014, Maia Kobabe, who uses e/em/eir pronouns, thought that a comic of reading statistics would be the last autobiographical comic e would ever write. At the time, it was the only thing e felt comfortable with strangers knowing about em. <i>Now, Gender Queer</i> is here. Maia’s intensely cathartic autobiography charts eir journey of self-identity, which includes the mortification and confusion of adolescent crushes, grappling with how to come out to family and society, bonding with friends over erotic gay fanfiction, and facing the trauma and fundamental violation of pap smears.<br> <br> Started as a way to explain to eir family what it means to be nonbinary and asexual, <i>Gender Queer</i> is more than a personal story: it is a useful and touching guide on gender identity—what it means and how to think about it—for advocates, friends, and humans everywhere.<br> <br><b>\"It’s also a great resource for those who identify as nonbinary or asexual as well as for those who know someone who identifies that way and wish to better understand.\" — SLJ (starred review)</b>",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1549304003"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781549304002"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 240,
+                "printedPageCount": 240,
+                "dimensions": {
+                    "height": "21.00 cm",
+                    "width": "14.60 cm",
+                    "thickness": "1.80 cm"
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Comics & Graphic Novels / General",
+                    "Comics & Graphic Novels / Nonfiction / Biography & Memoir",
+                    "Comics & Graphic Novels / LGBT"
+                ],
+                "averageRating": 3,
+                "ratingsCount": 3,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "comicsContent": true,
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=nSFEvgEACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE72xFsN-zrXl5Josqg6bC4xBDzJTIZehdsOoEiVWiED6cnuG3TzO4BnQ5fbpBnbhIKmkvJwezuUQkOJHta5ZScSitutd3CDBZE9jJiprrRTZR_wwlXyHy312zuOHSiYDWe1sxvFN&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=nSFEvgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE7033wwOkzLIa9v_SX-qTfYR5USAf9uf8GSmgcX6_wywQF628E1fVf7YsmwVcvQLgknNuB0fAxhLj3P0EW-Yp6fxvuOgXUaxMG_HM2BMrqK1_FxFmWFDWZY0XgzOvFeRbgTq6EYq&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=nSFEvgEACAAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=nSFEvgEACAAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=nSFEvgEACAAJ"
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "NO_PAGES",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=nSFEvgEACAAJ&hl=&source=gbs_api",
+                "accessViewStatus": "NONE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "NnqTEAAAQBAJ",
+            "etag": "Te15Kyd3/P4",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/NnqTEAAAQBAJ",
+            "volumeInfo": {
+                "title": "Lore Olympus: Volume Four",
+                "authors": [
+                    "Rachel Smythe"
+                ],
+                "publisher": "Random House Worlds",
+                "publishedDate": "2023-06-06",
+                "description": "<b><i>NEW YORK TIMES </i>BESTSELLER • Witness what the gods do after dark in the fourth volume of a stylish and contemporary reimagining of one of the best-known stories in Greek mythology, featuring exclusive behind-the-scenes content from creator Rachel Smythe.</b><br> <b><br>A <i>SHE READS </i>BEST BOOK OF THE YEAR</b><br><br><i>“I don’t always get to do as I please.”</i><br> <br>The rumor mill of Olympus is constantly churning, but Persephone and Hades are all anyone can talk about. With the constant gossip creating intense pressure on the pair, they decide to slow down their budding romance and focus on sorting out their own issues first.<br> <br>But that’s easier said than done. <br> <br>Hades struggles to find support in his personal life, with Zeus trivializing his feelings and Minthe resorting to abusive patterns in their relationship. And while Hades tries to create healthier boundaries where he can—like finally putting a stop to his sporadic, revenge-fueled hookups with Hera—he still feels lonely and adrift.<br> <br>Persephone feels equally ostracized as her classmates shun her for her connection to Hades, and she can find no refuge at home, with Apollo constantly dropping by unannounced and pushing his unwelcome advances. And on top of it all, the wrathful god of war, Ares, has returned to Olympus to dredge up his sordid history with the goddess of spring, threatening to surface Persephone’s dark and mysterious past and ruin her tenuous position in the land of the gods. <br> <br>Despite agreeing to take it slow, Persephone and Hades find themselves inextricably drawn toward each other once more amid the chaos. The pull of fate cannot be denied.<br> <br>This edition of Rachel Smythe’s original Eisner-winning webcomic <i>Lore Olympus</i> features exclusive behind-the-scenes content and brings the Greek pantheon into the modern age in a sharply perceptive and romantic graphic novel.<br> <br><b>This volume collects episodes 76–102 of the #1 WEBTOON comic <i>Lore Olympus</i>.</b>",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0593599055"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780593599051"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 416,
+                "printedPageCount": 416,
+                "dimensions": {
+                    "height": "23.00 cm",
+                    "width": "18.00 cm",
+                    "thickness": "2.40 cm"
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Comics & Graphic Novels / Fantasy",
+                    "Comics & Graphic Novels / Romance",
+                    "Fiction / Fairy Tales, Folk Tales, Legends & Mythology"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=NnqTEAAAQBAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE71fCKwzTUzPhWueAY84UJBgXqLgqwY-LMpRyzExej30F_ugUhJVDNdx6L8g59VSSphi5AxiiaVq-godRcdK-tY4nbtOFeviHvAjj6uICcRL6lAYzPApqUynGMZWAp_RMTpI7PM4&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=NnqTEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73pw_Tr5Hh5HwNJSe-KVSnZi-wxUrgxoie90nzgmHLnSyCFXlFaUd59ZpReYni7IkG0NJweFGKc716-fnekB2Wf6tKIh8NsM1hyAXsLXsnBKsQ9ma5FlSimGwmDJf-NM78d-Hj0&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=NnqTEAAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=NnqTEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=NnqTEAAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "NO_PAGES",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=NnqTEAAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "NONE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "NtRyzwEACAAJ",
+            "etag": "RCLbwDGAj8U",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/NtRyzwEACAAJ",
+            "volumeInfo": {
+                "title": "Goodbye, Eri",
+                "authors": [
+                    "Tatsuki Fujimoto"
+                ],
+                "publisher": "VIZ Media LLC",
+                "publishedDate": "2023-06-27",
+                "description": "<b>An explosive story from the mad genius behind <i>Chainsaw Man</i> and<i> Look Back</i>!</b><br><br>Young filmmaker Yuta contemplates suicide after the death of his mother, but a chance meeting with a mysterious girl will alter his life in an explosive way.<br><br>From the mad genius behind <i>Chainsaw Man</i> and <i>Look Back</i> comes a new story about coping with loss.<br> <br>Yuta’s moviemaking career started with a request from his mother to record her final moments. After her death, Yuta meets a mysterious girl named Eri, who takes his life in new directions. The two begin creating a movie together, but Eri is harboring an explosive secret.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1974738930"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781974738939"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 208,
+                "printedPageCount": 208,
+                "dimensions": {
+                    "height": "21.00 cm",
+                    "width": "14.60 cm",
+                    "thickness": "1.50 cm"
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Comics & Graphic Novels / Manga / School Life",
+                    "Comics & Graphic Novels / Literary",
+                    "Comics & Graphic Novels / Horror",
+                    "Comics & Graphic Novels / Manga / General",
+                    "Fiction / Horror"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "comicsContent": true,
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=NtRyzwEACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE72-P1Vb63zRiNICvRuNQLr1IfC0kETOL3QMaOlHQFZEpiQciLcBAuMBe6s78JmoWRfJVZY9D_Hvl4A06AoM5e-vYWef2fk5k-WY5hvhOVPzIuUV1dFQlRrYXW-lJl11CPvSLBaD&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=NtRyzwEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73ldJTa7h92nsVNUPtO-P5HsMM5cUE3fwE1Sigo6W5g6g8qoJdMcxq8i-kRYYX3KbauXUC8xgDGPpddp48AHyc5dlM7CP1GOc-nGybHCBs0zxSzdYKxzBK-dI8Z31udzqjrBIsE&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=NtRyzwEACAAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=NtRyzwEACAAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=NtRyzwEACAAJ"
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "NO_PAGES",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=NtRyzwEACAAJ&hl=&source=gbs_api",
+                "accessViewStatus": "NONE",
+                "quoteSharingAllowed": false
+            }
+        }
+    ],
+    "youngAdultFiction": [
+        {
+            "kind": "books#volume",
+            "id": "3bvTEAAAQBAJ",
+            "etag": "R30NjZkrEAY",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/3bvTEAAAQBAJ",
+            "volumeInfo": {
+                "title": "Burning Crowns (Twin Crowns, Book 3)",
+                "authors": [
+                    "Katherine Webber",
+                    "Catherine Doyle"
+                ],
+                "publisher": "HarperCollins UK",
+                "publishedDate": "2024-04-25",
+                "description": "<p>Bestselling authors and real-life sisters-in-law Catherine Doyle and Katherine Webber join forces on a compelling YA fantasy bursting with high-stakes adventure, romance and humour. Two queens, one throne. What can possibly go wrong ...? </p><p>'Twin Crowns cast a spell on me from the very first pages with its glittering blend of harrowing adventure, charming wit, and intricate world-building.I was thoroughly bewitched by this marvelous book. Don’t miss it!' – Sarah J Maas, #1 New York Times Bestselling Author</p><p>Wren and Rose rule the kingdom of Eana. But an ancient, powerful enemy moves in the shadows. Oonagh, the twins’ evil undead ancestor, is creating a terrifying army, and she is determined to fight for the throne.</p><p>Rose must gather support from the four corners of the kingdom whilst she wrestles with what the future holds for her and her beloved Shen. Meanwhile, Wren and Alarik set out to destroy the curse that both unites and weakens them. Caught between the King of Gevra and his Captain of the Guard, Tor, Wren must decide where her heart truly lies ...</p><p>When Oonagh's true plans are revealed and Rose's life hangs in the balance, the stage for the final battle is set. Sacrifices will be made, blood will be spilled. Who will survive to rule the kingdom of Eana?</p><p>The epic, breathtaking conclusion to this bestselling romantasy trilogy!</p>",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0008617546"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780008617547"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 480,
+                "printedPageCount": 451,
+                "printType": "BOOK",
+                "categories": [
+                    "Young Adult Fiction / Fantasy / Wizards & Witches",
+                    "Young Adult Fiction / Royalty",
+                    "Young Adult Fiction / Romance / Romantic Comedy",
+                    "Fiction / Romance / Fantasy",
+                    "Fiction / Fantasy / Humorous",
+                    "Juvenile Fiction / Love & Romance",
+                    "Juvenile Fiction / Family / General",
+                    "Juvenile Nonfiction / People & Places / General",
+                    "Juvenile Fiction / Action & Adventure / General"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.2.2.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=3bvTEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71ekDEK6VXuiLuxd4l0oyPmAFj_eNNdqp8W9ke_dr9OAm8GqzzFi8CLOBWLu0zS2htA2BL84yaT0J_HN6x-I-WGvwHrXoowV03SyKNbvwd_aUz9Lh1iHqbTQ-NVCoAbOsI8T7tl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=3bvTEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72L-MHDMGn00fOezf7jRU0YS0nmbGqbgShj3aMQeGDosWEE6nmirWEREOiorjP-09rYXG52TZm6ViIQR2XkCuD4BM-k2dcx47IkFqtDkzTZQGE74x50Y2lo2A2Nfg-K05kVRffE&source=gbs_api",
+                    "small": "http://books.google.com/books/publisher/content?id=3bvTEAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE71N69pXmAlr3b4grikc_7wf-wUMqoN_PFO45UIQ5BPdKxsPZ6hoh4kFTccBeg0n13Wu8PYU8PpcqxAWW8OJHP6p6iSMdOJL7Av_9g4UO5O5R9j1IjtckczgwRmQabzIIS_QF8bl&source=gbs_api",
+                    "medium": "http://books.google.com/books/publisher/content?id=3bvTEAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73RYxvjP8g4Pwm_wi1UiBWiENUUPPGP3ztS7B-pMWvgW_g9G0wkGGh8lZzt2Crh0arZq2tOB1d3Ohp1qM-aRgO6KcbzQO3vNi0FuE_3nU3rNjeeOBHSIldf49sUiVKDwSPR9i4v&source=gbs_api",
+                    "large": "http://books.google.com/books/publisher/content?id=3bvTEAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE73awYP9HNA1Ge2ebEHpqvSnFHZyXGDe0zGS5ZXa9lMFsp6d3fH8BwPV4DOqeSzn4K8zwko_juQoOmBujkJ81mbAQ8jl6piQpYkmnX9QnC2qwjo_lwq4WlUVPYuJH33CWMjIT2SR&source=gbs_api",
+                    "extraLarge": "http://books.google.com/books/publisher/content?id=3bvTEAAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE72NTlcnPFgfsBm-867cGh4-oFStCSc2Z3HF5cW0XVWkm_Ltvt7X2-HuxBOYlub8uamwrpIhC5yfhRL1B2EDfUYCjkeSlLDwDsev8dgth0HSzkbUHQ_1ewr1e9DlDbi4F2TasatL&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=3bvTEAAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=3bvTEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=3bvTEAAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "1"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 239760,
+                    "currencyCode": "VND"
+                },
+                "retailPrice": {
+                    "amount": 163037,
+                    "currencyCode": "VND"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=3bvTEAAAQBAJ&rdid=book-3bvTEAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 239760000000,
+                            "currencyCode": "VND"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 163037000000,
+                            "currencyCode": "VND"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/Burning_Crowns_Twin_Crowns_Book_3-sample-epub.acsm?id=3bvTEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=3bvTEAAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "cle4EAAAQBAJ",
+            "etag": "dFwB8dLNI/Q",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/cle4EAAAQBAJ",
+            "volumeInfo": {
+                "title": "To a Darker Shore",
+                "authors": [
+                    "Leanne Schwartz"
+                ],
+                "publisher": "Page Street Publishing",
+                "publishedDate": "2024-04-30",
+                "description": "<p><b>When her best friend is sacrificed to the devil, she’ll go to hell and back for him</b><br><br>Plain, poor, plus-size, and autistic, Alesta grew up trying to convince her beauty-obsessed kingdom that she’s too useful to be sacrificed. Their god blessed their island Soladisa as a haven for his followers, but to keep the devil at bay, the church sends a child sacrifice to hell’s entrance every season—often poor or plain girls just like Alesta.<br><br>With a head full of ideas for inventions, Alesta knows her best shot at making it to adulthood is to design something impressive for the festival exhibition so she might win a spot in the university—acceptance could guarantee her safety. But Alesta’s flying machine demonstration goes awry, a failure that will surely mean death. What happens is worse: Her best friend and heir to the throne, Kyrian, takes the blame expecting leniency but ends up sacrificed in her place.<br><br>To stop the sacrifices forever, Alesta plans to kill the monster that killed her friend. Prepared to save her kingdom or die trying, she travels to the depths of hell only to find Kyrian—alive, but monstrously transformed.<br>There is no escaping hell or their growing feelings for one another, and the deeper they descend into hell, the closer they come to uncovering a truth about the sacrifices that threatens to invoke the wrath of not only monsters but the gods as well.</p>",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1645678415"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781645678410"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 400,
+                "printedPageCount": 351,
+                "printType": "BOOK",
+                "categories": [
+                    "Young Adult Fiction / Fantasy / Historical",
+                    "Young Adult Fiction / Neurodiversity",
+                    "Young Adult Fiction / Fantasy / Romance"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "1.2.2.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=cle4EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE738zTrj0RhMnguHqO7r84P0m8jRNiQ_ThrVSrOv2c10x53gCT67FhN0-QLPsLru7opQik1qC7CPd-rvKnjIwN0ULyD4LjZyqIQfaR-zEp5P4MwZ2NTcLghcMrFIDNWGhv9WFZsm&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=cle4EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70h04KQIPZ5fEawrY2ca5Fa2iqHAEVfsDey8MovQyxWLdSoeywyuScVNkk7Qb9hnSssz8oSZsTim58tKaQGtpFYb6xzigVmysNE9HK8TS-aiKUb3s1qMlbzRKozVzzL9fRdUGTY&source=gbs_api",
+                    "small": "http://books.google.com/books/publisher/content?id=cle4EAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE70VlJ-83JHOWbR7t0X8LKOG6f_w4n_jITFSqF2okRGXM2CRfbbf3gPmLfl6KpSHUXYoepXnWSdkRItU_Ot-94DiyJ72z-AbbSz8KUjsV22rfnWwBTIW4PhWjUTrCE25uWPN8KFF&source=gbs_api",
+                    "medium": "http://books.google.com/books/publisher/content?id=cle4EAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE72W-y5AFmOyzwn17qXHR-h7iDj2BOR7tEaYKS4OigX24Ovnq1dM8IlVG3scrXY6gPG4enoYEDcPzRpPrRvoKbd6odXwPhlDJrSoL2trbXFnQ98IJZRukbyvbJwKCMr0mx9MB5CW&source=gbs_api",
+                    "large": "http://books.google.com/books/publisher/content?id=cle4EAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE704jFilkS7hFx0PRk6dOexs0yRmiuhRyQVU9y74KFWrE1ldLAt8MdQ6xNWpcxL0Y5dBRO0CcDqXVxNp1NBjSOtcH7bMFuK_RDUNpsIG3Q16PEuZSCP9TXRi82Q5RZfbonk4p39Y&source=gbs_api",
+                    "extraLarge": "http://books.google.com/books/publisher/content?id=cle4EAAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE72gvqOH4vsOUvY_LTQv_jporwXcim1P8gInxU5SdEwLnoK7oXUrETt6MJeI39Hmn4j9_ezUtGRdiu6w9g8AXPizB1wOUxiS2U3A0amPpqi8HyJmTfYR0pbyvUNBvUEwdWRKG06x&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=cle4EAAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=cle4EAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=cle4EAAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "1"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 339968,
+                    "currencyCode": "VND"
+                },
+                "retailPrice": {
+                    "amount": 231178,
+                    "currencyCode": "VND"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=cle4EAAAQBAJ&rdid=book-cle4EAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 339968000000,
+                            "currencyCode": "VND"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 231178000000,
+                            "currencyCode": "VND"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/To_a_Darker_Shore-sample-epub.acsm?id=cle4EAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=cle4EAAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "LQnxEAAAQBAJ",
+            "etag": "KL5tko5wEWI",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/LQnxEAAAQBAJ",
+            "volumeInfo": {
+                "title": "Not Like Other Girls",
+                "authors": [
+                    "Meredith Adamo"
+                ],
+                "publisher": "Bloomsbury Publishing",
+                "publishedDate": "2024-04-30",
+                "description": "<b>Cheats. Liars. Fakes. Friends? A breathtaking contemporary YA thriller </b><b>–</b><b> serious questions and hot romance in an irresistible twisty mystery. Perfect for fans of <i>One of Us is Lying, We Were Liars </i>and <i> A Good Girl's Guide to Murder.</i><br></b><br>Jo used to be the perfect high-school girl – class president, popular, bright and successful. But when nude photos of her were leaked to the entire school, her grades plummeted, her friends fell away and now she's a reckless, difficult social outcast. The girl who 'deserved' it.<br><br>Then her former best friend Maddie disappears. Everyone else assumes Maddie has just run away but that doesn't add up to Jo. To discover the truth, Jo needs to get back in with the group of classmates who have shut her out: the boys who betrayed her and the clique of girls who whisper behind her back. And she has to make it look as if she wants to be there. <br><br>The only way back in is through Hudson. An old fling with his own reasons for finding Maddie, he persuades Jo to fake date him. And it works. But as the truth about Maddie's disappearance comes to light, so do long-hidden secrets from Jo's past. Who is Jo really trying to find-Maddie, or the girl she herself used to be?<br><br><b>'Both a twisty mystery and a compelling, heartbreaking exploration of what it's like to be a teen girl. I absolutely loved this.' </b>Ravena Guron, author of <i>This Book Kills</i><br><i><br></i><b>'Edgy and authentic, this [is a] stunning punch of a novel'</b> <i>Publishers Weekly</i><br><i><br></i><b>'Compulsively readable, this is a must-read for lovers of YA mysteries' </b><i>Booklist</i>",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1526669870"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781526669872"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 320,
+                "printedPageCount": 390,
+                "printType": "BOOK",
+                "categories": [
+                    "Young Adult Fiction / Thrillers & Suspense / General",
+                    "Young Adult Fiction / Social Themes / Dating & Sex",
+                    "Young Adult Fiction / Romance / Contemporary",
+                    "Young Adult Fiction / Social Themes / Self-Esteem & Self-Reliance",
+                    "Juvenile Fiction / Love & Romance"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "1.2.2.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=LQnxEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72JD__Jj33CzyUN0HJ60fLFaGqz_CX_zyKst5njYFlOw6KwRgn7hm-Jhyl4El5qtsGZB5ZMPYFirrcaVg2cmXPpXJLhdEocgfQUAH1Yk7jRTVv6kq2zUTvp3Hm1-p7vleaWuwzK&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=LQnxEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70jUYshWvcBcchF4jTxzWP3XhFhYD6b_ucWuzzJdZvLJQQ5Qf63V-fGZ1efnLvQW241FY5Xrz6lUtvVkoqtZiImaDCJtvNRPEJ792YR6rtIwTVUK76PzwKrZb_c8XTfkDAQM8-k&source=gbs_api",
+                    "small": "http://books.google.com/books/publisher/content?id=LQnxEAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72dIP3nZvHr88rXMz9qaDzDA9w1w_ZPyYHquJWzxXBKvIV4nja1hrBegSFbbkHjKMSrENzWAoTr4cy4muHubVDRRiELniETSJc0fsRy0fMwFUixkwlU6gIJSXPnY5BAzDxgWMZZ&source=gbs_api",
+                    "medium": "http://books.google.com/books/publisher/content?id=LQnxEAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71y5E_pRfSaWdnU1B6D3H5TP6CTHZY_SkqWTjt0mml2qPAbhTNvsZS9N9KZ3cf9gG7-vR3t4lj7M4m-PwM6dWOp3bsY38ZKI8iK_gYzKYEASSbfFvWIpKu3Yh1Z59R6qaotpiFN&source=gbs_api",
+                    "large": "http://books.google.com/books/publisher/content?id=LQnxEAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE725VJdfZvWQcxDzdT1ZwcoK8MM9fZlcfiupxR7SFMpl_uGxMcVgEwu1iie113iz9Brnwrd7Z1B3c39Qw0-Qp7caygpuWxETLiiPeoj2nGUfiAlLfGPiSHT-Apz_G2wNdMeYwMQv&source=gbs_api",
+                    "extraLarge": "http://books.google.com/books/publisher/content?id=LQnxEAAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE704seCi9rQfncID2lRPcj_E2uIAP3ukfAQrDm6MDuVTb8lgILA5K8oEv4J3D7de9l8ANnW-3ty9comg1pb8GQn2sO-hVSNPR89CITwjAmTZOkZkfTJc15t6Q5arC9XeB3MtFthg&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=LQnxEAAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=LQnxEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=LQnxEAAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "2"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 263012,
+                    "currencyCode": "VND"
+                },
+                "retailPrice": {
+                    "amount": 184106,
+                    "currencyCode": "VND"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=LQnxEAAAQBAJ&rdid=book-LQnxEAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 263012000000,
+                            "currencyCode": "VND"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 184106000000,
+                            "currencyCode": "VND"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/Not_Like_Other_Girls-sample-epub.acsm?id=LQnxEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/Not_Like_Other_Girls-sample-pdf.acsm?id=LQnxEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=LQnxEAAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "sdvMEAAAQBAJ",
+            "etag": "2WyhKWQ5cWU",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/sdvMEAAAQBAJ",
+            "volumeInfo": {
+                "title": "Kill Her Twice",
+                "authors": [
+                    "Stacey Lee"
+                ],
+                "publisher": "Penguin",
+                "publishedDate": "2024-04-23",
+                "description": "<b>From the <i>New York Times</i> bestselling author of <i>The Downstairs Girl</i> comes a YA murder mystery noir set in 1930s Los Angeles’s Chinatown.</b><br><br><b>“A captivating and crackling noir full of suspenseful twists. Readers will fall in love with the Chow sisters and their quest for the truth.” —Kathleen Glasgow, #1 <i>New York Times</i> bestselling author of <i>Girl in Pieces</i> and <i>The Agathas</i></b><br><br>LOS ANGELES, 1932: Lulu Wong, star of the silver screen and the pride of Chinatown, has a face known to practically everyone, especially the Chow sisters—May, Gemma, and Peony—Lulu’s former classmates and neighbors. So the girls instantly know it’s Lulu when they discover a body one morning in an out-of-the-way stable, far from the Beverly Hills home where she lived after her fame skyrocketed.<br><br>The sisters suspect Lulu’s death is the result of foul play, but the police don’t seem motivated to investigate. Even worse, there are signs that point to a cover-up, and powerful forces in the city want to frame the killing as evidence that Chinatown is a den of iniquity and crime, even more reason it should be demolished to make room for the construction of a new railway depot, Union Station.<br><br>Worried that neither the police nor the papers will treat Lulu fairly—no matter her fame and wealth—the sisters set out to solve their friend’s murder themselves, and maybe save their neighborhood in the bargain. But with Lulu’s killer still on the loose, the girls’ investigation just might put them square in the crosshairs of a cold-blooded murderer.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0593532066"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780593532065"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 400,
+                "printedPageCount": 401,
+                "printType": "BOOK",
+                "categories": [
+                    "Young Adult Fiction / Mysteries & Detective Stories",
+                    "Young Adult Fiction / People & Places / United States / Asian American & Pacific Islander",
+                    "Young Adult Fiction / Historical / United States / 20th Century"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "1.1.1.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=sdvMEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72TjyM27e0Xhexiu9SwvugkTqG7e7N5PHDstXgtEvpNRtOhtOGaTE3N4Si53SwabmeUwB3fXROFl_h2dQf0R4yiGJBVn1NIEjMIErvPdqHW4ER3tBNZQRaFECeTt6k448u9nEhq&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=sdvMEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72mbwt_d3pD7bvm4Kdw-yVLtN9o-1CEm8kfxZRrcCVaNtp-sRq92oeV5xIGBr_SH7rR29hSCd19O4Y3vAyzpMpGR48kcIEyqoyH_T9decHhfkvZjpNbx5lPclimz63avG0jzk4r&source=gbs_api",
+                    "small": "http://books.google.com/books/publisher/content?id=sdvMEAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE7113QwmHV7gb0-XwyrTOHHtFFNkIKTkO_ao2lxkuFDlvO6S1WaD29W6pykdfuOxM82Onavj0jFKjxQLQnJXnztxXQUCcBf_24jW9S-jcndFMs7Yp2j0Kw5PJZmw7w0LtecaTpjm&source=gbs_api",
+                    "medium": "http://books.google.com/books/publisher/content?id=sdvMEAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE705Ucl0hS_YF7vsy7AuUckYX75XWsAmdchYQ4rwKmCv9GjHyE8Rivs5iTvBkWkE1ZxjOM4uGf4upICUAKzyueKJJc6ziZu7IibUgHQUVl6g-wVg1N_uVaTI5KYaifymtajZgg2u&source=gbs_api",
+                    "large": "http://books.google.com/books/publisher/content?id=sdvMEAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE730o65dfI2oWhPs5lya6HjkrWa3tr1drxJoUwbBC5Sq8AP6Dju8lPe0GYqfdMLFni_ddVlnv9V02TMjLf5UCaYTOD9IhGRpNEn06DGACOM7UGTehqJ9JyM4T5NWdpRi-lqnZ63D&source=gbs_api",
+                    "extraLarge": "http://books.google.com/books/publisher/content?id=sdvMEAAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE73SnoEHBtaiDyuVUVDeQLvVflg5L2XKz0TXnzXD9OfnzMJla-R8Ft2azoMm0P5-V3bvwip_-TrR_FLZ17jrwwTtG30bG90BqCi6qCKOsxQ-mXh3-83Ad2QS_OKKIvd-Yb75MI6V&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=sdvMEAAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=sdvMEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=sdvMEAAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "1"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 342788,
+                    "currencyCode": "VND"
+                },
+                "retailPrice": {
+                    "amount": 233096,
+                    "currencyCode": "VND"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=sdvMEAAAQBAJ&rdid=book-sdvMEAAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 342788000000,
+                            "currencyCode": "VND"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 233096000000,
+                            "currencyCode": "VND"
+                        }
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com.vn/books/download/Kill_Her_Twice-sample-epub.acsm?id=sdvMEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=sdvMEAAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "wrUlEAAAQBAJ",
+            "etag": "oyYX2Y7kveM",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/wrUlEAAAQBAJ",
+            "volumeInfo": {
+                "title": "A Good Girl's Guide to Murder",
+                "authors": [
+                    "Holly Jackson"
+                ],
+                "publisher": "Random House Children's Books",
+                "publishedDate": "2021-01-05",
+                "description": "<b>THE MUST-READ MULTIMILLION BESTSELLING MYSTERY SERIES • This is the story about an investigation turned obsession, full of twists and turns and with an ending you'll never expect. Coming to Netflix soon! </b><br><br>Everyone in Fairview knows the story.<br><br>Pretty and popular high school senior Andie Bell was murdered by her boyfriend, Sal Singh, who then killed himself. It was all anyone could talk about. And five years later, Pip sees how the tragedy still haunts her town.<br><br>But she can't shake the feeling that there was more to what happened that day. She knew Sal when she was a child, and he was always so kind to her. How could he possibly have been a killer?<br><br>Now a senior herself, Pip decides to reexamine the closed case for her final project, at first just to cast doubt on the original investigation. But soon she discovers a trail of dark secrets that might actually prove Sal innocent . . . and the line between past and present begins to blur. Someone in Fairview doesn't want Pip digging around for answers, and now her own life might be in danger.<br><br><br><b>And don't miss the sequel, </b><i><b>Good Girl, Bad Blood!</b> </i><br><br><b>\"The perfect nail-biting mystery.\" —Natasha Preston, #1 <i>New York Times </i>bestselling author</b>",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1984896393"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781984896391"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 400,
+                "printedPageCount": 401,
+                "dimensions": {
+                    "height": "21.00 cm",
+                    "width": "14.10 cm",
+                    "thickness": "2.10 cm"
+                },
+                "printType": "BOOK",
+                "categories": [
+                    "Young Adult Fiction / Thrillers & Suspense / General",
+                    "Young Adult Fiction / Law & Crime",
+                    "Young Adult Fiction / Social Themes / Prejudice & Racism"
+                ],
+                "averageRating": 5,
+                "ratingsCount": 1,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.3.2.0.preview.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/publisher/content?id=wrUlEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71Qbfcd9tL2AY9-wfVLblK20IP-7hQhsNbTVOhXVXLEkvnTCL6TbkjNRxkorxEuS9dNYij7L1QarCE8jELOKgqReofQ4GiJ-ECnXEIKICLZSWwq4f-krxKcDK1fySdCZiTQ82-a&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/publisher/content?id=wrUlEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE703sY_fFR41t2hIyJPijJo-KKolWtdk4we0CKeiGypbqtvJrQdTiIRKxljv9M_I8uBg8RyG_BCyP217T62-uR0hA_CauLBvS_RURJDyAfWTmZB6-dyKX3YJ0eJL1NQDrakv_G4b&source=gbs_api",
+                    "small": "http://books.google.com/books/publisher/content?id=wrUlEAAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72ZD4Nj0tumSqY7QaRvNJc5Kt_5uwcUKC_phRkmG0wGzcjeT16B7qiVSR2DNm-yErmerqe0YcXgdTY3W6l_5em6vH5pvaifsbQ2O1gZs0aIhS7Xp9dACxV2rYvnOh-HwM9NwUIv&source=gbs_api",
+                    "medium": "http://books.google.com/books/publisher/content?id=wrUlEAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE715rttrLhdnLKhZidZNWEmPAsCsXZlFGoUB3I8IvOVxMos8As3DyYHZ1B89qezfQ4IWNo2xwjfbtdttKvnGZnuaNJbVO5yz4cEU99-JQO_m7ttb5ejuTrrSiW_cthyTwX4Pn0bi&source=gbs_api",
+                    "large": "http://books.google.com/books/publisher/content?id=wrUlEAAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE73kkClrO6kRlydWRbsk_iqchcAFTZ5BIIHvIWmTYOgNPiMhRoKw3Qu8yrRxOrZR7_4h1OyYs5ev2Ga-YIAW_th0Ah1L-VF_AB_dj1PwvJaQujBSHzPH3KpfdIVPIryj4SsiMbKS&source=gbs_api",
+                    "extraLarge": "http://books.google.com/books/publisher/content?id=wrUlEAAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE72Ij-wUlUHbmuuQT5i0LEanGTYXwddAkqjRpIOkTrLQQlPbWqyDx6xd9cp7kYk9notAY6dzWsNDX19dgq5hoGaG2N5j5oRgtEtFDw0JbqOIVobSEZ4E9a9oaA0xnavJyz3CZLGL&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.vn/books?id=wrUlEAAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=wrUlEAAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=wrUlEAAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "VN",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "VN",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=wrUlEAAAQBAJ&hl=&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        }
+    ]
+}

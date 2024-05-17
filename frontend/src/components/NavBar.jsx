@@ -3,7 +3,7 @@ import { NavLink as Link } from 'react-router-dom'
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
 import Logo from '../assets/logo-no-background.png'
 import { useAuth } from '../hooks/AuthProvider'
-// import "../styles/NavBar.css"
+import "../styles/NavBar.css"
 
 const NavBar = () => {
   const auth = useAuth()
@@ -25,8 +25,7 @@ const NavBar = () => {
           </>
         ) : (
           <>
-            <Link to={`/mytags`} id="Fav-Tags">Favorite Tags</Link>
-            <Link to={`/mybooks`} id="Fav-Books">Favorite Books</Link>
+            <Link to={`/mybooks`} id="Fav-Books">Favorites</Link>
             <Button variant='outline-info' id="Sign-Out" onClick={() => auth.logOut()}>Sign Out</Button>
           </>
         )}

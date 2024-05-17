@@ -8,7 +8,7 @@ const FavBooks = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    document.title = 'Favorite Books | Next Chapter'
+    document.title = 'Favorites | Next Chapter'
     // Load bookList from localStorage when component mounts
     const storedBookList = localStorage.getItem('bookList')
     if (storedBookList) {
@@ -16,7 +16,7 @@ const FavBooks = () => {
     }
     setLoading(false) // Set loading to false once data is loaded
   }, [])
-  
+
   function truncateTitle(title) {
     if (title.length <= 60) {
       return title
@@ -29,7 +29,7 @@ const FavBooks = () => {
 
   return (
     <div>
-      <header>Favorite Books</header>
+      <header id='favbooks-header'>Favorites</header>
       {loading ? (
         <Spinner />
       ) : (
@@ -51,12 +51,12 @@ const FavBooks = () => {
                       </td>
                     </tr>
                     <tr>
-                      <td  id='book-title' className='text-center'>
+                      <td id='book-title' className='text-center'>
                         {truncateTitle(book.bookTitle)}
                       </td>
                     </tr>
                   </tbody>
-              </table>
+                </table>
               </div>
             </Link>
           ))}

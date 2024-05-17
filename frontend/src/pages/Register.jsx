@@ -41,15 +41,11 @@ const Register = () => {
           <br />
           <input type='email' name='email' placeholder='email' />
           <div id='register-container'>
-            <button type='submit' id='register-button'>
-              Register
-            </button>
+            <button type='submit' id='register-button'>Register</button>
           </div>
           <div id='existing-user-prompt'>
             Existing User?
-            <Link to={`/login`} id='to-sign-in-button'>
-              Sign In
-            </Link>
+            <Link to={`/login`} id='to-sign-in-button'>Sign In</Link>
           </div>
         </Form>
       </div>

@@ -59,7 +59,8 @@
     text-shadow: -5px 4px black;
 }
 
-#bookAuthor {
+#bookAuthor,
+#bookPublishDate {
     font-size: 25px;
     font-weight: lighter;
     margin-top: 5px;
@@ -92,7 +93,9 @@
     padding-top: 1rem;
 }
 
-#Description {
+#Description,
+#Categories,
+#purchase-info-header {
     float: none;
     font-size: 35px;
     font-weight: normal;
@@ -101,7 +104,8 @@
     padding-bottom: 20px;
 }
 
-#bookDescription {
+#bookDescription,
+#bookCategory {
     height: 100%;
     font-size: 17px;
     font-weight: lighter;
@@ -113,16 +117,8 @@
     padding-bottom: 2rem;
 }
 
-#Categories {
-    float: none;
-    font-size: 35px;
-    font-weight: normal;
-    color: #00C2FF;
-    text-shadow: -5px 4px #000000;
-    padding-bottom: 20px;
-}
-
-#bookCategory {
+#purchase-info,
+#no-purchase-info {
     height: 100%;
     font-size: 17px;
     font-weight: lighter;
@@ -131,4 +127,10 @@
     margin-right: 100px;
     margin-left: none;
     color: #cdcaca;
+    padding-bottom: 2rem;
+    text-decoration: none;
+}
+
+#purchase-info:hover {
+    text-decoration: underline;
 }

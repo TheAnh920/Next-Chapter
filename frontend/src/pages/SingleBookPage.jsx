@@ -25,7 +25,6 @@ const SingleBookPage = () => {
         console.error('Error fetching book details:', error)
       }
     }
-
     fetchBookDetails()
   }, [lastSubdirectory])
 
@@ -43,7 +42,6 @@ const SingleBookPage = () => {
     const bookTitle = book.volumeInfo.title
     const currentFavBookTagList = JSON.parse(localStorage.getItem('favBookTagList')) || []
     const updatedCatList = removeDupeCat(currentFavBookTagList.concat(book.volumeInfo.categories))
-    // const favBookCatList = removeDupeCat()
     const response = await axios.post('http://localhost:5555/account/addbook', { username, lastSubdirectory, bookTitle, updatedCatList })
     if (response.data.success) {
       const fetchLocal = JSON.parse(localStorage.getItem('bookList')) || []
@@ -51,15 +49,12 @@ const SingleBookPage = () => {
       localStorage.setItem('bookList', JSON.stringify(updatedBookIds))
       localStorage.setItem('favBookTagList', JSON.stringify(updatedCatList))
     }
-    console.log(response.data.message)
+    alert(response.data.message)
   }
 
   return (
     <div id="containerAll">
       <div id="container">
-        {/* SingleBookPage<br/>  */}
-        {/* <Button onClick={handleClick} label="Add to favorites" />
-        <Button onClick={handleClick}> Add to Favorites </Button> */}
         <div id="bookCover">
           <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
         </div>
@@ -67,8 +62,9 @@ const SingleBookPage = () => {
         <div id="bookInfo">
           <div id="bookTitle">
             <h1 id="h1BookTitle">{book.volumeInfo.title}</h1>
-            {user.token && <Button id="favButton" onClick={handleClick}> Add to Favorites </Button>}
+            {user.token && <Button id="favButton" onClick={handleClick}>Add to Favorites</Button>}
             <p id="bookAuthor">{book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author'}</p>
+            <p id='bookPublishDate'>{book.volumeInfo.publishedDate ? 'Year of publication: ' + book.volumeInfo.publishedDate.slice(0, 4) : 'No publication year information. '}</p>
           </div>
         </div>
       </div>
@@ -87,6 +83,11 @@ const SingleBookPage = () => {
           ))
           :
           <p id='bookCategory'>No tags available. </p>
+        }
+        <h2 id='purchase-info-header'>Where to buy</h2>
+        {book.saleInfo.saleability == 'FOR_SALE' && book.saleInfo.buyLink ?
+          <a href={book.saleInfo.buyLink} target='_blank' id='purchase-info'>Get this book</a> :
+          <p id='no-purchase-info'>This book is currently not available for purchase. </p>
         }
       </div>
     </div>
