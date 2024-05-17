@@ -31,9 +31,9 @@
 
 #home-book-grid {
   display: grid;
-  padding: 0.625rem;
+  padding: 1rem 2.5rem;
   gap: 2.5rem;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: auto;
 }
 
 @media (min-width: 119px) {
@@ -61,8 +61,8 @@
 }
 
 #home-book-img {
-  width: 250px;
-  height: 400px;
+  width: 336px;
+  height: 500px;
   display: block;
 }
 
@@ -74,7 +74,7 @@
 #home-book-title {
   text-align: center;
   font-size: 20px;
-  width: 250px;
+  width: 336px;
   color: #cfcccc;
   padding-top: 1.5rem;
 }

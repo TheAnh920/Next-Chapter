@@ -33,13 +33,7 @@ const FavBooks = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className='grid
-                        grid-cols-[auto]
-                        min-[119px]:grid-cols-[auto_auto]
-                        min-[501px]:grid-cols-[auto_auto_auto]
-                        md:grid-cols-[auto_auto_auto_auto]
-                        lg:grid-cols-[auto_auto_auto_auto_auto]
-                        gap-10 p-2.5' >
+        <div id='fav-books-list'>
           {bookList.map(book => (
             <Link to={`/book/${book.bookId}`} key={book.bookId}>
               <div id="fav-container">

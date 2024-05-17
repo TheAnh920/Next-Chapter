@@ -190,21 +190,14 @@ const Search = () => {
         books.length == 0 ?
           <div id="search-no-results">No results found. </div> :
           [
-            <div id="search-res" key='search-res'
-              className='grid
-                         grid-cols-[auto]
-                         min-[119px]:grid-cols-[auto_auto]
-                         min-[501px]:grid-cols-[auto_auto_auto]
-                         md:grid-cols-[auto_auto_auto_auto]
-                         lg:grid-cols-[auto_auto_auto_auto_auto]
-                         gap-10 p-2.5'>
+            <div id="search-res" key='search-res'>
               {books.map(book => (
                 <Link to={`/book/${book.id}`} key={book.id}>
                   <table>
                     <tbody>
-                      <tr id="book-img">
+                      <tr>
                         <td>
-                          <img src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
+                          <img id="book-img" src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
                         </td>
                       </tr>
                       <tr>
@@ -219,7 +212,7 @@ const Search = () => {
             </div>,
             <div id='load-more-container' key='load-more-results'>
               <Button id='load-more-button'
-                // onClick={updateSearch}
+              // onClick={updateSearch}
               >Next page</Button>
             </div>
           ]
