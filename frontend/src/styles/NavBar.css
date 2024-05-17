@@ -1,195 +1,253 @@
 /* Navigation bar */
 
 #Navbar {
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    display: flex;
-    padding-top: 2rem;
-    padding-left: 1rem;
-    font-size: 25px;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.15em;
-    /* display: inline-block; */
-    padding: 15px 20px;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  /* display: inline-block; */
+  padding: 15px 20px;
+  position: relative;
+  align-items: center;
 }
 
+#Logo {
+  display: flex;
+  align-items: center;
+  padding: 0 30px 0 30px;
+}
 
-#Nav-Content {
-    padding-left: 1rem;
-    padding-right: 10rem;
-    background-color: #000000;
-    color: #ffffff;
+#Nav-Search {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
 }
 
 #Ad-Search {
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.15em;
-    display: inline-block;
-    padding: 25px 30px;
-    position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 25px 30px;
+  position: relative;
 }
 
 #Ad-Search:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #fff;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
 #Ad-Search:hover:after {
-    width: 100%;
-    left: 0;
+  width: 100%;
+  left: 0;
+}
+
+#nav-user-options {
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
 }
 
 #Fav-Tags {
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.15em;
-    display: inline-block;
-    padding: 25px 30px;
-    position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 25px 30px;
+  position: relative;
 }
 
 #Fav-Tags:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #fff;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
 #Fav-Tags:hover:after {
-    width: 100%;
-    left: 0;
+  width: 100%;
+  left: 0;
 }
 
 #Fav-Books {
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.15em;
-    display: inline-block;
-    padding: 25px 30px;
-    position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 25px 30px;
+  position: relative;
 }
 
 #Fav-Books:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #fff;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
 #Fav-Books:hover:after {
-    width: 100%;
-    left: 0;
+  width: 100%;
+  left: 0;
 }
 
 #Sign-In {
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.15em;
-    display: inline-block;
-    padding: 25px 30px;
-    position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 25px 30px;
+  position: relative;
 }
 
 #Sign-In::after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #fff;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
 #Sign-In:hover:after {
-    width: 95%;
-    left: 0;
+  width: 95%;
+  left: 0;
 }
+
 /* sign out */
 #Sign-Out {
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.15em;
-    display: inline-block;
-    padding: 25px 30px;
-    position: relative;
-    
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 25px 30px;
+  position: relative;
 }
 
 #Sign-Out::after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #fff;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
 #Sign-Out:hover:after {
-    width: 100%;
-    left: 0;
+  width: 100%;
+  left: 0;
 }
 
 #Register {
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.15em;
-    display: inline-block;
-    padding: 25px 30px;
-    position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 25px 30px;
+  position: relative;
 }
 
 #Register::after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #fff;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
 #Register:hover:after {
-    width: 100%;
-    left: 0;
+  width: 100%;
+  left: 0;
+}
+
+#logo-only-img,
+#Ad-Search-responsive,
+#Sign-In-responsive,
+#Register-responsive,
+#Fav-Books-responsive,
+#Sign-Out-responsive {
+  display: none;
+}
+
+@media screen and (max-width: 812px) {
+
+  #logo-img,
+  #Ad-Search,
+  #Sign-In,
+  #Register,
+  #Fav-Books,
+  #Sign-Out {
+    display: none;
+  }
+
+  #logo-only-img {
+    display: inline-block;
+  }
+
+  #Ad-Search-responsive,
+  #Sign-In-responsive,
+  #Register-responsive,
+  #Fav-Books-responsive,
+  #Sign-Out-responsive {
+    color: #fff;
+    display: inline-block;
+    padding: 31px 30px;
+    position: relative;
+  }
+
+  #Ad-Search-responsive:hover,
+  #Sign-In-responsive:hover,
+  #Register-responsive:hover,
+  #Fav-Books-responsive:hover,
+  #Sign-Out-responsive:hover {
+    color: #ff00e1;
+    transition: color 0.25s ease;
+  }
 }
