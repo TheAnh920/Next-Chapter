@@ -10,24 +10,27 @@ const Home = () => {
   const [rcmBooks, setRcmBooks] = useState([])
   const [loading, setLoading] = useState(false)
   const user = useAuth()
+  const favBookTagList = JSON.parse(localStorage.getItem('favBookTagList')) || []
 
   useEffect(() => {
     document.title = 'Home | Next Chapter'
-    user.token && generateRecs()
+    user.token && (localStorage.getItem('rcmBookList') ?
+      setRcmBooks(JSON.parse(localStorage.getItem('rcmBookList'))) :
+      generateRecs()
+    )
   }, [])
-
-  const favBookTagList = JSON.parse(localStorage.getItem('favBookTagList')) || []
 
   const generateRecs = async () => {
     setLoading(true)
     const response = await axios.post('http://localhost:5555/books/similar', { favBookTagList })
     setRcmBooks(response.data.message)
+    localStorage.setItem('rcmBookList', JSON.stringify(response.data.message))
     setLoading(false)
   }
 
   function mapBooks(books) {
     return (
-      <div id='home-book-grid'>
+      <div id='book-grid'>
         {books.map(book => (
           <Link to={`/book/${book.id}`} key={book.id}>
             <div>
@@ -85,7 +88,7 @@ const Home = () => {
         </div>
         {mapBooks(books.youngAdultFiction)}
       </div>
-      {user.token &&
+      {(user.token && !(favBookTagList.join('').length == 0)) &&
         <div id='rcm-book-list'>
           <div id='rcm-book-header'>Based on your taste</div>
           {loading ?

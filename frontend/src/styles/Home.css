@@ -29,40 +29,40 @@
   color: #fff;
 }
 
-#home-book-grid {
+#book-grid {
   display: grid;
   padding: 1rem 2.5rem;
   gap: 2.5rem;
-  grid-template-columns: auto;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 @media (min-width: 119px) {
-  #home-book-grid {
-    grid-template-columns: auto auto;
+  #book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 501px) {
-  #home-book-grid {
-    grid-template-columns: auto auto auto;
+  #book-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 768px) {
-  #home-book-grid {
-    grid-template-columns: auto auto auto auto;
+  #book-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1024px) {
-  #home-book-grid {
-    grid-template-columns: auto auto auto auto auto;
+  #book-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
 #home-book-img {
   width: 336px;
-  height: 500px;
+  /* height: 500px; */
   display: block;
 }
 

@@ -48,6 +48,7 @@ const SingleBookPage = () => {
       const updatedBookIds = [...fetchLocal, response.data.bookData]
       localStorage.setItem('bookList', JSON.stringify(updatedBookIds))
       localStorage.setItem('favBookTagList', JSON.stringify(updatedCatList))
+      localStorage.removeItem('rcmBookList')
     }
     alert(response.data.message)
   }

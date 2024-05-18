@@ -33,8 +33,10 @@ const AuthProvider = ({ children }) => {
         setUser(null);
         setToken("");
         localStorage.removeItem("site");
+        localStorage.removeItem("user");
         localStorage.removeItem("bookList");
         localStorage.removeItem("favBookTagList");
+        localStorage.removeItem('rcmBookList');
         navigate(`/`);
     }
 
