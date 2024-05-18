@@ -10,6 +10,7 @@ import FavBooks from './pages/FavBooks'
 import AuthProvider from './hooks/AuthProvider'
 import PrivateRoute from './router/PrivateRoute'
 import PublicRoute from './router/PublicRoute'
+import Book from './pages/Book'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/book/:id' element={<SingleBookPage />} />
           <Route path='/search' element={<Search />} />
+          <Route path='/book' element={<Book />} />
           <Route element={<PublicRoute />}>
             <Route path='/login' element={<SignIn />} />
             <Route path='/register' element={<Register />} />

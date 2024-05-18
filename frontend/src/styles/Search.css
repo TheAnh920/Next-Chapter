@@ -93,7 +93,11 @@
 /* resize image */
 #book-img {
   width: 336px;
+
   height: 500px;
+
+  /* height: 504px; */
+
   display: block;
 }
 

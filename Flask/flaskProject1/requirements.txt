@@ -1,0 +1,5 @@
+Flask
+numpy
+urllib3
+requests
+pandas
