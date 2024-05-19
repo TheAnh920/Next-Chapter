@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Spinner from '../components/Spinner'
-import "../styles/FavBooks.css"
+// import Spinner from '../components/Spinner'
+import books from "../components/HomeBooks.json"
+import "../styles/Home.css"
 
 const Book = () => {
  
@@ -65,17 +66,6 @@ const Book = () => {
         </div>
         {mapBooks(books.youngAdultFiction)}
       </div>
-      {(user.token && !(favBookTagList.join('').length == 0)) &&
-        <div id='rcm-book-list'>
-          <div id='rcm-book-header'>Based on your taste</div>
-          {loading ?
-            <div id='spinner'>
-              <Spinner />
-            </div> :
-            mapBooks(rcmBooks)
-          }
-        </div>
-      }
     </div>
   )
 }
