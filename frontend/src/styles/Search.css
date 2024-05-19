@@ -93,11 +93,7 @@
 /* resize image */
 #book-img {
   width: 336px;
-
-  height: 500px;
-
-  /* height: 504px; */
-
+  /* height: 500px; */
   display: block;
 }
 
@@ -129,38 +125,6 @@ body {
   color: white;
   font-size: 23px;
   padding: 0.625rem;
-}
-
-#search-res {
-  color: #353030;
-  display: grid;
-  padding: 1rem 2.5rem;
-  gap: 2.5rem;
-  grid-template-columns: auto;
-}
-
-@media (min-width: 119px) {
-  #search-res {
-    grid-template-columns: auto auto;
-  }
-}
-
-@media (min-width: 501px) {
-  #search-res {
-    grid-template-columns: auto auto auto;
-  }
-}
-
-@media (min-width: 768px) {
-  #search-res {
-    grid-template-columns: auto auto auto auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  #search-res {
-    grid-template-columns: auto auto auto auto auto;
-  }
 }
 
 /* Advanced Search */

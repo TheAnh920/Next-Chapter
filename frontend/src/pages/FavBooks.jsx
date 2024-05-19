@@ -33,7 +33,7 @@ const FavBooks = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div id='fav-books-list'>
+        <div id='book-grid'>
           {bookList.map(book => (
             <Link to={`/book/${book.bookId}`} key={book.bookId}>
               <div id="fav-container">

@@ -189,33 +189,26 @@ const Search = () => {
       {searched && (
         books.length == 0 ?
           <div id="search-no-results">No results found. </div> :
-          [
-            <div id="search-res" key='search-res'>
-              {books.map(book => (
-                <Link to={`/book/${book.id}`} key={book.id}>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <img id="book-img" src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td id='book-title' className='text-center'>
-                          {truncateTitle(book.volumeInfo.title)}
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </Link>
-              ))}
-            </div>,
-            <div id='load-more-container' key='load-more-results'>
-              <Button id='load-more-button'
-              // onClick={updateSearch}
-              >Next page</Button>
-            </div>
-          ]
+          <div id="book-grid">
+            {books.map(book => (
+              <Link to={`/book/${book.id}`} key={book.id}>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img id="book-img" src={"https://books.google.com/books/publisher/content/images/frontcover/" + book.id + "?fife=w400-h600&source=gbs_api"} alt={book.volumeInfo.title} />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td id='book-title' className='text-center'>
+                        {truncateTitle(book.volumeInfo.title)}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </Link>
+            ))}
+          </div>
       )}
     </div>
   )
