@@ -22,7 +22,7 @@ const Home = () => {
 
   const generateRecs = async () => {
     setLoading(true)
-    const response = await axios.post('http://localhost:5555/books/similar', { favBookTagList })
+    const response = await axios.post('https://next-chapter.onrender.com/books/similar', { favBookTagList })
     setRcmBooks(response.data.message)
     localStorage.setItem('rcmBookList', JSON.stringify(response.data.message))
     setLoading(false)

@@ -18,7 +18,7 @@ const SingleBookPage = () => {
     document.title = 'Book Details | Next Chapter'
     const fetchBookDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5555/books/single/${lastSubdirectory}`)
+        const response = await axios.get(`https://next-chapter.onrender.com/books/single/${lastSubdirectory}`)
         setBook(response.data || null)
         setLoading(false)
       } catch (error) {
@@ -42,7 +42,7 @@ const SingleBookPage = () => {
     const bookTitle = book.volumeInfo.title
     const currentFavBookTagList = JSON.parse(localStorage.getItem('favBookTagList')) || []
     const updatedCatList = removeDupeCat(currentFavBookTagList.concat(book.volumeInfo.categories))
-    const response = await axios.post('http://localhost:5555/account/addbook', { username, lastSubdirectory, bookTitle, updatedCatList })
+    const response = await axios.post('https://next-chapter.onrender.com/account/addbook', { username, lastSubdirectory, bookTitle, updatedCatList })
     if (response.data.success) {
       const fetchLocal = JSON.parse(localStorage.getItem('bookList')) || []
       const updatedBookIds = [...fetchLocal, response.data.bookData]

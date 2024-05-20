@@ -20,7 +20,7 @@ const Register = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     if (password === confirmPassword) {
-      const response = await axios.post('http://localhost:5555/account/signup', { username, password })
+      const response = await axios.post('https://next-chapter.onrender.com/account/signup', { username, password })
       console.log(response.data.message)
       if (response.data.success) {
         navigate(`/login`);

@@ -48,7 +48,7 @@ const TopicSearch = () => {
 
   const handleSearch = async () => {
     setFinalSearchTerm(flaskSearchTerm)
-    const response = await axios.post('http://127.0.0.1:5000/ml_search', { flaskSearchTerm })
+    const response = await axios.post('https://next-chapter-flask-api.onrender.com/ml_search', { flaskSearchTerm })
     console.log(response.data.bookData)
     setBooks(response.data.bookData)
     setSearched(true)

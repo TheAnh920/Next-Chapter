@@ -11,7 +11,7 @@ const AuthProvider = ({ children }) => {
 
     const loginAction = async (username, password) => {
         try {
-            const response = await axios.post("http://localhost:5555/account/signin", { username , password })
+            const response = await axios.post("https://next-chapter.onrender.com/account/signin", { username , password })
             console.log(response.data)
             if (response.data) {
                 setUser(response.data.username);

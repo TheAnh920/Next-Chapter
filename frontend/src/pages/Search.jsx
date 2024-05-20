@@ -29,7 +29,7 @@ const Search = () => {
     }
     // console.log(tagTerms)
     try {
-      const response = await axios.get('http://localhost:5555/books/search', {
+      const response = await axios.get('https://next-chapter.onrender.com/books/search', {
         params: {
           q: searchTerm,
           authorTerm: authorTerm,
@@ -53,7 +53,7 @@ const Search = () => {
     }
     // console.log(tagTerms)
     try {
-      const response = await axios.get('http://localhost:5555/books/search', {
+      const response = await axios.get('https://next-chapter.onrender.com/books/search', {
         params: {
           q: searchTerm,
           authorTerm: authorTerm,
