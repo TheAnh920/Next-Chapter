@@ -20,7 +20,7 @@ const TopicSearch = () => {
   }, [])
 
   const getTrendingBooks = async () => {
-    const response = await axios.post('http://127.0.0.1:5000/books_by_ratings')
+    const response = await axios.post('https://next-chapter-flask-api.onrender.com/books_by_ratings')
     console.log(response.data.bookData)
 
     for (let i = 0; i < response.data.bookData[0].length; i++) {
