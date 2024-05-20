@@ -11,6 +11,7 @@ import AuthProvider from './hooks/AuthProvider'
 import PrivateRoute from './router/PrivateRoute'
 import PublicRoute from './router/PublicRoute'
 import Book from './pages/Book'
+import FlaskTesting from './pages/FlaskTesting'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path='/book/:id' element={<SingleBookPage />} />
           <Route path='/search' element={<Search />} />
           <Route path='/book' element={<Book />} />
+          <Route path='/flask' element={<FlaskTesting />} />
           <Route element={<PublicRoute />}>
             <Route path='/login' element={<SignIn />} />
             <Route path='/register' element={<Register />} />
