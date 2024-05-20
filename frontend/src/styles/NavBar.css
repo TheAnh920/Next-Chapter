@@ -59,6 +59,41 @@
   left: 0;
 }
 
+#nav-topic-search {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+#topic-search {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 25px 30px;
+  position: relative;
+}
+
+#topic-search:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+#topic-search:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 #nav-user-options {
   margin-left: auto;
   margin-right: 0;
@@ -209,6 +244,7 @@
 
 #logo-only-img,
 #Ad-Search-responsive,
+#topic-search-responsive,
 #Sign-In-responsive,
 #Register-responsive,
 #Fav-Books-responsive,
@@ -216,10 +252,11 @@
   display: none;
 }
 
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 1065px) {
 
   #logo-img,
   #Ad-Search,
+  #topic-search,
   #Sign-In,
   #Register,
   #Fav-Books,
@@ -232,6 +269,7 @@
   }
 
   #Ad-Search-responsive,
+  #topic-search-responsive,
   #Sign-In-responsive,
   #Register-responsive,
   #Fav-Books-responsive,
@@ -243,6 +281,7 @@
   }
 
   #Ad-Search-responsive:hover,
+  #topic-search-responsive:hover,
   #Sign-In-responsive:hover,
   #Register-responsive:hover,
   #Fav-Books-responsive:hover,

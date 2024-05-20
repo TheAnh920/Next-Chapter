@@ -4,6 +4,7 @@ import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
 import { IoIosSearch } from "react-icons/io"
 import { FaSignInAlt, FaHeart, FaSignOutAlt } from "react-icons/fa"
 import { FaPenToSquare } from "react-icons/fa6"
+import { TbMessage2Search } from "react-icons/tb"
 import Logo from '../assets/logo-no-background.png'
 import LogoNoText from '../assets/logo-no-text.png'
 import { useAuth } from '../hooks/AuthProvider'
@@ -34,6 +35,12 @@ const NavBar = () => {
         <Link to={`/search`} id="Ad-Search">Search</Link>
         <Link to={`/search`} id="Ad-Search-responsive">
           <IoIosSearch />
+        </Link>
+      </Nav>
+      <Nav id='nav-topic-search'>
+        <Link to={`/topicsearch`} id='topic-search'>Topic Search</Link>
+        <Link to={`/topicsearch`} id='topic-search-responsive'>
+          <TbMessage2Search />
         </Link>
       </Nav>
       <Nav id='nav-user-options'>
